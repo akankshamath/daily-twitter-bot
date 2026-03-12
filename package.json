@@ -1,0 +1,37 @@
+{
+  "name": "daily-twitter-bot",
+  "version": "1.0.0",
+  "description": "Daily digest bot for tracking company launches and tech trends via email",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "product-hunt",
+    "hacker-news",
+    "digest",
+    "email",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cheerio": "^0.22.35",
+    "axios": "^1.6.7",
+    "cheerio": "^1.2.0",
+    "dotenv": "^16.4.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^8.0.2",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^6.4.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
