@@ -89,7 +89,7 @@ async function runDailyUpdate() {
 async function main() {
   console.log('\n');
   console.log('╔═══════════════════════════════════════════════════════════════════╗');
-  console.log('║                    DAILY TECH DIGEST BOT                          ║');
+  console.log('║                    DAILY TECH DIGEST TOOL                         ║');
   console.log('║             Product Launches + Tech Trends via Email              ║');
   console.log('╚═══════════════════════════════════════════════════════════════════╝');
   console.log('\n');
@@ -102,7 +102,7 @@ async function main() {
 
     if (!isEmailValid) {
       console.error('❌ Email configuration is invalid');
-      console.error('💡 Please check your Gmail credentials in .env file\n');
+      console.error('Please check your Gmail credentials in .env file\n');
       process.exit(1);
     }
 
@@ -112,10 +112,10 @@ async function main() {
     console.log(`✅ Max Launches: ${config.content.maxLaunches}`);
     console.log(`✅ Max Trends: ${config.content.maxTrends}\n`);
   } catch (error) {
-    console.error('❌ Configuration validation failed\n');
+    console.error('Configuration validation failed\n');
 
     if (error instanceof Error && error.message.includes('Missing required environment variable')) {
-      console.error('💡 Make sure you have created a .env file based on .env.example');
+      console.error('Make sure you have created a .env file based on .env.example');
       console.error('   Required variables: GMAIL_USER, GMAIL_APP_PASSWORD, EMAIL_TO\n');
     }
 
@@ -127,12 +127,12 @@ async function main() {
 
   if (isTestMode) {
     console.log('═'.repeat(70));
-    console.log('🧪 TEST MODE - Running one-time update');
+    console.log('TEST MODE - Running one-time update');
     console.log('═'.repeat(70) + '\n');
 
     await runDailyUpdate();
 
-    console.log('\n✅ Test complete. Exiting...\n');
+    console.log('\nTest complete. Exiting...\n');
     process.exit(0);
   }
 
@@ -143,14 +143,14 @@ async function main() {
   console.log(`Schedule: ${config.schedule} (cron format)`);
   console.log('Status: Waiting for next scheduled run...');
   console.log('\n💡 Tips:');
-  console.log('   • Press Ctrl+C to stop the bot');
+  console.log('   • Press Ctrl+C to stop running');
   console.log('   • Run with --test flag to test immediately');
   console.log('   • Check .env file to modify schedule\n');
   console.log('═'.repeat(70) + '\n');
 
   // Validate cron expression
   if (!cron.validate(config.schedule)) {
-    console.error(`❌ Invalid cron schedule: ${config.schedule}\n`);
+    console.error(`Invalid cron schedule: ${config.schedule}\n`);
     process.exit(1);
   }
 
@@ -159,10 +159,10 @@ async function main() {
     await runDailyUpdate();
   });
 
-  console.log('✅ Bot is running...\n');
+  console.log('Tool is running...\n');
 }
 
-// Handle graceful shutdown
+// Handle graceful shutdown 
 process.on('SIGINT', () => {
   console.log('\n\n👋 Shutting down gracefully...');
   console.log('Goodbye!\n');
