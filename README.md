@@ -1,21 +1,23 @@
 # Daily Tech Digest Bot
 
-A TypeScript bot that automatically tracks product launches from Product Hunt and tech trends from Hacker News, then sends beautiful daily email digests.
+A TypeScript bot that automatically tracks product launches from Product Hunt, tech trends from Hacker News, and trending GitHub repositories, then sends beautiful daily email digests.
 
 ## Features
 
-- **Product Launches**: Top launches from Product Hunt with upvotes and topics
+- **Product Launches**: Top launches from Product Hunt with makers, categories, and upvotes
 - **Tech Trends**: Trending tech stories from Hacker News
-- **Daily Email Digest**: Beautiful HTML emails with both sections
-- **100% Free**: No API costs - uses free public APIs
+- **GitHub Trending**: Top 5 most starred repositories daily
+- **Daily Email Digest**: Beautiful HTML emails with card-based design
+- **100% Free**: No API costs - uses free public APIs and web scraping
 - **Configurable**: Customize schedule, content limits, and recipients
 - **Type-Safe**: Built with TypeScript
 
 ## What You Get
 
 Each morning, receive an email with:
-1. **Product Launches** - New products from Product Hunt with descriptions, upvotes, and topics
+1. **Product Launches** - New products from Product Hunt with maker names, descriptions, and categories
 2. **Tech Trends** - Top Hacker News stories filtered for tech content
+3. **GitHub Trending** - Top 5 trending repositories with stars gained today
 
 ## Prerequisites
 
@@ -58,9 +60,8 @@ EMAIL_TO=you@company.com,colleague@company.com
 CRON_SCHEDULE=0 9 * * *
 
 # Content limits
-MAX_LAUNCHES=20
-MAX_TRENDS=15
-MIN_UPVOTES=50
+MAX_LAUNCHES=5
+MAX_TRENDS=5
 ```
 
 ### 4. Test It
@@ -103,9 +104,8 @@ Test your cron expression: https://crontab.guru
 
 ### Content Limits
 
-**MAX_LAUNCHES**: Max Product Hunt launches (default: 20)
-**MAX_TRENDS**: Max Hacker News stories (default: 15)
-**MIN_UPVOTES**: Minimum upvotes/score to include (default: 50)
+**MAX_LAUNCHES**: Max Product Hunt launches (default: 5)
+**MAX_TRENDS**: Max Hacker News stories (default: 5)
 
 ## How It Works
 
@@ -123,11 +123,21 @@ Test your cron expression: https://crontab.guru
 - Filters by minimum score
 - Sorts by points
 
+### GitHub Trending Integration
+- Scrapes [GitHub Trending](https://github.com/trending) page using Cheerio
+- Fetches daily trending repositories (most starred today)
+- Extracts repo name, author, description, language, and star counts
+- Shows stars gained today vs total stars
+- Top 5 repos with green accent border (GitHub brand color)
+- **Note**: Uses web scraping (no API key needed)
+
 ### Email Digest
-- Beautiful responsive HTML design
-- Plain text fallback
-- Both launches and trends in one email
-- Direct links to products and discussions
+- Beautiful responsive HTML design with card-based layout
+- Plain text fallback included
+- Three sections: Product Hunt, Hacker News, and GitHub
+- Color-coded accent borders (blue for PH, orange for HN, green for GitHub)
+- Direct links to products, discussions, and repositories
+- Clean, minimal styling with subtle shadows
 
 ## Project Structure
 
@@ -136,9 +146,10 @@ daily-twitter-bot/
 ├── src/
 │   ├── index.ts              # Main app + scheduler
 │   ├── config.ts             # Environment config
-│   ├── productHuntClient.ts  # Product Hunt API
+│   ├── productHuntClient.ts  # Product Hunt RSS parser
 │   ├── hackerNewsClient.ts   # Hacker News API
-│   └── emailService.ts       # Gmail sender
+│   ├── githubClient.ts       # GitHub trending scraper
+│   └── emailService.ts       # Gmail sender + templates
 ├── dist/                     # Compiled JS
 ├── .env                      # Your config
 ├── .env.example              # Config template
@@ -288,6 +299,11 @@ Error: Missing required environment variable: GMAIL_USER
 - **Free**: Unlimited use of public API
 - **Rate limits**: None for reasonable use
 
+### GitHub Trending
+- **Free**: Web scraping (no API key needed)
+- **Rate limits**: Respect GitHub's robots.txt and ToS
+- **Cost**: $0
+
 ### Gmail
 - **Free**: 500 emails/day limit
 - **Cost**: $0
@@ -299,7 +315,8 @@ Error: Missing required environment variable: GMAIL_USER
 ### Add More Sources
 - Reddit API (r/startups, r/technology)
 - Dev.to API (trending articles)
-- GitHub Trending (scraping or API)
+- ArXiv trending papers (AI research)
+- Twitter/X trending topics
 
 ### Filter Improvements
 - Industry-specific filters (AI, crypto, SaaS)
@@ -333,6 +350,8 @@ ISC
 
 - [Hacker News API](https://github.com/HackerNews/API)
 - [Product Hunt API](https://api.producthunt.com/v2/docs)
+- [GitHub Trending](https://github.com/trending)
+- [Cheerio (Web Scraping)](https://cheerio.js.org/)
 - [Nodemailer Docs](https://nodemailer.com/)
 - [Node-cron Docs](https://github.com/node-cron/node-cron)
 - [Cron Expression Builder](https://crontab.guru)
@@ -346,4 +365,4 @@ Questions or issues? Check:
 
 ---
 
-**Built with TypeScript, Product Hunt, Hacker News, and Gmail**
+**Built with TypeScript, Product Hunt, Hacker News, GitHub, and Gmail**
