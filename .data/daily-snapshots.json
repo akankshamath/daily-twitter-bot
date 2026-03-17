@@ -1,0 +1,3333 @@
+{
+  "snapshots": [
+    {
+      "date": "2026-03-13",
+      "companies": [
+        {
+          "id": "openr-ag",
+          "companyName": "openr",
+          "productName": "openrag",
+          "canonicalUrl": "https://www.openr.ag",
+          "summary": "OpenRAG is a comprehensive, single package Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch.",
+          "categories": [
+            "Python",
+            "Developer Tools"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-langflow-ai-openrag",
+              "collectedAt": "2026-03-13T20:00:44.042Z",
+              "companyName": "openr",
+              "repoName": "openrag",
+              "repoUrl": "https://github.com/langflow-ai/openrag",
+              "homepageUrl": "https://www.openr.ag",
+              "description": "OpenRAG is a comprehensive, single package Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch.",
+              "language": "Python",
+              "stars": 2154,
+              "forks": 203,
+              "starsToday": 905,
+              "ownerLogin": "langflow-ai",
+              "ownerType": "Organization",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "phact",
+                  "name": "Sebastián Estévez",
+                  "profileUrl": "https://github.com/phact",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/1313220?v=4",
+                  "company": "DataStax",
+                  "followers": 62,
+                  "contributions": 968,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "edwinjosechittilappilly",
+                  "name": "Edwin Jose",
+                  "profileUrl": "https://github.com/edwinjosechittilappilly",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/15969583?v=4",
+                  "company": "DataStax",
+                  "followers": 79,
+                  "contributions": 459,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "lucaseduoli",
+                  "name": "Lucas Oliveira",
+                  "profileUrl": "https://github.com/lucaseduoli",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/62335616?v=4",
+                  "bio": "React, Flutter, Dart, JS, TS, PHP, Docker | Web and Mobile Developer | Student of Computer Engineering | Owner and creator of Nevit Technology",
+                  "followers": 174,
+                  "contributions": 324,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "mendonk",
+                  "name": "Mendon Kissling",
+                  "profileUrl": "https://github.com/mendonk",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/59585235?v=4",
+                  "company": "@IBM",
+                  "followers": 24,
+                  "contributions": 293,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "aimurphy",
+                  "name": "April I. Murphy",
+                  "profileUrl": "https://github.com/aimurphy",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/36110273?v=4",
+                  "company": "DataStax",
+                  "bio": "Technical Writer. Not a bot.",
+                  "followers": 8,
+                  "contributions": 285,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "phact",
+              "name": "Sebastián Estévez",
+              "profileUrl": "https://github.com/phact",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/1313220?v=4",
+              "company": "DataStax",
+              "followers": 62,
+              "contributions": 968,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "edwinjosechittilappilly",
+              "name": "Edwin Jose",
+              "profileUrl": "https://github.com/edwinjosechittilappilly",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/15969583?v=4",
+              "company": "DataStax",
+              "followers": 79,
+              "contributions": 459,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "lucaseduoli",
+              "name": "Lucas Oliveira",
+              "profileUrl": "https://github.com/lucaseduoli",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/62335616?v=4",
+              "bio": "React, Flutter, Dart, JS, TS, PHP, Docker | Web and Mobile Developer | Student of Computer Engineering | Owner and creator of Nevit Technology",
+              "followers": 174,
+              "contributions": 324,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "mendonk",
+              "name": "Mendon Kissling",
+              "profileUrl": "https://github.com/mendonk",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/59585235?v=4",
+              "company": "@IBM",
+              "followers": 24,
+              "contributions": 293,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "aimurphy",
+              "name": "April I. Murphy",
+              "profileUrl": "https://github.com/aimurphy",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/36110273?v=4",
+              "company": "DataStax",
+              "bio": "Technical Writer. Not a bot.",
+              "followers": 8,
+              "contributions": 285,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 905 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "openr is surfacing as a python company with current public momentum. OpenRAG is a comprehensive, single package Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 905,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "lightpanda-io",
+          "companyName": "lightpanda",
+          "productName": "browser",
+          "canonicalUrl": "https://lightpanda.io",
+          "summary": "Lightpanda: the headless browser designed for AI and automation",
+          "categories": [
+            "Zig",
+            "browser",
+            "browser-automation",
+            "cdp",
+            "headless"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-lightpanda-io-browser",
+              "collectedAt": "2026-03-13T20:00:44.012Z",
+              "companyName": "lightpanda",
+              "repoName": "browser",
+              "repoUrl": "https://github.com/lightpanda-io/browser",
+              "homepageUrl": "https://lightpanda.io",
+              "description": "Lightpanda: the headless browser designed for AI and automation",
+              "language": "Zig",
+              "stars": 15131,
+              "forks": 530,
+              "starsToday": 1175,
+              "ownerLogin": "lightpanda-io",
+              "ownerType": "Organization",
+              "topics": [
+                "browser",
+                "browser-automation",
+                "cdp",
+                "headless",
+                "playwright",
+                "puppeteer",
+                "zig"
+              ],
+              "contributors": [
+                {
+                  "login": "karlseguin",
+                  "name": "Karl Seguin",
+                  "profileUrl": "https://github.com/karlseguin",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/206480?v=4",
+                  "followers": 2400,
+                  "contributions": 1973,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "krichprollsch",
+                  "name": "Pierre Tachoire",
+                  "profileUrl": "https://github.com/krichprollsch",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/562696?v=4",
+                  "company": "Lightpanda",
+                  "bio": "Backend software engineer, @lightpanda-io Co-founder, Scrooge McDuck @clermontech",
+                  "followers": 209,
+                  "contributions": 1698,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "francisbouvier",
+                  "name": "Francis Bouvier",
+                  "profileUrl": "https://github.com/francisbouvier",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/5114029?v=4",
+                  "company": "Lightpanda",
+                  "bio": "CEO @Lightpanda-io. Software developer and entrepreneur.",
+                  "followers": 78,
+                  "contributions": 359,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "mookums",
+                  "name": "muki",
+                  "profileUrl": "https://github.com/mookums",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/26614015?v=4",
+                  "bio": "fsck-ing around",
+                  "followers": 85,
+                  "contributions": 217,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "nikneym",
+                  "name": "Halil Durak",
+                  "profileUrl": "https://github.com/nikneym",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/4337696?v=4",
+                  "company": "@lightpanda-io",
+                  "bio": "code from a duck with headache",
+                  "followers": 67,
+                  "contributions": 194,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "karlseguin",
+              "name": "Karl Seguin",
+              "profileUrl": "https://github.com/karlseguin",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/206480?v=4",
+              "followers": 2400,
+              "contributions": 1973,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "krichprollsch",
+              "name": "Pierre Tachoire",
+              "profileUrl": "https://github.com/krichprollsch",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/562696?v=4",
+              "company": "Lightpanda",
+              "bio": "Backend software engineer, @lightpanda-io Co-founder, Scrooge McDuck @clermontech",
+              "followers": 209,
+              "contributions": 1698,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "francisbouvier",
+              "name": "Francis Bouvier",
+              "profileUrl": "https://github.com/francisbouvier",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/5114029?v=4",
+              "company": "Lightpanda",
+              "bio": "CEO @Lightpanda-io. Software developer and entrepreneur.",
+              "followers": 78,
+              "contributions": 359,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "mookums",
+              "name": "muki",
+              "profileUrl": "https://github.com/mookums",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/26614015?v=4",
+              "bio": "fsck-ing around",
+              "followers": 85,
+              "contributions": 217,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "nikneym",
+              "name": "Halil Durak",
+              "profileUrl": "https://github.com/nikneym",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/4337696?v=4",
+              "company": "@lightpanda-io",
+              "bio": "code from a duck with headache",
+              "followers": 67,
+              "contributions": 194,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 1,175 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "lightpanda is surfacing as a zig company with current public momentum. Lightpanda: the headless browser designed for AI and automation",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 1175,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "keyboardio",
+          "companyName": "keyboardio",
+          "productName": "superpowers",
+          "canonicalUrl": "https://github.com/obra/superpowers",
+          "summary": "An agentic skills framework & software development methodology that works.",
+          "categories": [
+            "Shell",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-obra-superpowers",
+              "collectedAt": "2026-03-13T20:00:44.110Z",
+              "companyName": "keyboardio",
+              "repoName": "superpowers",
+              "repoUrl": "https://github.com/obra/superpowers",
+              "description": "An agentic skills framework & software development methodology that works.",
+              "language": "Shell",
+              "stars": 81705,
+              "forks": 6344,
+              "starsToday": 2096,
+              "ownerLogin": "obra",
+              "ownerType": "User",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "obra",
+                  "name": "Jesse Vincent",
+                  "profileUrl": "https://github.com/obra",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
+                  "company": "@keyboardio ",
+                  "followers": 3077,
+                  "contributions": 304,
+                  "role": "founder",
+                  "source": "github"
+                },
+                {
+                  "login": "arittr",
+                  "name": "Drew Ritter",
+                  "profileUrl": "https://github.com/arittr",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/5742859?v=4",
+                  "followers": 37,
+                  "contributions": 15,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "clkao",
+                  "name": "Chia-liang Kao",
+                  "profileUrl": "https://github.com/clkao",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/69736?v=4",
+                  "company": "Recce",
+                  "followers": 637,
+                  "contributions": 8,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "jjshanks",
+                  "name": "Joshua Shanks",
+                  "profileUrl": "https://github.com/jjshanks",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/62661?v=4",
+                  "company": "Protect AI",
+                  "followers": 72,
+                  "contributions": 3,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "claude",
+                  "name": "Claude",
+                  "profileUrl": "https://github.com/claude",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/81847?v=4",
+                  "company": "@anthropics",
+                  "followers": 46921,
+                  "contributions": 2,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [
+            {
+              "login": "obra",
+              "name": "Jesse Vincent",
+              "profileUrl": "https://github.com/obra",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
+              "company": "@keyboardio ",
+              "followers": 3077,
+              "contributions": 304,
+              "role": "founder",
+              "source": "github"
+            }
+          ],
+          "githubContributors": [
+            {
+              "login": "obra",
+              "name": "Jesse Vincent",
+              "profileUrl": "https://github.com/obra",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
+              "company": "@keyboardio ",
+              "followers": 3077,
+              "contributions": 304,
+              "role": "founder",
+              "source": "github"
+            },
+            {
+              "login": "arittr",
+              "name": "Drew Ritter",
+              "profileUrl": "https://github.com/arittr",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/5742859?v=4",
+              "followers": 37,
+              "contributions": 15,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "clkao",
+              "name": "Chia-liang Kao",
+              "profileUrl": "https://github.com/clkao",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69736?v=4",
+              "company": "Recce",
+              "followers": 637,
+              "contributions": 8,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "jjshanks",
+              "name": "Joshua Shanks",
+              "profileUrl": "https://github.com/jjshanks",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/62661?v=4",
+              "company": "Protect AI",
+              "followers": 72,
+              "contributions": 3,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "claude",
+              "name": "Claude",
+              "profileUrl": "https://github.com/claude",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/81847?v=4",
+              "company": "@anthropics",
+              "followers": 46921,
+              "contributions": 2,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 2,096 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "keyboardio is surfacing as a shell company with current public momentum. An agentic skills framework & software development methodology that works.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 2096,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "apilayer-com",
+          "companyName": "apilayer",
+          "productName": "public-apis",
+          "canonicalUrl": "https://APILayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo",
+          "summary": "A collective list of free APIs",
+          "categories": [
+            "Python",
+            "api",
+            "apis",
+            "dataset",
+            "development"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-public-apis-public-apis",
+              "collectedAt": "2026-03-13T20:00:44.082Z",
+              "companyName": "apilayer",
+              "repoName": "public-apis",
+              "repoUrl": "https://github.com/public-apis/public-apis",
+              "homepageUrl": "https://APILayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo",
+              "description": "A collective list of free APIs",
+              "language": "Python",
+              "stars": 409262,
+              "forks": 44217,
+              "starsToday": 895,
+              "ownerLogin": "public-apis",
+              "ownerType": "Organization",
+              "topics": [
+                "api",
+                "apis",
+                "dataset",
+                "development",
+                "free",
+                "list",
+                "lists",
+                "open-source",
+                "public",
+                "public-api",
+                "public-apis",
+                "resources",
+                "software"
+              ],
+              "contributors": [
+                {
+                  "login": "matheusfelipeog",
+                  "name": "Matheus Felipe",
+                  "profileUrl": "https://github.com/matheusfelipeog",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/50463866?v=4",
+                  "bio": "I'm observing 👁",
+                  "followers": 963,
+                  "contributions": 826,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "davemachado",
+                  "name": "Dave Machado",
+                  "profileUrl": "https://github.com/davemachado",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/15134885?v=4",
+                  "bio": "The generation of random numbers is too important to be left to chance.",
+                  "followers": 843,
+                  "contributions": 683,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "pawelborkar",
+                  "name": "Pawel Borkar",
+                  "profileUrl": "https://github.com/pawelborkar",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/36134699?v=4",
+                  "bio": "The more I know, the more I realize how less I know.",
+                  "followers": 351,
+                  "contributions": 150,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "jbrooksuk",
+                  "name": "James Brooks",
+                  "profileUrl": "https://github.com/jbrooksuk",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/246103?v=4",
+                  "company": "@laravel",
+                  "bio": "Head of Enterprise Enablement @laravel.\r\nFounder of @CachetHQ 🚦\r\nCreator of artisan.page\r\nOrganiser of @phpstoke ",
+                  "followers": 2311,
+                  "contributions": 135,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "marekdano",
+                  "name": "Marek Dano",
+                  "profileUrl": "https://github.com/marekdano",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/1914165?v=4",
+                  "company": "IBM",
+                  "bio": "Software engineer mainly JS/TS",
+                  "followers": 264,
+                  "contributions": 133,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "matheusfelipeog",
+              "name": "Matheus Felipe",
+              "profileUrl": "https://github.com/matheusfelipeog",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/50463866?v=4",
+              "bio": "I'm observing 👁",
+              "followers": 963,
+              "contributions": 826,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "davemachado",
+              "name": "Dave Machado",
+              "profileUrl": "https://github.com/davemachado",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/15134885?v=4",
+              "bio": "The generation of random numbers is too important to be left to chance.",
+              "followers": 843,
+              "contributions": 683,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "pawelborkar",
+              "name": "Pawel Borkar",
+              "profileUrl": "https://github.com/pawelborkar",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/36134699?v=4",
+              "bio": "The more I know, the more I realize how less I know.",
+              "followers": 351,
+              "contributions": 150,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "jbrooksuk",
+              "name": "James Brooks",
+              "profileUrl": "https://github.com/jbrooksuk",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/246103?v=4",
+              "company": "@laravel",
+              "bio": "Head of Enterprise Enablement @laravel.\r\nFounder of @CachetHQ 🚦\r\nCreator of artisan.page\r\nOrganiser of @phpstoke ",
+              "followers": 2311,
+              "contributions": 135,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "marekdano",
+              "name": "Marek Dano",
+              "profileUrl": "https://github.com/marekdano",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/1914165?v=4",
+              "company": "IBM",
+              "bio": "Software engineer mainly JS/TS",
+              "followers": 264,
+              "contributions": 133,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 895 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "apilayer is surfacing as a python company with current public momentum. A collective list of free APIs",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 895,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "promptfoo-dev",
+          "companyName": "promptfoo",
+          "productName": "promptfoo",
+          "canonicalUrl": "https://promptfoo.dev",
+          "summary": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+          "categories": [
+            "TypeScript",
+            "ci",
+            "ci-cd",
+            "cicd",
+            "evaluation"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-promptfoo-promptfoo",
+              "collectedAt": "2026-03-13T20:00:44.045Z",
+              "companyName": "promptfoo",
+              "repoName": "promptfoo",
+              "repoUrl": "https://github.com/promptfoo/promptfoo",
+              "homepageUrl": "https://promptfoo.dev",
+              "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+              "language": "TypeScript",
+              "stars": 15067,
+              "forks": 1341,
+              "starsToday": 1850,
+              "ownerLogin": "promptfoo",
+              "ownerType": "Organization",
+              "topics": [
+                "ci",
+                "ci-cd",
+                "cicd",
+                "evaluation",
+                "evaluation-framework",
+                "llm",
+                "llm-eval",
+                "llm-evaluation",
+                "llm-evaluation-framework",
+                "llmops",
+                "pentesting",
+                "prompt-engineering",
+                "prompt-testing",
+                "prompts",
+                "rag",
+                "red-teaming",
+                "testing",
+                "vulnerability-scanners"
+              ],
+              "contributors": [
+                {
+                  "login": "typpo",
+                  "name": "Ian Webster",
+                  "profileUrl": "https://github.com/typpo",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/310310?v=4",
+                  "followers": 947,
+                  "contributions": 2782,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "mldangelo",
+                  "name": "Michael",
+                  "profileUrl": "https://github.com/mldangelo",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/7235481?v=4",
+                  "company": "Promptfoo",
+                  "followers": 797,
+                  "contributions": 2059,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "renovate[bot]",
+                  "name": "renovate[bot]",
+                  "profileUrl": "https://github.com/apps/renovate",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/2740?v=4",
+                  "followers": 0,
+                  "contributions": 539,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "dependabot[bot]",
+                  "name": "dependabot[bot]",
+                  "profileUrl": "https://github.com/apps/dependabot",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                  "followers": 0,
+                  "contributions": 407,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "sklein12",
+                  "name": "sklein12",
+                  "profileUrl": "https://github.com/sklein12",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/1080611?v=4",
+                  "company": "@Discord",
+                  "followers": 22,
+                  "contributions": 321,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "typpo",
+              "name": "Ian Webster",
+              "profileUrl": "https://github.com/typpo",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/310310?v=4",
+              "followers": 947,
+              "contributions": 2782,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "mldangelo",
+              "name": "Michael",
+              "profileUrl": "https://github.com/mldangelo",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/7235481?v=4",
+              "company": "Promptfoo",
+              "followers": 797,
+              "contributions": 2059,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "renovate[bot]",
+              "name": "renovate[bot]",
+              "profileUrl": "https://github.com/apps/renovate",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/2740?v=4",
+              "followers": 0,
+              "contributions": 539,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "dependabot[bot]",
+              "name": "dependabot[bot]",
+              "profileUrl": "https://github.com/apps/dependabot",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+              "followers": 0,
+              "contributions": 407,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "sklein12",
+              "name": "sklein12",
+              "profileUrl": "https://github.com/sklein12",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/1080611?v=4",
+              "company": "@Discord",
+              "followers": 22,
+              "contributions": 321,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 1,850 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "promptfoo is surfacing as a typescript company with current public momentum. Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 1850,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "inspiration-k-che-daniel-klas",
+          "companyName": "Inspiration Küche Daniel Klas",
+          "productName": "agency-agents",
+          "canonicalUrl": "https://github.com/msitarzewski/agency-agents",
+          "summary": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "categories": [
+            "Shell",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-msitarzewski-agency-agents",
+              "collectedAt": "2026-03-13T20:00:43.959Z",
+              "companyName": "Inspiration Küche Daniel Klas",
+              "repoName": "agency-agents",
+              "repoUrl": "https://github.com/msitarzewski/agency-agents",
+              "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+              "language": "Shell",
+              "stars": 39435,
+              "forks": 5922,
+              "starsToday": 5758,
+              "ownerLogin": "msitarzewski",
+              "ownerType": "User",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "msitarzewski",
+                  "name": "Michael Sitarzewski",
+                  "profileUrl": "https://github.com/msitarzewski",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/1972242?v=4",
+                  "bio": "Builder with 30+ yrs experience. Startup founder, Techstars alum, lifelong tinkerer. I enjoy turning ideas into working products—sometimes companies.",
+                  "followers": 1247,
+                  "contributions": 82,
+                  "role": "founder",
+                  "source": "github"
+                },
+                {
+                  "login": "jnMetaCode",
+                  "name": "jnMetaCode",
+                  "profileUrl": "https://github.com/jnMetaCode",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/12096460?v=4",
+                  "bio": "Full-stack developer | AI & open-source enthusiast",
+                  "followers": 97,
+                  "contributions": 21,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "4shil",
+                  "name": "Ashil K Lal",
+                  "profileUrl": "https://github.com/4shil",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/166588383?v=4",
+                  "bio": "Making Dreams a Reality",
+                  "followers": 53,
+                  "contributions": 9,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "aryanvr961",
+                  "name": "Aryan Verma",
+                  "profileUrl": "https://github.com/aryanvr961",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/256591019?v=4",
+                  "bio": "Still learning. Already architecting.\r\n Student | Open Source Contributor",
+                  "followers": 0,
+                  "contributions": 4,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "DKFuH",
+                  "name": "Daniel Klas",
+                  "profileUrl": "https://github.com/DKFuH",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/44840246?v=4",
+                  "company": "Inspiration Küche Daniel Klas",
+                  "followers": 0,
+                  "contributions": 4,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [
+            {
+              "login": "msitarzewski",
+              "name": "Michael Sitarzewski",
+              "profileUrl": "https://github.com/msitarzewski",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/1972242?v=4",
+              "bio": "Builder with 30+ yrs experience. Startup founder, Techstars alum, lifelong tinkerer. I enjoy turning ideas into working products—sometimes companies.",
+              "followers": 1247,
+              "contributions": 82,
+              "role": "founder",
+              "source": "github"
+            }
+          ],
+          "githubContributors": [
+            {
+              "login": "msitarzewski",
+              "name": "Michael Sitarzewski",
+              "profileUrl": "https://github.com/msitarzewski",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/1972242?v=4",
+              "bio": "Builder with 30+ yrs experience. Startup founder, Techstars alum, lifelong tinkerer. I enjoy turning ideas into working products—sometimes companies.",
+              "followers": 1247,
+              "contributions": 82,
+              "role": "founder",
+              "source": "github"
+            },
+            {
+              "login": "jnMetaCode",
+              "name": "jnMetaCode",
+              "profileUrl": "https://github.com/jnMetaCode",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/12096460?v=4",
+              "bio": "Full-stack developer | AI & open-source enthusiast",
+              "followers": 97,
+              "contributions": 21,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "4shil",
+              "name": "Ashil K Lal",
+              "profileUrl": "https://github.com/4shil",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/166588383?v=4",
+              "bio": "Making Dreams a Reality",
+              "followers": 53,
+              "contributions": 9,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "aryanvr961",
+              "name": "Aryan Verma",
+              "profileUrl": "https://github.com/aryanvr961",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/256591019?v=4",
+              "bio": "Still learning. Already architecting.\r\n Student | Open Source Contributor",
+              "followers": 0,
+              "contributions": 4,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "DKFuH",
+              "name": "Daniel Klas",
+              "profileUrl": "https://github.com/DKFuH",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/44840246?v=4",
+              "company": "Inspiration Küche Daniel Klas",
+              "followers": 0,
+              "contributions": 4,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 5,758 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Inspiration Küche Daniel Klas is surfacing as a shell company with current public momentum. A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 5758,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "peking-university",
+          "companyName": "Peking University",
+          "productName": "BitNet",
+          "canonicalUrl": "https://github.com/microsoft/BitNet",
+          "summary": "Official inference framework for 1-bit LLMs",
+          "categories": [
+            "Python",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-microsoft-BitNet",
+              "collectedAt": "2026-03-13T20:00:44.083Z",
+              "companyName": "Peking University",
+              "repoName": "BitNet",
+              "repoUrl": "https://github.com/microsoft/BitNet",
+              "description": "Official inference framework for 1-bit LLMs",
+              "language": "Python",
+              "stars": 33740,
+              "forks": 2851,
+              "starsToday": 2223,
+              "ownerLogin": "microsoft",
+              "ownerType": "Organization",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "potassiummmm",
+                  "name": "Hansong Zhou",
+                  "profileUrl": "https://github.com/potassiummmm",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/54800242?v=4",
+                  "company": "Peking University",
+                  "followers": 143,
+                  "contributions": 19,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "younesbelkada",
+                  "name": "Younes B",
+                  "profileUrl": "https://github.com/younesbelkada",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/49240599?v=4",
+                  "followers": 854,
+                  "contributions": 15,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "tsong-ms",
+                  "name": "tsong-ms",
+                  "profileUrl": "https://github.com/tsong-ms",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/84831885?v=4",
+                  "followers": 60,
+                  "contributions": 14,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "XsquirrelC",
+                  "name": "XsquirrelC",
+                  "profileUrl": "https://github.com/XsquirrelC",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178687198?v=4",
+                  "company": "Shanghai Jiao Tong University",
+                  "followers": 3,
+                  "contributions": 6,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "sd983527",
+                  "name": "Yan Xia",
+                  "profileUrl": "https://github.com/sd983527",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/59006636?v=4",
+                  "company": "Microsoft Research Asia",
+                  "followers": 32,
+                  "contributions": 6,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "potassiummmm",
+              "name": "Hansong Zhou",
+              "profileUrl": "https://github.com/potassiummmm",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/54800242?v=4",
+              "company": "Peking University",
+              "followers": 143,
+              "contributions": 19,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "younesbelkada",
+              "name": "Younes B",
+              "profileUrl": "https://github.com/younesbelkada",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/49240599?v=4",
+              "followers": 854,
+              "contributions": 15,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "tsong-ms",
+              "name": "tsong-ms",
+              "profileUrl": "https://github.com/tsong-ms",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/84831885?v=4",
+              "followers": 60,
+              "contributions": 14,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "XsquirrelC",
+              "name": "XsquirrelC",
+              "profileUrl": "https://github.com/XsquirrelC",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/178687198?v=4",
+              "company": "Shanghai Jiao Tong University",
+              "followers": 3,
+              "contributions": 6,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "sd983527",
+              "name": "Yan Xia",
+              "profileUrl": "https://github.com/sd983527",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/59006636?v=4",
+              "company": "Microsoft Research Asia",
+              "followers": 32,
+              "contributions": 6,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 2,223 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Peking University is surfacing as a python company with current public momentum. Official inference framework for 1-bit LLMs",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 88,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 60
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 2223,
+            "contributorDelta": 5,
+            "scoreDelta": 88
+          }
+        },
+        {
+          "id": "dolthub-com",
+          "companyName": "dolthub",
+          "productName": "dolt",
+          "canonicalUrl": "https://www.dolthub.com",
+          "summary": "Dolt – Git for Data",
+          "categories": [
+            "Go",
+            "agent-memory",
+            "agent-memory-server",
+            "ai-agents",
+            "ai-database"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-dolthub-dolt",
+              "collectedAt": "2026-03-13T20:00:44.187Z",
+              "companyName": "dolthub",
+              "repoName": "dolt",
+              "repoUrl": "https://github.com/dolthub/dolt",
+              "homepageUrl": "https://www.dolthub.com",
+              "description": "Dolt – Git for Data",
+              "language": "Go",
+              "stars": 20999,
+              "forks": 669,
+              "starsToday": 58,
+              "ownerLogin": "dolthub",
+              "ownerType": "Organization",
+              "topics": [
+                "agent-memory",
+                "agent-memory-server",
+                "ai-agents",
+                "ai-database",
+                "data-version-control",
+                "data-versioning",
+                "database",
+                "database-version-control",
+                "database-versioning",
+                "decentralized-database",
+                "git",
+                "git-database",
+                "git-for-data",
+                "git-for-databases",
+                "git-sql",
+                "immutable-database",
+                "mariadb",
+                "mysql",
+                "sql",
+                "version-controlled-database"
+              ],
+              "contributors": [
+                {
+                  "login": "zachmu",
+                  "name": "Zach Musgrave",
+                  "profileUrl": "https://github.com/zachmu",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/474773?v=4",
+                  "company": "@dolthub ",
+                  "bio": "Software engineer building Dolt and DoltHub",
+                  "followers": 124,
+                  "contributions": 4308,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "andy-wm-arthur",
+                  "name": "AndyA",
+                  "profileUrl": "https://github.com/andy-wm-arthur",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/8837413?v=4",
+                  "company": "@dolthub ",
+                  "followers": 54,
+                  "contributions": 2717,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "fulghum",
+                  "name": "Jason Fulghum",
+                  "profileUrl": "https://github.com/fulghum",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/193449?v=4",
+                  "company": "DoltHub",
+                  "followers": 223,
+                  "contributions": 2261,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "coffeegoddd",
+                  "name": "Dustin Brown",
+                  "profileUrl": "https://github.com/coffeegoddd",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/43383835?v=4",
+                  "company": "DoltHub",
+                  "bio": "Software engineering is a service business. My role as an engineer is to design and build applications for clients that meet their desired outcomes.",
+                  "followers": 23,
+                  "contributions": 2117,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "reltuk",
+                  "name": "Aaron Son",
+                  "profileUrl": "https://github.com/reltuk",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/1150979?v=4",
+                  "followers": 35,
+                  "contributions": 2100,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "zachmu",
+              "name": "Zach Musgrave",
+              "profileUrl": "https://github.com/zachmu",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/474773?v=4",
+              "company": "@dolthub ",
+              "bio": "Software engineer building Dolt and DoltHub",
+              "followers": 124,
+              "contributions": 4308,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "andy-wm-arthur",
+              "name": "AndyA",
+              "profileUrl": "https://github.com/andy-wm-arthur",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/8837413?v=4",
+              "company": "@dolthub ",
+              "followers": 54,
+              "contributions": 2717,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "fulghum",
+              "name": "Jason Fulghum",
+              "profileUrl": "https://github.com/fulghum",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/193449?v=4",
+              "company": "DoltHub",
+              "followers": 223,
+              "contributions": 2261,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "coffeegoddd",
+              "name": "Dustin Brown",
+              "profileUrl": "https://github.com/coffeegoddd",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/43383835?v=4",
+              "company": "DoltHub",
+              "bio": "Software engineering is a service business. My role as an engineer is to design and build applications for clients that meet their desired outcomes.",
+              "followers": 23,
+              "contributions": 2117,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "reltuk",
+              "name": "Aaron Son",
+              "profileUrl": "https://github.com/reltuk",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/1150979?v=4",
+              "followers": 35,
+              "contributions": 2100,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 58 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "dolthub is surfacing as a go company with current public momentum. Dolt – Git for Data",
+          "recommendedAction": "research",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 60,
+            "emerging": 15,
+            "acceleration": 93,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 58,
+            "contributorDelta": 5,
+            "scoreDelta": 60
+          }
+        },
+        {
+          "id": "burnlink",
+          "companyName": "BurnLink",
+          "productName": "BurnLink",
+          "canonicalUrl": "https://www.producthunt.com/products/burnlink",
+          "summary": "Share encrypted files that are ephemeral",
+          "categories": [
+            "Software"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "ph-144888",
+              "collectedAt": "2026-03-13T20:00:41.725Z",
+              "companyName": "BurnLink",
+              "productName": "BurnLink",
+              "launchUrl": "https://www.producthunt.com/products/burnlink",
+              "description": "Share encrypted files that are ephemeral",
+              "tagline": "Share encrypted files that are ephemeral",
+              "topics": [],
+              "makerName": "Joy G. Majumdar",
+              "votesCount": 300,
+              "commentsCount": 30,
+              "createdAt": "2026-03-05T19:07:04.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "joy-g.-majumdar",
+              "name": "Joy G. Majumdar",
+              "profileUrl": "https://www.producthunt.com/products/burnlink",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Product Hunt launch with 300 estimated votes and 30 comments.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "BurnLink is surfacing as a software company with current public momentum. Share encrypted files that are ephemeral",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 34,
+            "emerging": 55,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 34
+          }
+        },
+        {
+          "id": "parker-by-perfectly",
+          "companyName": "Parker by Perfectly",
+          "productName": "Parker by Perfectly",
+          "canonicalUrl": "https://www.producthunt.com/products/parker-by-perfectly",
+          "summary": "Your AI career super-connector",
+          "categories": [
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "ph-91545",
+              "collectedAt": "2026-03-13T20:00:41.725Z",
+              "companyName": "Parker by Perfectly",
+              "productName": "Parker by Perfectly",
+              "launchUrl": "https://www.producthunt.com/products/parker-by-perfectly",
+              "description": "Your AI career super-connector",
+              "tagline": "Your AI career super-connector",
+              "topics": [],
+              "makerName": "Garry Tan",
+              "votesCount": 280,
+              "commentsCount": 28,
+              "createdAt": "2026-03-12T22:20:12.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "garry-tan",
+              "name": "Garry Tan",
+              "profileUrl": "https://www.producthunt.com/products/parker-by-perfectly",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Product Hunt launch with 280 estimated votes and 28 comments.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Parker by Perfectly is surfacing as a ai company with current public momentum. Your AI career super-connector",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 33,
+            "emerging": 53,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 33
+          }
+        },
+        {
+          "id": "perfectly",
+          "companyName": "Perfectly",
+          "productName": "Perfectly",
+          "canonicalUrl": "https://www.producthunt.com/products/perfectly",
+          "summary": "The first AI-native recruiting agency. Fill roles in days.",
+          "categories": [
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "ph-847091",
+              "collectedAt": "2026-03-13T20:00:41.725Z",
+              "companyName": "Perfectly",
+              "productName": "Perfectly",
+              "launchUrl": "https://www.producthunt.com/products/perfectly",
+              "description": "The first AI-native recruiting agency. Fill roles in days.",
+              "tagline": "The first AI-native recruiting agency. Fill roles in days.",
+              "topics": [],
+              "makerName": "Garry Tan",
+              "votesCount": 260,
+              "commentsCount": 26,
+              "createdAt": "2026-03-12T22:08:51.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "garry-tan",
+              "name": "Garry Tan",
+              "profileUrl": "https://www.producthunt.com/products/perfectly",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Product Hunt launch with 260 estimated votes and 26 comments.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Perfectly is surfacing as a ai company with current public momentum. The first AI-native recruiting agency. Fill roles in days.",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 32,
+            "emerging": 52,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 32
+          }
+        },
+        {
+          "id": "ask-maps-by-google",
+          "companyName": "Ask Maps by Google",
+          "productName": "Ask Maps by Google",
+          "canonicalUrl": "https://www.producthunt.com/products/ask-maps-by-google",
+          "summary": "Ask Maps questions, drive with immersive navigation.",
+          "categories": [
+            "Software"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "ph-606493",
+              "collectedAt": "2026-03-13T20:00:41.725Z",
+              "companyName": "Ask Maps by Google",
+              "productName": "Ask Maps by Google",
+              "launchUrl": "https://www.producthunt.com/products/ask-maps-by-google",
+              "description": "Ask Maps questions, drive with immersive navigation.",
+              "tagline": "Ask Maps questions, drive with immersive navigation.",
+              "topics": [],
+              "makerName": "Rohan Chaubey",
+              "votesCount": 240,
+              "commentsCount": 24,
+              "createdAt": "2026-03-12T12:53:18.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "rohan-chaubey",
+              "name": "Rohan Chaubey",
+              "profileUrl": "https://www.producthunt.com/products/ask-maps-by-google",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Product Hunt launch with 240 estimated votes and 24 comments.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Ask Maps by Google is surfacing as a software company with current public momentum. Ask Maps questions, drive with immersive navigation.",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 31,
+            "emerging": 50,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 31
+          }
+        },
+        {
+          "id": "pinnacle",
+          "companyName": "Pinnacle",
+          "productName": "Pinnacle",
+          "canonicalUrl": "https://www.producthunt.com/products/pinnacle",
+          "summary": "Turn your phone into a brain performance coach",
+          "categories": [
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "ph-528480",
+              "collectedAt": "2026-03-13T20:00:41.725Z",
+              "companyName": "Pinnacle",
+              "productName": "Pinnacle",
+              "launchUrl": "https://www.producthunt.com/products/pinnacle",
+              "description": "Turn your phone into a brain performance coach",
+              "tagline": "Turn your phone into a brain performance coach",
+              "topics": [],
+              "makerName": "Ben Lang",
+              "votesCount": 220,
+              "commentsCount": 22,
+              "createdAt": "2026-02-25T15:43:33.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "ben-lang",
+              "name": "Ben Lang",
+              "profileUrl": "https://www.producthunt.com/products/pinnacle",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Product Hunt launch with 220 estimated votes and 22 comments.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Pinnacle is surfacing as a ai company with current public momentum. Turn your phone into a brain performance coach",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 30,
+            "emerging": 48,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 30
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-03-16",
+      "companies": [
+        {
+          "id": "mirofish-ai",
+          "companyName": "mirofish",
+          "productName": "MiroFish",
+          "canonicalUrl": "https://mirofish.ai",
+          "summary": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+          "categories": [
+            "Python",
+            "agent-memory",
+            "financial-forecasting",
+            "future-prediction",
+            "knowledge-graph"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-666ghj-MiroFish",
+              "collectedAt": "2026-03-17T01:01:44.354Z",
+              "companyName": "mirofish",
+              "repoName": "MiroFish",
+              "repoUrl": "https://github.com/666ghj/MiroFish",
+              "homepageUrl": "https://mirofish.ai",
+              "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+              "language": "Python",
+              "stars": 29990,
+              "forks": 3666,
+              "starsToday": 3260,
+              "ownerLogin": "666ghj",
+              "ownerType": "User",
+              "topics": [
+                "agent-memory",
+                "financial-forecasting",
+                "future-prediction",
+                "knowledge-graph",
+                "llms",
+                "multi-agent-simulation",
+                "public-opinion-analysis",
+                "python3",
+                "social-prediction",
+                "swarm-intelligence"
+              ],
+              "contributors": [
+                {
+                  "login": "666ghj",
+                  "name": "BaiFu",
+                  "profileUrl": "https://github.com/666ghj",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/110395318?v=4",
+                  "company": "BUPT, Shanda",
+                  "bio": "Do what you love, and love what you do.",
+                  "followers": 2420,
+                  "contributions": 218,
+                  "role": "founder",
+                  "source": "github"
+                },
+                {
+                  "login": "cursoragent",
+                  "name": "Cursor Agent",
+                  "profileUrl": "https://github.com/cursoragent",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/199161495?v=4",
+                  "followers": 2036,
+                  "contributions": 1,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [
+            {
+              "login": "666ghj",
+              "name": "BaiFu",
+              "profileUrl": "https://github.com/666ghj",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/110395318?v=4",
+              "company": "BUPT, Shanda",
+              "bio": "Do what you love, and love what you do.",
+              "followers": 2420,
+              "contributions": 218,
+              "role": "founder",
+              "source": "github"
+            }
+          ],
+          "githubContributors": [
+            {
+              "login": "666ghj",
+              "name": "BaiFu",
+              "profileUrl": "https://github.com/666ghj",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/110395318?v=4",
+              "company": "BUPT, Shanda",
+              "bio": "Do what you love, and love what you do.",
+              "followers": 2420,
+              "contributions": 218,
+              "role": "founder",
+              "source": "github"
+            },
+            {
+              "login": "cursoragent",
+              "name": "Cursor Agent",
+              "profileUrl": "https://github.com/cursoragent",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/199161495?v=4",
+              "followers": 2036,
+              "contributions": 1,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 3,260 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "mirofish is surfacing as a python company with current public momentum. A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 3260,
+            "contributorDelta": 2,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "claude-mem-ai",
+          "companyName": "claude-mem",
+          "productName": "claude-mem",
+          "canonicalUrl": "https://claude-mem.ai",
+          "summary": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+          "categories": [
+            "TypeScript",
+            "ai",
+            "ai-agents",
+            "ai-memory",
+            "anthropic"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-thedotmack-claude-mem",
+              "collectedAt": "2026-03-17T01:01:44.745Z",
+              "companyName": "claude-mem",
+              "repoName": "claude-mem",
+              "repoUrl": "https://github.com/thedotmack/claude-mem",
+              "homepageUrl": "https://claude-mem.ai",
+              "description": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+              "language": "TypeScript",
+              "stars": 36809,
+              "forks": 2643,
+              "starsToday": 1045,
+              "ownerLogin": "thedotmack",
+              "ownerType": "User",
+              "topics": [
+                "ai",
+                "ai-agents",
+                "ai-memory",
+                "anthropic",
+                "artificial-intelligence",
+                "chromadb",
+                "claude",
+                "claude-agent-sdk",
+                "claude-agents",
+                "claude-code",
+                "claude-code-plugin",
+                "claude-skills",
+                "embeddings",
+                "long-term-memory",
+                "mem0",
+                "memory-engine",
+                "openmemory",
+                "rag",
+                "sqlite",
+                "supermemory"
+              ],
+              "contributors": [
+                {
+                  "login": "thedotmack",
+                  "name": "Alex Newman",
+                  "profileUrl": "https://github.com/thedotmack",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/683968?v=4",
+                  "followers": 789,
+                  "contributions": 1279,
+                  "role": "founder",
+                  "source": "github"
+                },
+                {
+                  "login": "Copilot",
+                  "name": "Copilot",
+                  "profileUrl": "https://github.com/apps/copilot-swe-agent",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                  "contributions": 56,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "rodboev",
+                  "name": "Rod Boev",
+                  "profileUrl": "https://github.com/rodboev",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/106971?v=4",
+                  "followers": 25,
+                  "contributions": 14,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "github-actions[bot]",
+                  "name": "github-actions[bot]",
+                  "profileUrl": "https://github.com/apps/github-actions",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+                  "followers": 0,
+                  "contributions": 8,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "rajivsinclair",
+                  "name": "Rajiv Sinclair",
+                  "profileUrl": "https://github.com/rajivsinclair",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/4379424?v=4",
+                  "company": "Public Data Works",
+                  "bio": "building investigative data tools for the public @invinst @ipno-llead @City-Bureau ",
+                  "followers": 62,
+                  "contributions": 6,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [
+            {
+              "login": "thedotmack",
+              "name": "Alex Newman",
+              "profileUrl": "https://github.com/thedotmack",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/683968?v=4",
+              "followers": 789,
+              "contributions": 1279,
+              "role": "founder",
+              "source": "github"
+            }
+          ],
+          "githubContributors": [
+            {
+              "login": "thedotmack",
+              "name": "Alex Newman",
+              "profileUrl": "https://github.com/thedotmack",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/683968?v=4",
+              "followers": 789,
+              "contributions": 1279,
+              "role": "founder",
+              "source": "github"
+            },
+            {
+              "login": "Copilot",
+              "name": "Copilot",
+              "profileUrl": "https://github.com/apps/copilot-swe-agent",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+              "contributions": 56,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "rodboev",
+              "name": "Rod Boev",
+              "profileUrl": "https://github.com/rodboev",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/106971?v=4",
+              "followers": 25,
+              "contributions": 14,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "github-actions[bot]",
+              "name": "github-actions[bot]",
+              "profileUrl": "https://github.com/apps/github-actions",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+              "followers": 0,
+              "contributions": 8,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "rajivsinclair",
+              "name": "Rajiv Sinclair",
+              "profileUrl": "https://github.com/rajivsinclair",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/4379424?v=4",
+              "company": "Public Data Works",
+              "bio": "building investigative data tools for the public @invinst @ipno-llead @City-Bureau ",
+              "followers": 62,
+              "contributions": 6,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 1,045 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "claude-mem is surfacing as a typescript company with current public momentum. A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 1045,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "cosmistack",
+          "companyName": "Cosmistack",
+          "productName": "project-nomad",
+          "canonicalUrl": "https://github.com/Crosstalk-Solutions/project-nomad",
+          "summary": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+          "categories": [
+            "TypeScript",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-Crosstalk-Solutions-project-nomad",
+              "collectedAt": "2026-03-17T01:01:44.578Z",
+              "companyName": "Cosmistack",
+              "repoName": "project-nomad",
+              "repoUrl": "https://github.com/Crosstalk-Solutions/project-nomad",
+              "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+              "language": "TypeScript",
+              "stars": 1827,
+              "forks": 167,
+              "starsToday": 775,
+              "ownerLogin": "Crosstalk-Solutions",
+              "ownerType": "Organization",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "jakeaturner",
+                  "name": "Jake Turner",
+                  "profileUrl": "https://github.com/jakeaturner",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/52841588?v=4",
+                  "company": "@Cosmistack ",
+                  "bio": "Co-founder & full stack dev @Cosmistack. Director of Engineering @LibreTexts",
+                  "followers": 0,
+                  "contributions": 205,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "chriscrosstalk",
+                  "name": "chriscrosstalk",
+                  "profileUrl": "https://github.com/chriscrosstalk",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/49691103?v=4",
+                  "followers": 38,
+                  "contributions": 63,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "cosmistack-bot",
+                  "name": "Cosmistack Bot",
+                  "profileUrl": "https://github.com/cosmistack-bot",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/175166532?v=4",
+                  "company": "@Cosmistack ",
+                  "followers": 8,
+                  "contributions": 54,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "dependabot[bot]",
+                  "name": "dependabot[bot]",
+                  "profileUrl": "https://github.com/apps/dependabot",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                  "followers": 0,
+                  "contributions": 22,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "Copilot",
+                  "name": "Copilot",
+                  "profileUrl": "https://github.com/apps/copilot-swe-agent",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+                  "contributions": 1,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "jakeaturner",
+              "name": "Jake Turner",
+              "profileUrl": "https://github.com/jakeaturner",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/52841588?v=4",
+              "company": "@Cosmistack ",
+              "bio": "Co-founder & full stack dev @Cosmistack. Director of Engineering @LibreTexts",
+              "followers": 0,
+              "contributions": 205,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "chriscrosstalk",
+              "name": "chriscrosstalk",
+              "profileUrl": "https://github.com/chriscrosstalk",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/49691103?v=4",
+              "followers": 38,
+              "contributions": 63,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "cosmistack-bot",
+              "name": "Cosmistack Bot",
+              "profileUrl": "https://github.com/cosmistack-bot",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/175166532?v=4",
+              "company": "@Cosmistack ",
+              "followers": 8,
+              "contributions": 54,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "dependabot[bot]",
+              "name": "dependabot[bot]",
+              "profileUrl": "https://github.com/apps/dependabot",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+              "followers": 0,
+              "contributions": 22,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "Copilot",
+              "name": "Copilot",
+              "profileUrl": "https://github.com/apps/copilot-swe-agent",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
+              "contributions": 1,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 775 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Cosmistack is surfacing as a typescript company with current public momentum. Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 775,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "keyboardio",
+          "companyName": "keyboardio",
+          "productName": "superpowers",
+          "canonicalUrl": "https://github.com/obra/superpowers",
+          "summary": "An agentic skills framework & software development methodology that works.",
+          "categories": [
+            "Shell",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-obra-superpowers",
+              "collectedAt": "2026-03-17T01:01:44.774Z",
+              "companyName": "keyboardio",
+              "repoName": "superpowers",
+              "repoUrl": "https://github.com/obra/superpowers",
+              "description": "An agentic skills framework & software development methodology that works.",
+              "language": "Shell",
+              "stars": 88620,
+              "forks": 7001,
+              "starsToday": 3152,
+              "ownerLogin": "obra",
+              "ownerType": "User",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "obra",
+                  "name": "Jesse Vincent",
+                  "profileUrl": "https://github.com/obra",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
+                  "company": "@keyboardio ",
+                  "followers": 3305,
+                  "contributions": 305,
+                  "role": "founder",
+                  "source": "github"
+                },
+                {
+                  "login": "arittr",
+                  "name": "Drew Ritter",
+                  "profileUrl": "https://github.com/arittr",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/5742859?v=4",
+                  "followers": 47,
+                  "contributions": 15,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "clkao",
+                  "name": "Chia-liang Kao",
+                  "profileUrl": "https://github.com/clkao",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/69736?v=4",
+                  "company": "Recce",
+                  "followers": 644,
+                  "contributions": 8,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "jjshanks",
+                  "name": "Joshua Shanks",
+                  "profileUrl": "https://github.com/jjshanks",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/62661?v=4",
+                  "company": "Protect AI",
+                  "followers": 76,
+                  "contributions": 3,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "claude",
+                  "name": "Claude",
+                  "profileUrl": "https://github.com/claude",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/81847?v=4",
+                  "company": "@anthropics",
+                  "followers": 49723,
+                  "contributions": 2,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [
+            {
+              "login": "obra",
+              "name": "Jesse Vincent",
+              "profileUrl": "https://github.com/obra",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
+              "company": "@keyboardio ",
+              "followers": 3305,
+              "contributions": 305,
+              "role": "founder",
+              "source": "github"
+            }
+          ],
+          "githubContributors": [
+            {
+              "login": "obra",
+              "name": "Jesse Vincent",
+              "profileUrl": "https://github.com/obra",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
+              "company": "@keyboardio ",
+              "followers": 3305,
+              "contributions": 305,
+              "role": "founder",
+              "source": "github"
+            },
+            {
+              "login": "arittr",
+              "name": "Drew Ritter",
+              "profileUrl": "https://github.com/arittr",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/5742859?v=4",
+              "followers": 47,
+              "contributions": 15,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "clkao",
+              "name": "Chia-liang Kao",
+              "profileUrl": "https://github.com/clkao",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/69736?v=4",
+              "company": "Recce",
+              "followers": 644,
+              "contributions": 8,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "jjshanks",
+              "name": "Joshua Shanks",
+              "profileUrl": "https://github.com/jjshanks",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/62661?v=4",
+              "company": "Protect AI",
+              "followers": 76,
+              "contributions": 3,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "claude",
+              "name": "Claude",
+              "profileUrl": "https://github.com/claude",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/81847?v=4",
+              "company": "@anthropics",
+              "followers": 49723,
+              "contributions": 2,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 3,152 stars today.",
+            "GitHub momentum improved by 1,056 stars/day versus the prior snapshot."
+          ],
+          "thesis": "keyboardio is surfacing as a shell company with current public momentum. An agentic skills framework & software development methodology that works.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": false,
+            "launchCountDelta": 0,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 1056,
+            "contributorDelta": 0,
+            "scoreDelta": 0
+          }
+        },
+        {
+          "id": "gitnexus-vercel-app",
+          "companyName": "gitnexus",
+          "productName": "GitNexus",
+          "canonicalUrl": "https://gitnexus.vercel.app",
+          "summary": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+          "categories": [
+            "TypeScript",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-abhigyanpatwari-GitNexus",
+              "collectedAt": "2026-03-17T01:01:44.575Z",
+              "companyName": "gitnexus",
+              "repoName": "GitNexus",
+              "repoUrl": "https://github.com/abhigyanpatwari/GitNexus",
+              "homepageUrl": "https://gitnexus.vercel.app",
+              "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+              "language": "TypeScript",
+              "stars": 15603,
+              "forks": 1793,
+              "starsToday": 1860,
+              "ownerLogin": "abhigyanpatwari",
+              "ownerType": "User",
+              "topics": [],
+              "contributors": [
+                {
+                  "login": "abhigyanpatwari",
+                  "name": "Abhigyan Patwari",
+                  "profileUrl": "https://github.com/abhigyanpatwari",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/126312502?v=4",
+                  "bio": "CS student & AI engineer who likes to dig into the guts of systems. If it's interesting, I'll probably try to build something with it.\r\n",
+                  "followers": 266,
+                  "contributions": 211,
+                  "role": "founder",
+                  "source": "github"
+                },
+                {
+                  "login": "magyargergo",
+                  "name": "Gergő Magyar",
+                  "profileUrl": "https://github.com/magyargergo",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/11230420?v=4",
+                  "company": "ITV",
+                  "followers": 14,
+                  "contributions": 26,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "paulrobello",
+                  "name": "Paul Robello",
+                  "profileUrl": "https://github.com/paulrobello",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/955011?v=4",
+                  "company": "PARCOM",
+                  "bio": "Full Stack Engineer / Cloud Solutions Architect",
+                  "followers": 78,
+                  "contributions": 17,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "gunesbizim",
+                  "name": "gunesbizim",
+                  "profileUrl": "https://github.com/gunesbizim",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/37237628?v=4",
+                  "followers": 3,
+                  "contributions": 14,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "L1nusB",
+                  "name": "Linus Beckhaus",
+                  "profileUrl": "https://github.com/L1nusB",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/47142578?v=4",
+                  "followers": 4,
+                  "contributions": 8,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [
+            {
+              "login": "abhigyanpatwari",
+              "name": "Abhigyan Patwari",
+              "profileUrl": "https://github.com/abhigyanpatwari",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/126312502?v=4",
+              "bio": "CS student & AI engineer who likes to dig into the guts of systems. If it's interesting, I'll probably try to build something with it.\r\n",
+              "followers": 266,
+              "contributions": 211,
+              "role": "founder",
+              "source": "github"
+            }
+          ],
+          "githubContributors": [
+            {
+              "login": "abhigyanpatwari",
+              "name": "Abhigyan Patwari",
+              "profileUrl": "https://github.com/abhigyanpatwari",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/126312502?v=4",
+              "bio": "CS student & AI engineer who likes to dig into the guts of systems. If it's interesting, I'll probably try to build something with it.\r\n",
+              "followers": 266,
+              "contributions": 211,
+              "role": "founder",
+              "source": "github"
+            },
+            {
+              "login": "magyargergo",
+              "name": "Gergő Magyar",
+              "profileUrl": "https://github.com/magyargergo",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/11230420?v=4",
+              "company": "ITV",
+              "followers": 14,
+              "contributions": 26,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "paulrobello",
+              "name": "Paul Robello",
+              "profileUrl": "https://github.com/paulrobello",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/955011?v=4",
+              "company": "PARCOM",
+              "bio": "Full Stack Engineer / Cloud Solutions Architect",
+              "followers": 78,
+              "contributions": 17,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "gunesbizim",
+              "name": "gunesbizim",
+              "profileUrl": "https://github.com/gunesbizim",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/37237628?v=4",
+              "followers": 3,
+              "contributions": 14,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "L1nusB",
+              "name": "Linus Beckhaus",
+              "profileUrl": "https://github.com/L1nusB",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/47142578?v=4",
+              "followers": 4,
+              "contributions": 8,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 1,860 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "gitnexus is surfacing as a typescript company with current public momentum. GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 1860,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "lightpanda-io",
+          "companyName": "lightpanda",
+          "productName": "browser",
+          "canonicalUrl": "https://lightpanda.io",
+          "summary": "Lightpanda: the headless browser designed for AI and automation",
+          "categories": [
+            "Zig",
+            "browser",
+            "browser-automation",
+            "cdp",
+            "headless"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-lightpanda-io-browser",
+              "collectedAt": "2026-03-17T01:01:44.612Z",
+              "companyName": "lightpanda",
+              "repoName": "browser",
+              "repoUrl": "https://github.com/lightpanda-io/browser",
+              "homepageUrl": "https://lightpanda.io",
+              "description": "Lightpanda: the headless browser designed for AI and automation",
+              "language": "Zig",
+              "stars": 20221,
+              "forks": 773,
+              "starsToday": 2086,
+              "ownerLogin": "lightpanda-io",
+              "ownerType": "Organization",
+              "topics": [
+                "browser",
+                "browser-automation",
+                "cdp",
+                "headless",
+                "playwright",
+                "puppeteer",
+                "zig"
+              ],
+              "contributors": [
+                {
+                  "login": "karlseguin",
+                  "name": "Karl Seguin",
+                  "profileUrl": "https://github.com/karlseguin",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/206480?v=4",
+                  "followers": 2423,
+                  "contributions": 2011,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "krichprollsch",
+                  "name": "Pierre Tachoire",
+                  "profileUrl": "https://github.com/krichprollsch",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/562696?v=4",
+                  "company": "Lightpanda",
+                  "bio": "Backend software engineer, @lightpanda-io Co-founder, Scrooge McDuck @clermontech",
+                  "followers": 217,
+                  "contributions": 1701,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "francisbouvier",
+                  "name": "Francis Bouvier",
+                  "profileUrl": "https://github.com/francisbouvier",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/5114029?v=4",
+                  "company": "Lightpanda",
+                  "bio": "CEO @Lightpanda-io. Software developer and entrepreneur.",
+                  "followers": 88,
+                  "contributions": 359,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "mookums",
+                  "name": "muki",
+                  "profileUrl": "https://github.com/mookums",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/26614015?v=4",
+                  "bio": "fsck-ing around",
+                  "followers": 89,
+                  "contributions": 217,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "nikneym",
+                  "name": "Halil Durak",
+                  "profileUrl": "https://github.com/nikneym",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/4337696?v=4",
+                  "company": "@lightpanda-io",
+                  "bio": "code from a duck with headache",
+                  "followers": 70,
+                  "contributions": 197,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "karlseguin",
+              "name": "Karl Seguin",
+              "profileUrl": "https://github.com/karlseguin",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/206480?v=4",
+              "followers": 2423,
+              "contributions": 2011,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "krichprollsch",
+              "name": "Pierre Tachoire",
+              "profileUrl": "https://github.com/krichprollsch",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/562696?v=4",
+              "company": "Lightpanda",
+              "bio": "Backend software engineer, @lightpanda-io Co-founder, Scrooge McDuck @clermontech",
+              "followers": 217,
+              "contributions": 1701,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "francisbouvier",
+              "name": "Francis Bouvier",
+              "profileUrl": "https://github.com/francisbouvier",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/5114029?v=4",
+              "company": "Lightpanda",
+              "bio": "CEO @Lightpanda-io. Software developer and entrepreneur.",
+              "followers": 88,
+              "contributions": 359,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "mookums",
+              "name": "muki",
+              "profileUrl": "https://github.com/mookums",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/26614015?v=4",
+              "bio": "fsck-ing around",
+              "followers": 89,
+              "contributions": 217,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "nikneym",
+              "name": "Halil Durak",
+              "profileUrl": "https://github.com/nikneym",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/4337696?v=4",
+              "company": "@lightpanda-io",
+              "bio": "code from a duck with headache",
+              "followers": 70,
+              "contributions": 197,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 2,086 stars today.",
+            "GitHub momentum improved by 911 stars/day versus the prior snapshot."
+          ],
+          "thesis": "lightpanda is surfacing as a zig company with current public momentum. Lightpanda: the headless browser designed for AI and automation",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": false,
+            "launchCountDelta": 0,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 911,
+            "contributorDelta": 0,
+            "scoreDelta": 0
+          }
+        },
+        {
+          "id": "openviking-ai",
+          "companyName": "openviking",
+          "productName": "OpenViking",
+          "canonicalUrl": "https://openviking.ai",
+          "summary": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+          "categories": [
+            "Python",
+            "agent",
+            "agentic-rag",
+            "ai-agents",
+            "clawbot"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-volcengine-OpenViking",
+              "collectedAt": "2026-03-17T01:01:44.508Z",
+              "companyName": "openviking",
+              "repoName": "OpenViking",
+              "repoUrl": "https://github.com/volcengine/OpenViking",
+              "homepageUrl": "https://openviking.ai",
+              "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+              "language": "Python",
+              "stars": 14158,
+              "forks": 968,
+              "starsToday": 2012,
+              "ownerLogin": "volcengine",
+              "ownerType": "Organization",
+              "topics": [
+                "agent",
+                "agentic-rag",
+                "ai-agents",
+                "clawbot",
+                "context-database",
+                "context-engineering",
+                "filesystem",
+                "llm",
+                "memory",
+                "openclaw",
+                "opencode",
+                "rag",
+                "skill"
+              ],
+              "contributors": [
+                {
+                  "login": "qin-ctx",
+                  "name": "Qin Haojie",
+                  "profileUrl": "https://github.com/qin-ctx",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/234610432?v=4",
+                  "company": "Bytedance",
+                  "bio": "Be the CEO of Agents !",
+                  "followers": 45,
+                  "contributions": 60,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "zhoujh01",
+                  "name": "zhoujiahui",
+                  "profileUrl": "https://github.com/zhoujh01",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/242402223?v=4",
+                  "followers": 18,
+                  "contributions": 56,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "MaojiaSheng",
+                  "name": "MaojiaSheng",
+                  "profileUrl": "https://github.com/MaojiaSheng",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/211460083?v=4",
+                  "company": "VolcEngine-Viking",
+                  "followers": 28,
+                  "contributions": 41,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "dependabot[bot]",
+                  "name": "dependabot[bot]",
+                  "profileUrl": "https://github.com/apps/dependabot",
+                  "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+                  "followers": 0,
+                  "contributions": 25,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "ZaynJarvis",
+                  "name": "Zayn Jarvis",
+                  "profileUrl": "https://github.com/ZaynJarvis",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/31875147?v=4",
+                  "company": "TikTok Pte. Ltd. ",
+                  "bio": "Have Fun!",
+                  "followers": 70,
+                  "contributions": 24,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "qin-ctx",
+              "name": "Qin Haojie",
+              "profileUrl": "https://github.com/qin-ctx",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/234610432?v=4",
+              "company": "Bytedance",
+              "bio": "Be the CEO of Agents !",
+              "followers": 45,
+              "contributions": 60,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "zhoujh01",
+              "name": "zhoujiahui",
+              "profileUrl": "https://github.com/zhoujh01",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/242402223?v=4",
+              "followers": 18,
+              "contributions": 56,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "MaojiaSheng",
+              "name": "MaojiaSheng",
+              "profileUrl": "https://github.com/MaojiaSheng",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/211460083?v=4",
+              "company": "VolcEngine-Viking",
+              "followers": 28,
+              "contributions": 41,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "dependabot[bot]",
+              "name": "dependabot[bot]",
+              "profileUrl": "https://github.com/apps/dependabot",
+              "avatarUrl": "https://avatars.githubusercontent.com/in/29110?v=4",
+              "followers": 0,
+              "contributions": 25,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "ZaynJarvis",
+              "name": "Zayn Jarvis",
+              "profileUrl": "https://github.com/ZaynJarvis",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/31875147?v=4",
+              "company": "TikTok Pte. Ltd. ",
+              "bio": "Have Fun!",
+              "followers": 70,
+              "contributions": 24,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 2,012 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "openviking is surfacing as a python company with current public momentum. OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+          "recommendedAction": "reach_out",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 100,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 100
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 2012,
+            "contributorDelta": 5,
+            "scoreDelta": 100
+          }
+        },
+        {
+          "id": "learn-shareai-run",
+          "companyName": "learn",
+          "productName": "learn-claude-code",
+          "canonicalUrl": "https://learn.shareai.run",
+          "summary": "Bash is all you need - A nano Claude Code–like agent, built from 0 to 1",
+          "categories": [
+            "TypeScript",
+            "agent",
+            "agent-development",
+            "ai-agent",
+            "claude"
+          ],
+          "sourceSignals": [
+            {
+              "source": "github",
+              "sourceId": "gh-shareAI-lab-learn-claude-code",
+              "collectedAt": "2026-03-17T01:01:44.354Z",
+              "companyName": "learn",
+              "repoName": "learn-claude-code",
+              "repoUrl": "https://github.com/shareAI-lab/learn-claude-code",
+              "homepageUrl": "https://learn.shareai.run",
+              "description": "Bash is all you need - A nano Claude Code–like agent, built from 0 to 1",
+              "language": "TypeScript",
+              "stars": 29297,
+              "forks": 5008,
+              "starsToday": 1535,
+              "ownerLogin": "shareAI-lab",
+              "ownerType": "Organization",
+              "topics": [
+                "agent",
+                "agent-development",
+                "ai-agent",
+                "claude",
+                "claude-code",
+                "educational",
+                "llm",
+                "python",
+                "teaching",
+                "tutorial"
+              ],
+              "contributors": [
+                {
+                  "login": "CrazyBoyM",
+                  "name": "Xinlu Lai",
+                  "profileUrl": "https://github.com/CrazyBoyM",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/35400185?v=4",
+                  "company": "ShareAI Lab",
+                  "bio": "Fcking & Accelerating & Hacking the Unity🌍World  &&\r\nbe Crazy, be Up\r\nFounder & builder of @shareAI-lab ",
+                  "followers": 825,
+                  "contributions": 9,
+                  "role": "core_builder",
+                  "source": "github"
+                },
+                {
+                  "login": "Gaarahan",
+                  "name": "Gaarahan",
+                  "profileUrl": "https://github.com/Gaarahan",
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/34125917?v=4",
+                  "followers": 26,
+                  "contributions": 1,
+                  "role": "core_builder",
+                  "source": "github"
+                }
+              ]
+            }
+          ],
+          "founders": [],
+          "githubContributors": [
+            {
+              "login": "CrazyBoyM",
+              "name": "Xinlu Lai",
+              "profileUrl": "https://github.com/CrazyBoyM",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/35400185?v=4",
+              "company": "ShareAI Lab",
+              "bio": "Fcking & Accelerating & Hacking the Unity🌍World  &&\r\nbe Crazy, be Up\r\nFounder & builder of @shareAI-lab ",
+              "followers": 825,
+              "contributions": 9,
+              "role": "core_builder",
+              "source": "github"
+            },
+            {
+              "login": "Gaarahan",
+              "name": "Gaarahan",
+              "profileUrl": "https://github.com/Gaarahan",
+              "avatarUrl": "https://avatars.githubusercontent.com/u/34125917?v=4",
+              "followers": 26,
+              "contributions": 1,
+              "role": "core_builder",
+              "source": "github"
+            }
+          ],
+          "whyNow": [
+            "1 trending GitHub repo adding 1,535 stars today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "learn is surfacing as a typescript company with current public momentum. Bash is all you need - A nano Claude Code–like agent, built from 0 to 1",
+          "recommendedAction": "research",
+          "stageGuess": "growth",
+          "scores": {
+            "overall": 73,
+            "emerging": 100,
+            "acceleration": 100,
+            "founderStrength": 10
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 1,
+            "starsTodayDelta": 1535,
+            "contributorDelta": 2,
+            "scoreDelta": 73
+          }
+        },
+        {
+          "id": "adaptive-the-agent-computer",
+          "companyName": "Adaptive — The Agent Computer",
+          "productName": "Adaptive — The Agent Computer",
+          "canonicalUrl": "https://www.producthunt.com/products/adaptive-ai",
+          "summary": "The computer for AI to get things done",
+          "categories": [
+            "producthunt",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "2026-03-16-ph-0c3517e5",
+              "collectedAt": "2026-03-17T01:01:42.480Z",
+              "companyName": "Adaptive — The Agent Computer",
+              "productName": "Adaptive — The Agent Computer",
+              "launchUrl": "https://www.producthunt.com/products/adaptive-ai",
+              "description": "The computer for AI to get things done",
+              "tagline": "The computer for AI to get things done",
+              "topics": [
+                "producthunt"
+              ],
+              "makerName": "Unknown",
+              "createdAt": "2026-03-17T01:01:42.480Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "unknown",
+              "name": "Unknown",
+              "profileUrl": "https://www.producthunt.com/products/adaptive-ai",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Launched on Product Hunt today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Adaptive — The Agent Computer is surfacing as a producthunt company with current public momentum. The computer for AI to get things done",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 27,
+            "emerging": 40,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 27
+          }
+        },
+        {
+          "id": "masko-code",
+          "companyName": "Masko Code",
+          "productName": "Masko Code",
+          "canonicalUrl": "https://www.producthunt.com/products/masko-code",
+          "summary": "A mascot that watches Claude Code for you",
+          "categories": [
+            "producthunt",
+            "Software"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "2026-03-16-ph-af0a7424",
+              "collectedAt": "2026-03-17T01:01:42.480Z",
+              "companyName": "Masko Code",
+              "productName": "Masko Code",
+              "launchUrl": "https://www.producthunt.com/products/masko-code",
+              "description": "A mascot that watches Claude Code for you",
+              "tagline": "A mascot that watches Claude Code for you",
+              "topics": [
+                "producthunt"
+              ],
+              "makerName": "Unknown",
+              "createdAt": "2026-03-17T01:01:42.480Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "unknown",
+              "name": "Unknown",
+              "profileUrl": "https://www.producthunt.com/products/masko-code",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Launched on Product Hunt today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Masko Code is surfacing as a producthunt company with current public momentum. A mascot that watches Claude Code for you",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 27,
+            "emerging": 40,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 27
+          }
+        },
+        {
+          "id": "mulerun",
+          "companyName": "MuleRun",
+          "productName": "MuleRun",
+          "canonicalUrl": "https://www.producthunt.com/products/mulerun",
+          "summary": "Raise an AI that actually learns how you work",
+          "categories": [
+            "producthunt",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "2026-03-16-ph-c14ad752",
+              "collectedAt": "2026-03-17T01:01:42.480Z",
+              "companyName": "MuleRun",
+              "productName": "MuleRun",
+              "launchUrl": "https://www.producthunt.com/products/mulerun",
+              "description": "Raise an AI that actually learns how you work",
+              "tagline": "Raise an AI that actually learns how you work",
+              "topics": [
+                "producthunt"
+              ],
+              "makerName": "Unknown",
+              "createdAt": "2026-03-17T01:01:42.480Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "unknown",
+              "name": "Unknown",
+              "profileUrl": "https://www.producthunt.com/products/mulerun",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Launched on Product Hunt today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "MuleRun is surfacing as a producthunt company with current public momentum. Raise an AI that actually learns how you work",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 27,
+            "emerging": 40,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 27
+          }
+        },
+        {
+          "id": "xhawk-0-99",
+          "companyName": "XHawk 0.99",
+          "productName": "XHawk 0.99",
+          "canonicalUrl": "https://www.producthunt.com/products/xhawk",
+          "summary": "Transform Coding Sessions & Code into a System of Context",
+          "categories": [
+            "producthunt",
+            "Software"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "2026-03-16-ph-4dd20f5c",
+              "collectedAt": "2026-03-17T01:01:42.480Z",
+              "companyName": "XHawk 0.99",
+              "productName": "XHawk 0.99",
+              "launchUrl": "https://www.producthunt.com/products/xhawk",
+              "description": "Transform Coding Sessions & Code into a System of Context",
+              "tagline": "Transform Coding Sessions & Code into a System of Context",
+              "topics": [
+                "producthunt"
+              ],
+              "makerName": "Unknown",
+              "createdAt": "2026-03-17T01:01:42.480Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "unknown",
+              "name": "Unknown",
+              "profileUrl": "https://www.producthunt.com/products/xhawk",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Launched on Product Hunt today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "XHawk 0.99 is surfacing as a producthunt company with current public momentum. Transform Coding Sessions & Code into a System of Context",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 27,
+            "emerging": 40,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 27
+          }
+        },
+        {
+          "id": "donely",
+          "companyName": "Donely",
+          "productName": "Donely",
+          "canonicalUrl": "https://www.producthunt.com/products/donely",
+          "summary": "Your own OpenClaw instance for $0/mo + free AI usage offer",
+          "categories": [
+            "producthunt",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "2026-03-16-ph-39ebcc53",
+              "collectedAt": "2026-03-17T01:01:42.480Z",
+              "companyName": "Donely",
+              "productName": "Donely",
+              "launchUrl": "https://www.producthunt.com/products/donely",
+              "description": "Your own OpenClaw instance for $0/mo + free AI usage offer",
+              "tagline": "Your own OpenClaw instance for $0/mo + free AI usage offer",
+              "topics": [
+                "producthunt"
+              ],
+              "makerName": "Unknown",
+              "createdAt": "2026-03-17T01:01:42.480Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "unknown",
+              "name": "Unknown",
+              "profileUrl": "https://www.producthunt.com/products/donely",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Launched on Product Hunt today.",
+            "Newly appeared in the tracked signal set."
+          ],
+          "thesis": "Donely is surfacing as a producthunt company with current public momentum. Your own OpenClaw instance for $0/mo + free AI usage offer",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 27,
+            "emerging": 40,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 27
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "lastMessageId": "<1b356ae7-e647-849a-c43d-2276468f7f29@gmail.com>"
+  }
+}

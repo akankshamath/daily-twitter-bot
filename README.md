@@ -1,23 +1,23 @@
-# Daily Tech Digest Bot
+# VC Daily Dealflow Bot
 
-A TypeScript bot that automatically tracks product launches from Product Hunt, tech trends from Hacker News, and trending GitHub repositories, then sends beautiful daily email digests.
+A TypeScript bot that tracks Product Hunt launches and GitHub momentum, enriches them into company profiles, and sends a daily investor-style email thread.
 
 ## Features
 
-- **Product Launches**: Top launches from Product Hunt with makers, categories, and upvotes
-- **Tech Trends**: Trending tech stories from Hacker News
-- **GitHub Trending**: Top 5 most starred repositories daily
-- **Daily Email Digest**: Beautiful HTML emails with card-based design
-- **100% Free**: No API costs - uses free public APIs and web scraping
-- **Configurable**: Customize schedule, content limits, and recipients
+- **Product Hunt Signals**: Daily launches with maker names, topics, and estimated launch momentum
+- **GitHub Signals**: Trending repositories enriched with contributors, public company hints, homepage URLs, and stars gained today
+- **Investor Email Thread**: A recurring daily email thread grouped into emerging companies, accelerating companies, hot categories, and founders/builders to meet
+- **Daily Snapshots**: Stores recent snapshots locally so each digest can compare today versus prior days
+- **Configurable**: Customize schedule, content limits, recipients, subject line, and snapshot path
 - **Type-Safe**: Built with TypeScript
 
 ## What You Get
 
 Each morning, receive an email with:
-1. **Product Launches** - New products from Product Hunt with maker names, descriptions, and categories
-2. **Tech Trends** - Top Hacker News stories filtered for tech content
-3. **GitHub Trending** - Top 5 trending repositories with stars gained today
+1. **Newly Emerging Companies** - startups surfacing through Product Hunt and GitHub
+2. **Existing Companies Accelerating** - tracked companies with rising momentum versus earlier snapshots
+3. **Categories Heating Up** - sectors with increasing company count and stronger average scores
+4. **Founders And Builders To Meet Now** - makers, repo owners, and core contributors tied to the highest-signal companies
 
 ## Prerequisites
 
@@ -61,7 +61,16 @@ CRON_SCHEDULE=0 9 * * *
 
 # Content limits
 MAX_LAUNCHES=5
-MAX_TRENDS=5
+MAX_EMERGING_COMPANIES=10
+MAX_ACCELERATING_COMPANIES=10
+MAX_PEOPLE_TO_MEET=8
+
+# Optional GitHub API token for richer enrichment
+GITHUB_TOKEN=
+
+# Email thread + snapshot storage
+EMAIL_SUBJECT=VC Daily Dealflow Thread
+SNAPSHOT_FILE=.data/daily-snapshots.json
 ```
 
 ### 4. Test It
@@ -104,40 +113,39 @@ Test your cron expression: https://crontab.guru
 
 ### Content Limits
 
-**MAX_LAUNCHES**: Max Product Hunt launches (default: 5)
-**MAX_TRENDS**: Max Hacker News stories (default: 5)
+**MAX_LAUNCHES**: Max Product Hunt launches to ingest
+**MAX_EMERGING_COMPANIES**: Max companies in the emerging section
+**MAX_ACCELERATING_COMPANIES**: Max companies in the accelerating section
+**MAX_PEOPLE_TO_MEET**: Max founder/builder profiles in the outreach section
+
+### GitHub Enrichment
+
+**GITHUB_TOKEN**: Optional but recommended. Improves GitHub API rate limits and contributor/company enrichment.
+
+### Email Threading And Snapshot Storage
+
+**EMAIL_SUBJECT**: Fixed subject used to keep digests in one email thread
+**SNAPSHOT_FILE**: Local JSON file storing recent snapshots and the previous email `messageId`
 
 ## How It Works
 
 ### Product Hunt Integration
-- Uses Product Hunt RSS feed (no API key needed!)
-- Fetches real product launches with names, descriptions, and links
-- Estimates popularity based on feed position
-- Includes taglines, topics, and direct links to products
-- **Note**: Upvote counts are estimated (RSS doesn't include exact numbers)
+- Uses the Product Hunt RSS feed
+- Builds company/product signals with launch summary, topics, maker name, and estimated launch momentum
+- Upvote/comment counts remain estimates because RSS does not expose full Product Hunt analytics
 
-### Hacker News Integration
-- Uses official [Hacker News Firebase API](https://github.com/HackerNews/API)
-- Fetches top stories
-- Filters for tech-related content using keywords
-- Filters by minimum score
-- Sorts by points
+### GitHub Integration
+- Scrapes [GitHub Trending](https://github.com/trending) to discover repos with daily momentum
+- Enriches each trending repo through the public GitHub API
+- Pulls homepage URLs, topics, owner type, top contributors, and contributor profile data such as company and followers
+- Works without a token, but rate limits are tighter
 
-### GitHub Trending Integration
-- Scrapes [GitHub Trending](https://github.com/trending) page using Cheerio
-- Fetches daily trending repositories (most starred today)
-- Extracts repo name, author, description, language, and star counts
-- Shows stars gained today vs total stars
-- Top 5 repos with green accent border (GitHub brand color)
-- **Note**: Uses web scraping (no API key needed)
-
-### Email Digest
-- Beautiful responsive HTML design with card-based layout
-- Plain text fallback included
-- Three sections: Product Hunt, Hacker News, and GitHub
-- Color-coded accent borders (blue for PH, orange for HN, green for GitHub)
-- Direct links to products, discussions, and repositories
-- Clean, minimal styling with subtle shadows
+### Daily Snapshot And Briefing
+- Stores local daily snapshots in JSON
+- Detects newly emerging companies versus previously seen companies
+- Compares momentum across snapshots to identify acceleration
+- Aggregates category momentum
+- Ranks founders/builders to meet now using company score plus profile strength
 
 ## Project Structure
 
@@ -146,10 +154,12 @@ daily-twitter-bot/
 ├── src/
 │   ├── index.ts              # Main app + scheduler
 │   ├── config.ts             # Environment config
+│   ├── types.ts              # Shared normalized models
+│   ├── storage.ts            # Local snapshot persistence
+│   ├── companyEnricher.ts    # Company scoring + daily brief logic
 │   ├── productHuntClient.ts  # Product Hunt RSS parser
-│   ├── hackerNewsClient.ts   # Hacker News API
-│   ├── githubClient.ts       # GitHub trending scraper
-│   └── emailService.ts       # Gmail sender + templates
+│   ├── githubClient.ts       # GitHub trending scraper + API enrichment
+│   └── emailService.ts       # Gmail sender + investor email templates
 ├── dist/                     # Compiled JS
 ├── .env                      # Your config
 ├── .env.example              # Config template
@@ -169,7 +179,7 @@ npm run dev
 
 ### Test Mode
 
-Send one email immediately:
+Send one investor brief immediately:
 ```bash
 npm run dev -- --test
 ```
@@ -233,19 +243,11 @@ Reattach later:
 screen -r tech-digest
 ```
 
-## Upgrading to Official Product Hunt API (Optional)
+## Notes
 
-The bot already uses **real Product Hunt data via RSS feed**. To get exact upvote counts instead of estimates:
-
-1. **Apply for API access**: https://api.producthunt.com/v2/docs
-2. **Get OAuth token**: Follow PH API authentication docs
-3. **Update `productHuntClient.ts:37`**: Replace RSS parsing with GraphQL queries
-4. **Add to `.env`**:
-   ```env
-   PRODUCT_HUNT_API_TOKEN=your_token_here
-   ```
-
-Both Product Hunt (RSS) and Hacker News data are already real and live!
+- Product Hunt data is still RSS-based, so launch popularity remains estimated.
+- GitHub contributor company names are best-effort and depend on public profile data.
+- The thread view works best when `EMAIL_SUBJECT` stays fixed across days.
 
 ## Troubleshooting
 
@@ -264,13 +266,12 @@ Both Product Hunt (RSS) and Hacker News data are already real and live!
 
 **No launches shown**
 - Check if Product Hunt RSS feed is accessible
-- Adjust MAX_LAUNCHES if needed
-- Bot will fall back to example data if RSS fails
+- Adjust `MAX_LAUNCHES` if needed
+- The bot will omit Product Hunt launches for that run if the feed fails
 
-**No trends shown**
-- Lower MIN_UPVOTES in .env (default is 50)
-- Check Hacker News is accessible
-- Tech keyword filter might be too strict
+**No GitHub contributor/company details**
+- Add `GITHUB_TOKEN` to reduce rate-limit failures
+- Some contributor profiles do not expose a public company name
 
 ### Bot Not Running at Scheduled Time
 

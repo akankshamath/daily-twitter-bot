@@ -12,6 +12,18 @@ interface Config {
   content: {
     maxLaunches: number;
     maxTrends: number;
+    maxEmergingCompanies: number;
+    maxAcceleratingCompanies: number;
+    maxPeopleToMeet: number;
+  };
+  github: {
+    token?: string;
+  };
+  storage: {
+    snapshotFile: string;
+  };
+  emailDigest: {
+    subject: string;
   };
 }
 
@@ -33,5 +45,17 @@ export const config: Config = {
   content: {
     maxLaunches: parseInt(process.env.MAX_LAUNCHES || '20', 10),
     maxTrends: parseInt(process.env.MAX_TRENDS || '15', 10),
+    maxEmergingCompanies: parseInt(process.env.MAX_EMERGING_COMPANIES || '10', 10),
+    maxAcceleratingCompanies: parseInt(process.env.MAX_ACCELERATING_COMPANIES || '10', 10),
+    maxPeopleToMeet: parseInt(process.env.MAX_PEOPLE_TO_MEET || '8', 10),
+  },
+  github: {
+    token: process.env.GITHUB_TOKEN,
+  },
+  storage: {
+    snapshotFile: process.env.SNAPSHOT_FILE || '.data/daily-snapshots.json',
+  },
+  emailDigest: {
+    subject: process.env.EMAIL_SUBJECT || 'VC Daily Dealflow Thread',
   },
 };

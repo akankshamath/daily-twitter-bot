@@ -1,8 +1,6 @@
 import nodemailer from 'nodemailer';
 import { config } from './config';
-import { Launch } from './productHuntClient';
-import { Story } from './hackerNewsClient';
-import { Repository } from './githubClient';
+import { CompanyProfile, DailyBrief, PersonToMeet } from './types';
 
 export class EmailService {
   private transporter: nodemailer.Transporter;
@@ -17,17 +15,17 @@ export class EmailService {
     });
   }
 
-  async sendDailyDigest(launches: Launch[], trends: Story[], repos: Repository[]): Promise<void> {
-    const date = new Date().toLocaleDateString('en-US', {
+  async sendDailyDigest(brief: DailyBrief, lastMessageId?: string): Promise<string> {
+    const date = new Date(brief.date).toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
 
-    const subject = `Daily Tech Digest - ${date}`;
-    const htmlContent = this.generateHtmlContent(launches, trends, repos, date);
-    const textContent = this.generateTextContent(launches, trends, repos, date);
+    const subject = config.emailDigest.subject;
+    const htmlContent = this.generateHtmlContent(brief, date);
+    const textContent = this.generateTextContent(brief, date);
 
     const mailOptions = {
       from: config.email.user,
@@ -35,130 +33,42 @@ export class EmailService {
       subject,
       text: textContent,
       html: htmlContent,
+      inReplyTo: lastMessageId,
+      references: lastMessageId ? [lastMessageId] : undefined,
     };
 
     try {
       const info = await this.transporter.sendMail(mailOptions);
       console.log(`Email sent successfully: ${info.messageId}`);
+      return info.messageId;
     } catch (error) {
       console.error('Error sending email:', error);
       throw error;
     }
   }
 
-  private generateHtmlContent(launches: Launch[], trends: Story[], repos: Repository[], date: string): string {
-    const launchesSection = this.generateLaunchesHtml(launches);
-    const trendsSection = this.generateTrendsHtml(trends);
-    const reposSection = this.generateReposHtml(repos);
-  
+  private generateHtmlContent(brief: DailyBrief, date: string): string {
     return `
     <!DOCTYPE html>
     <html lang="en">
-      <body style="margin:0; padding:0; background-color:#f2f2f2;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f2f2f2; margin:0; padding:40px 0;">
+      <body style="margin:0; padding:0; background:#f5f3ee; color:#1c1c1c; font-family:Arial, Helvetica, sans-serif;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f5f3ee; padding:32px 0;">
           <tr>
             <td align="center">
-              <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#ffffff; border-collapse:collapse;">
-                
-                <!-- Top spacing -->
+              <table role="presentation" width="720" cellpadding="0" cellspacing="0" border="0" style="width:720px; max-width:720px; background:#fffdf9; border:1px solid #e7dfd2;">
                 <tr>
-                  <td style="padding:32px 40px 16px 40px; text-align:center; font-family:Arial, Helvetica, sans-serif;">
-                    <div style="font-size:18px; font-weight:700; color:#111111; margin-bottom:8px;">
-                      Daily Tech Digest
-                    </div>
-                    <div style="font-size:13px; color:#666666;">
-                      ${this.escapeHtml(date)}
+                  <td style="padding:32px 40px 16px 40px;">
+                    <div style="font-size:28px; line-height:34px; font-weight:700; color:#0f172a;">VC Daily Dealflow Thread</div>
+                    <div style="font-size:14px; line-height:22px; color:#6b7280; margin-top:8px;">${this.escapeHtml(date)}</div>
+                    <div style="font-size:15px; line-height:24px; color:#475569; margin-top:12px;">
+                      Signals from Product Hunt launches and GitHub momentum, organized around products launching today, companies showing real momentum, and founders/builders worth meeting.
                     </div>
                   </td>
                 </tr>
-  
-                <!-- Intro -->
-                <tr>
-                  <td style="padding:8px 40px 24px 40px; font-family:Arial, Helvetica, sans-serif; color:#222222;">
-                    <div style="font-size:24px; line-height:32px; font-weight:700; margin-bottom:12px;">
-                      Your daily snapshot of tech launches and trends
-                    </div>
-                    <div style="font-size:15px; line-height:24px; color:#555555;">
-                      We pulled today’s most notable Product Hunt launches and the strongest stories from Hacker News into one clean digest.
-                    </div>
-                  </td>
-                </tr>
-  
-                <!-- Divider -->
-                <tr>
-                  <td style="padding:0 40px;">
-                    <div style="height:1px; background-color:#e8e8e8; line-height:1px; font-size:1px;">&nbsp;</div>
-                  </td>
-                </tr>
-  
-                <!-- Launches -->
-                <tr>
-                  <td style="padding:28px 40px 10px 40px; font-family:Arial, Helvetica, sans-serif;">
-                    <div style="font-size:20px; font-weight:700; color:#111111; margin-bottom:16px;">
-                      Product Hunt Launches
-                    </div>
-                    ${launchesSection}
-                  </td>
-                </tr>
-  
-                <!-- Divider -->
-                <tr>
-                  <td style="padding:8px 40px 0 40px;">
-                    <div style="height:1px; background-color:#e8e8e8; line-height:1px; font-size:1px;">&nbsp;</div>
-                  </td>
-                </tr>
-  
-                <!-- HN -->
-                <tr>
-                  <td style="padding:28px 40px 10px 40px; font-family:Arial, Helvetica, sans-serif;">
-                    <div style="font-size:20px; font-weight:700; color:#111111; margin-bottom:16px;">
-                      Trending on Hacker News
-                    </div>
-                    ${trendsSection}
-                  </td>
-                </tr>
-
-                <!-- Divider -->
-                <tr>
-                  <td style="padding:8px 40px 0 40px;">
-                    <div style="height:1px; background-color:#e8e8e8; line-height:1px; font-size:1px;">&nbsp;</div>
-                  </td>
-                </tr>
-
-                <!-- GitHub -->
-                <tr>
-                  <td style="padding:28px 40px 10px 40px; font-family:Arial, Helvetica, sans-serif;">
-                    <div style="font-size:20px; font-weight:700; color:#111111; margin-bottom:16px;">
-                      Trending on GitHub
-                    </div>
-                    ${reposSection}
-                  </td>
-                </tr>
-
-                <!-- CTA -->
-                <tr>
-                  <td align="center" style="padding:24px 40px 16px 40px;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                      <tr>
-                        <td align="center" bgcolor="#111111" style="border-radius:6px;">
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-  
-                <!-- Footer -->
-                <tr>
-                  <td style="padding:8px 40px 36px 40px; text-align:center; font-family:Arial, Helvetica, sans-serif;">
-                    <div style="font-size:12px; line-height:18px; color:#888888;">
-                      Powered by Product Hunt, Hacker News, and GitHub
-                    </div>
-                    <div style="font-size:12px; line-height:18px; color:#aaaaaa; margin-top:8px;">
-                      Generated automatically by your daily trend tracker
-                    </div>
-                  </td>
-                </tr>
-  
+                ${this.section('Products Launching Today', brief.launchesToday, 'launch')}
+                ${this.section('Newly Emerging Companies', brief.emergingCompanies, 'emerging')}
+                ${this.section('Existing Companies Accelerating', brief.acceleratingCompanies, 'accelerating')}
+                ${this.peopleSection(brief.foundersToMeet)}
               </table>
             </td>
           </tr>
@@ -168,134 +78,143 @@ export class EmailService {
     `;
   }
 
-  private generateLaunchesHtml(launches: Launch[]): string {
-    if (launches.length === 0) {
-      return `
-        <div style="font-size:14px; line-height:1.5; color:#1c1c1c;">
-          No new products today.
-        </div>
-      `;
-    }
-  
-    return launches.map((launch, index) => `
-      <div style="background-color:#ffffff; border:1px solid #e7e7e7; border-left:4px solid rgb(46, 93, 247); border-right:4px solid rgb(46, 93, 247); border-radius:14px; padding:22px; margin-bottom:16px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
-        <div style="font-size:18px; line-height:26px; font-weight:700; margin-bottom:8px;">
-          <a href="${launch.url}" style="color:#111111; text-decoration:none;">${index + 1}. ${this.escapeHtml(launch.name)}</a>
-        </div>
-        <div style="font-size:15px; line-height:22px; color:#555555; margin-bottom:10px;">
-          ${this.escapeHtml(launch.tagline)}
-        </div>
-        <div style="font-size:13px; line-height:20px; color:#999999; margin-bottom:8px;">
-          by ${this.escapeHtml(launch.author)}
-        </div>
-        ${launch.topics.length > 0 ? `
-        <div style="font-size:13px; line-height:20px; margin-top:4px;">
-          ${launch.topics.slice(0, 3).map(topic => `<span style="display:inline-block; padding:3px 10px; margin-right:6px; margin-top:4px; background-color:#f3f4f6; border-radius:12px; color:#6b7280; font-size:12px;">${this.escapeHtml(topic)}</span>`).join('')}
-        </div>
-        ` : ''}
-      </div>
-    `).join('');
+  private section(title: string, companies: CompanyProfile[], variant: 'launch' | 'emerging' | 'accelerating'): string {
+    const content = companies.length === 0
+      ? `<div style="font-size:14px; line-height:22px; color:#6b7280;">No companies cleared the ${variant} threshold today.</div>`
+      : companies.map(company => this.companyCard(company, variant)).join('');
+
+    return `
+      <tr>
+        <td style="padding:20px 40px 8px 40px;">
+          <div style="font-size:22px; line-height:28px; font-weight:700; color:#111827;">${title}</div>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:0 40px 12px 40px;">${content}</td>
+      </tr>
+    `;
   }
 
-  private generateTrendsHtml(trends: Story[]): string {
-    if (trends.length === 0) {
-      return `
-        <div style="font-size:14px; line-height:22px; color:#666666;">
-          No trending stories found.
-        </div>
-      `;
-    }
-  
-    return trends.map((trend, index) => `
-      <div style="background-color:#ffffff; border:1px solid #e7e7e7; border-left:4px solid rgb(46, 93, 247); border-right:4px solid rgb(46, 93, 247); border-radius:14px; padding:22px; margin-bottom:16px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
-        <div style="font-size:18px; line-height:26px; font-weight:700; margin-bottom:8px;">
-          <a href="${trend.url || `https://news.ycombinator.com/item?id=${trend.id}`}" style="color:#111111; text-decoration:none;">${index + 1}. ${this.escapeHtml(trend.title)}</a>
-        </div>
-        <div style="font-size:13px; line-height:20px; color:#666666; margin-bottom:10px;">
-          ${trend.score} points • ${trend.descendants || 0} comments • by ${this.escapeHtml(trend.by)}
-        </div>
-        <div style="font-size:14px; line-height:20px; color:#6b7280;">
-          <a href="https://news.ycombinator.com/item?id=${trend.id}" style="color:#999999; text-decoration:none;">Discussion</a>
-        </div>
-      </div>
-    `).join('');
-  }
+  private companyCard(company: CompanyProfile, variant: 'launch' | 'emerging' | 'accelerating'): string {
+    const founders = company.founders.slice(0, 3).map(person => this.personLabel(person.name, person.company)).join(' • ') || 'Unknown';
+    const contributors = company.githubContributors.slice(0, 3).map(person => this.personLabel(person.name, person.company)).join(' • ') || 'Not available';
+    const accentColor = variant === 'launch'
+      ? '#059669'
+      : variant === 'emerging'
+        ? '#2563eb'
+        : '#d97706';
 
-  private generateReposHtml(repos: Repository[]): string {
-    if (repos.length === 0) {
-      return `
-        <div style="font-size:14px; line-height:22px; color:#666666;">
-          No trending repositories found.
+    return `
+      <div style="border:1px solid #e5dccf; border-left:5px solid ${accentColor}; border-radius:12px; padding:18px 20px; margin:14px 0; background:#fff;">
+        <div style="font-size:18px; line-height:24px; font-weight:700; color:#0f172a;">
+          <a href="${company.canonicalUrl ?? '#'}" style="color:#0f172a; text-decoration:none;">${this.escapeHtml(company.companyName)}</a>
+          <span style="font-size:13px; color:#64748b; font-weight:400;"> • ${this.escapeHtml(company.productName)}</span>
         </div>
-      `;
-    }
-
-    return repos.map((repo, index) => `
-      <div style="background-color:#ffffff; border:1px solid #e7e7e7; border-left:4px solid #2da44e; border-right:4px solid #2da44e; border-radius:14px; padding:22px; margin-bottom:16px; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
-        <div style="font-size:18px; line-height:26px; font-weight:700; margin-bottom:8px;">
-          <a href="${repo.url}" style="color:#111111; text-decoration:none;">${index + 1}. ${this.escapeHtml(repo.author)}/${this.escapeHtml(repo.name)}</a>
+        <div style="font-size:14px; line-height:22px; color:#334155; margin-top:8px;">${this.escapeHtml(company.summary)}</div>
+        <div style="font-size:13px; line-height:20px; color:#64748b; margin-top:8px;">
+          Categories: ${this.escapeHtml(company.categories.join(', ') || 'Software')}
         </div>
-        <div style="font-size:15px; line-height:22px; color:#555555; margin-bottom:10px;">
-          ${this.escapeHtml(repo.description)}
+        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:8px;">
+          <strong>Why now:</strong> ${this.escapeHtml(company.whyNow.join(' '))}
         </div>
-        <div style="font-size:13px; line-height:20px; color:#666666;">
-          ⭐ ${repo.starsToday.toLocaleString()} stars today • ${repo.stars.toLocaleString()} total stars • ${this.escapeHtml(repo.language)}
+        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:8px;">
+          <strong>Founder signal:</strong> ${this.escapeHtml(founders)}
+        </div>
+        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:6px;">
+          <strong>GitHub contributors:</strong> ${this.escapeHtml(contributors)}
+        </div>
+        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:6px;">
+          <strong>Investment angle:</strong> ${this.escapeHtml(company.thesis)}
         </div>
       </div>
-    `).join('');
+    `;
   }
 
-  private generateTextContent(launches: Launch[], trends: Story[], repos: Repository[], date: string): string {
-    let content = `DAILY TECH DIGEST - ${date}\n${'='.repeat(60)}\n\n`;
+  private peopleSection(people: PersonToMeet[]): string {
+    const rows = people.length === 0
+      ? `<div style="font-size:14px; line-height:22px; color:#6b7280;">No founder or builder profiles available yet.</div>`
+      : people.map(person => this.personCard(person)).join('');
 
-    // Launches section
-    content += 'NEW PRODUCT LAUNCHES\n' + '-'.repeat(60) + '\n\n';
-    if (launches.length === 0) {
-      content += 'No new products launched today\n\n';
-    } else {
-      launches.forEach((launch, index) => {
-        content += `${index + 1}. ${launch.name}\n`;
-        content += `   ${launch.tagline}\n`;
-        if (launch.topics.length > 0) {
-          content += `   Topics: ${launch.topics.join(', ')}\n`;
-        }
-        content += `   ${launch.url}\n\n`;
-      });
+    return `
+      <tr>
+        <td style="padding:20px 40px 8px 40px;">
+          <div style="font-size:22px; line-height:28px; font-weight:700; color:#111827;">Founders And Builders To Meet Now</div>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:0 40px 32px 40px;">${rows}</td>
+      </tr>
+    `;
+  }
+
+  private personCard(entry: PersonToMeet): string {
+    return `
+      <div style="border:1px solid #e5dccf; border-radius:12px; padding:14px 16px; margin:12px 0; background:#fff;">
+        <div style="font-size:16px; line-height:22px; font-weight:700; color:#0f172a;">
+          <a href="${entry.person.profileUrl}" style="color:#0f172a; text-decoration:none;">${this.escapeHtml(entry.person.name)}</a>
+          <span style="font-size:13px; line-height:20px; color:#64748b; font-weight:400;"> • ${this.escapeHtml(entry.companyName)}</span>
+        </div>
+        <div style="font-size:13px; line-height:20px; color:#475569; margin-top:6px;">
+          ${this.escapeHtml(entry.person.role.replace('_', ' '))}${entry.person.company ? ` • ${this.escapeHtml(entry.person.company)}` : ''}${entry.person.followers ? ` • ${entry.person.followers} followers` : ''}${entry.person.contributions ? ` • ${entry.person.contributions} contributions` : ''}
+        </div>
+        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:8px;">${this.escapeHtml(entry.reason)}</div>
+      </div>
+    `;
+  }
+
+  private generateTextContent(brief: DailyBrief, date: string): string {
+    const sections = [
+      this.companyTextSection('PRODUCTS LAUNCHING TODAY', brief.launchesToday, 'launch'),
+      this.companyTextSection('NEWLY EMERGING COMPANIES', brief.emergingCompanies),
+      this.companyTextSection('EXISTING COMPANIES ACCELERATING', brief.acceleratingCompanies),
+      this.peopleTextSection(brief.foundersToMeet),
+    ];
+
+    return `VC DAILY DEALFLOW THREAD\n${date}\n${'='.repeat(72)}\n\n${sections.join('\n')}`;
+  }
+
+  private companyTextSection(title: string, companies: CompanyProfile[], variant: 'launch' | 'emerging' | 'accelerating' = 'emerging'): string {
+    if (companies.length === 0) {
+      return `${title}\n${'-'.repeat(72)}\nNo companies cleared this section today.\n`;
     }
 
-    // Trends section
-    content += '\nTRENDING ON HACKER NEWS\n' + '-'.repeat(60) + '\n\n';
-    if (trends.length === 0) {
-      content += 'No trending stories found\n\n';
-    } else {
-      trends.forEach((trend, index) => {
-        content += `${index + 1}. ${trend.title}\n`;
-        content += `   ▲ ${trend.score} points • 💬 ${trend.descendants || 0} comments • by ${trend.by}\n`;
-        if (trend.url) {
-          content += `   ${trend.url}\n`;
-        }
-        content += `   Discussion: https://news.ycombinator.com/item?id=${trend.id}\n\n`;
-      });
+    const body = companies.map((company, index) => {
+      const founders = company.founders.slice(0, 3).map(person => this.personLabel(person.name, person.company)).join('; ') || 'Unknown';
+      const contributors = company.githubContributors.slice(0, 3).map(person => this.personLabel(person.name, person.company)).join('; ') || 'Not available';
+
+      return `${index + 1}. ${company.companyName} (${company.productName})
+   URL: ${company.canonicalUrl ?? 'N/A'}
+   Summary: ${company.summary}
+   Categories: ${company.categories.join(', ') || 'Software'}
+   Why now: ${company.whyNow.join(' ')}
+   Founders: ${founders}
+   GitHub contributors: ${contributors}
+   Thesis: ${company.thesis}
+`;
+    }).join('\n');
+
+    return `${title}\n${'-'.repeat(72)}\n${body}`;
+  }
+
+  private peopleTextSection(people: PersonToMeet[]): string {
+    if (people.length === 0) {
+      return `FOUNDERS AND BUILDERS TO MEET NOW\n${'-'.repeat(72)}\nNo profiles available yet.\n`;
     }
 
-    // GitHub repos section
-    content += '\nTRENDING ON GITHUB\n' + '-'.repeat(60) + '\n\n';
-    if (repos.length === 0) {
-      content += 'No trending repositories found\n\n';
-    } else {
-      repos.forEach((repo, index) => {
-        content += `${index + 1}. ${repo.author}/${repo.name}\n`;
-        content += `   ${repo.description}\n`;
-        content += `   ⭐ ${repo.starsToday} stars today • ${repo.stars} total stars • ${repo.language}\n`;
-        content += `   ${repo.url}\n\n`;
-      });
-    }
+    const body = people.map((entry, index) =>
+      `${index + 1}. ${entry.person.name} (${entry.companyName})
+   Profile: ${entry.person.profileUrl}
+   Role: ${entry.person.role.replace('_', ' ')}
+   Company: ${entry.person.company ?? 'Unknown'}
+   Reason: ${entry.reason}
+`,
+    ).join('\n');
 
-    content += '\n' + '-'.repeat(60) + '\n';
-    content += 'Powered by Product Hunt, Hacker News, and GitHub\n';
-    content += `Generated at ${new Date().toLocaleString()}`;
+    return `FOUNDERS AND BUILDERS TO MEET NOW\n${'-'.repeat(72)}\n${body}`;
+  }
 
-    return content;
+  private personLabel(name: string, company?: string): string {
+    return company ? `${name} (${company})` : name;
   }
 
   private escapeHtml(text: string): string {

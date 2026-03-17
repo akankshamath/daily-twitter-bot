@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { config } from './config';
+import { HackerNewsSignal } from './types';
 
 export interface Story {
   id: number;
   title: string;
-  url: string;
+  url?: string;
   score: number;
   by: string;
   time: number;
@@ -13,35 +14,79 @@ export interface Story {
   text?: string;
 }
 
+export interface HNUser {
+  id: string;
+  created: number;
+  karma: number;
+  about?: string;
+}
+
 export class HackerNewsClient {
   private baseUrl = 'https://hacker-news.firebaseio.com/v0';
+
+  /**
+   * Fetches Show HN stories (product launches)
+   * Show HN is where people launch their products on Hacker News
+   */
+  async getShowHNStories(limit: number = 15): Promise<Story[]> {
+    try {
+      console.log('Fetching Show HN stories from Hacker News API...');
+
+      const { data: storyIds } = await axios.get<number[]>(`${this.baseUrl}/showstories.json`, {
+        timeout: 10000,
+      });
+
+      // Fetch top N story details
+      const stories = await Promise.all(
+        storyIds.slice(0, Math.min(limit * 2, 30)).map(id => this.getStory(id)),
+      );
+
+      // Filter out null results and stories without URLs
+      const validStories = stories
+        .filter((story): story is Story => story !== null && !!story.url)
+        .slice(0, limit);
+
+      console.log(`Found ${validStories.length} Show HN stories`);
+      return validStories;
+    } catch (error) {
+      console.error('Error fetching Hacker News Show HN stories:', error);
+      console.log('No Hacker News Show HN stories will be included for this run.');
+      return [];
+    }
+  }
 
   /**
    * Fetches top stories from Hacker News
    * API Docs: https://github.com/HackerNews/API
    */
-  async getTopStories(): Promise<Story[]> {
+  async getTopStories(limit: number = 10, minScore: number = 100): Promise<Story[]> {
     try {
       console.log('Fetching top stories from Hacker News...');
 
       // Get top story IDs
-      const { data: topStoryIds } = await axios.get<number[]>(`${this.baseUrl}/topstories.json`);
-
-      // Fetch details for top stories (limit to avoid too many requests)
-      const storyLimit = Math.min(config.content.maxTrends * 2, 30);
-      const storyPromises = topStoryIds.slice(0, storyLimit).map(id => this.getStory(id));
-
-      const stories = await Promise.all(storyPromises);
-
-      // Filter out nulls and stories without URLs
-      const validStories = stories.filter((story): story is Story => {
-        return story !== null && (story.url !== undefined || story.text !== undefined);
+      const { data: topStoryIds } = await axios.get<number[]>(`${this.baseUrl}/topstories.json`, {
+        timeout: 10000,
       });
 
-      console.log(`Found ${validStories.length} stories from Hacker News`);
+      // Fetch details for top stories (limit to avoid too many requests)
+      const stories = await Promise.all(
+        topStoryIds.slice(0, Math.min(limit * 3, 50)).map(id => this.getStory(id)),
+      );
+
+      // Filter by score and URL presence
+      const validStories = stories
+        .filter((story): story is Story =>
+          story !== null &&
+          !!story.url &&
+          story.score >= minScore
+        )
+        .slice(0, limit);
+
+      console.log(`Found ${validStories.length} top stories (min score: ${minScore})`);
       return validStories;
     } catch (error) {
-      console.error('Error fetching Hacker News data:', error);
+      console.error('Error fetching Hacker News top stories:', error);
+      console.log('No Hacker News top stories will be included for this run.');
       return [];
     }
   }
@@ -51,10 +96,27 @@ export class HackerNewsClient {
    */
   private async getStory(id: number): Promise<Story | null> {
     try {
-      const { data } = await axios.get<Story>(`${this.baseUrl}/item/${id}.json`);
+      const { data } = await axios.get<Story>(`${this.baseUrl}/item/${id}.json`, {
+        timeout: 5000,
+      });
       return data;
     } catch (error) {
       console.error(`Error fetching story ${id}:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Fetches user profile to enrich founder signals
+   */
+  private async getUser(username: string): Promise<HNUser | null> {
+    try {
+      const { data } = await axios.get<HNUser>(`${this.baseUrl}/user/${username}.json`, {
+        timeout: 5000,
+      });
+      return data;
+    } catch (error) {
+      console.error(`Error fetching HN user ${username}:`, error);
       return null;
     }
   }
@@ -150,5 +212,109 @@ export class HackerNewsClient {
       const titleLower = story.title.toLowerCase();
       return techKeywords.some(keyword => titleLower.includes(keyword));
     });
+  }
+
+  /**
+   * Converts HN stories to company signals for enrichment
+   */
+  async getCompanySignals(): Promise<HackerNewsSignal[]> {
+    const showHNStories = await this.getShowHNStories(15);
+    const topStories = await this.getTopStories(10, 150);
+
+    const allStories = [...showHNStories, ...topStories];
+    const collectedAt = new Date().toISOString();
+
+    // Enrich stories with user data
+    const signals = await Promise.all(
+      allStories.map(async (story) => {
+        const user = await this.getUser(story.by);
+        const companyName = this.extractCompanyName(story.title, story.url);
+        const storyType: 'show_hn' | 'top_story' = showHNStories.includes(story) ? 'show_hn' : 'top_story';
+
+        return {
+          source: 'hacker_news' as const,
+          sourceId: `hn-${story.id}`,
+          collectedAt,
+          storyType,
+          companyName,
+          productName: this.extractProductName(story.title),
+          storyUrl: `https://news.ycombinator.com/item?id=${story.id}`,
+          websiteUrl: story.url,
+          title: story.title,
+          description: story.text || this.extractDescriptionFromTitle(story.title),
+          authorUsername: story.by,
+          authorKarma: user?.karma ?? 0,
+          authorCreated: user?.created ? new Date(user.created * 1000).toISOString() : undefined,
+          score: story.score,
+          commentsCount: story.descendants || 0,
+          createdAt: new Date(story.time * 1000).toISOString(),
+        };
+      }),
+    );
+
+    return signals;
+  }
+
+  /**
+   * Extract company name from title and URL
+   */
+  private extractCompanyName(title: string, url?: string): string {
+    // Try to extract from URL first
+    if (url) {
+      try {
+        const parsed = new URL(url);
+        const domain = parsed.hostname.replace(/^www\./, '');
+        const parts = domain.split('.');
+
+        // Get the main domain name (before .com, .io, etc.)
+        if (parts.length >= 2) {
+          return this.capitalize(parts[parts.length - 2]);
+        }
+      } catch {
+        // Fall through to title extraction
+      }
+    }
+
+    // Extract from title (Show HN: ProductName - Description)
+    const showHNMatch = title.match(/Show HN:\s*([^-–—(]+)/i);
+    if (showHNMatch) {
+      return showHNMatch[1].trim();
+    }
+
+    // Try to get first part of title
+    const firstPart = title.split(/[-–—]/)[0].trim();
+    return firstPart.substring(0, 50);
+  }
+
+  /**
+   * Extract product name from title
+   */
+  private extractProductName(title: string): string {
+    // For Show HN, extract product name
+    const showHNMatch = title.match(/Show HN:\s*([^-–—(]+)/i);
+    if (showHNMatch) {
+      return showHNMatch[1].trim();
+    }
+
+    // Otherwise use first part of title
+    return title.split(/[-–—]/)[0].trim();
+  }
+
+  /**
+   * Extract description from title (everything after - or —)
+   */
+  private extractDescriptionFromTitle(title: string): string {
+    const parts = title.split(/[-–—]/);
+    if (parts.length > 1) {
+      return parts.slice(1).join(' - ').trim();
+    }
+    return title;
+  }
+
+  /**
+   * Capitalize first letter
+   */
+  private capitalize(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 }

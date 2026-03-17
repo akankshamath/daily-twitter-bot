@@ -1,9 +1,10 @@
 import cron from 'node-cron';
 import { config } from './config';
 import { ProductHuntClient } from './productHuntClient';
-import { HackerNewsClient } from './hackerNewsClient';
 import { GitHubClient } from './githubClient';
 import { EmailService } from './emailService';
+import { buildCompanyProfiles, buildDailyBrief } from './companyEnricher';
+import { SnapshotStorage } from './storage';
 
 async function runDailyUpdate() {
   console.log('\n' + '='.repeat(70));
@@ -14,38 +15,36 @@ async function runDailyUpdate() {
   try {
     // Initialize services
     const productHuntClient = new ProductHuntClient();
-    const hackerNewsClient = new HackerNewsClient();
     const githubClient = new GitHubClient();
     const emailService = new EmailService();
+    const storage = new SnapshotStorage(config.storage.snapshotFile);
+    const now = new Date();
+    const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    const previousSnapshot = await storage.getLatestSnapshot(date);
 
-    // Fetch Product Hunt launches
-    console.log('📦 Step 1/4: Fetching Product Hunt launches...');
-    const allLaunches = await productHuntClient.getTodayLaunches();
-    const topLaunches = allLaunches
-      .sort((a, b) => b.votesCount - a.votesCount)
-      .slice(0, config.content.maxLaunches);
-    console.log(`   ✓ Found ${topLaunches.length} top launches\n`);
+    console.log('📦 Step 1/4: Fetching Product Hunt company signals...');
+    const productSignals = await productHuntClient.getCompanySignals();
+    console.log(`   ✓ Found ${productSignals.length} Product Hunt signals\n`);
 
-    // Fetch Hacker News trends
-    console.log('📰 Step 2/4: Fetching Hacker News trends...');
-    const topStories = await hackerNewsClient.getTopStories();
+    console.log('⭐ Step 2/4: Fetching GitHub company signals...');
+    const githubSignals = await githubClient.getCompanySignals(8);
+    console.log(`   ✓ Found ${githubSignals.length} GitHub signals\n`);
 
-    // Filter and sort by score
-    const techStories = hackerNewsClient.filterTechStories(topStories);
-    const trendingStories = techStories
-      .sort((a, b) => b.score - a.score)
-      .slice(0, config.content.maxTrends);
+    console.log('🧠 Step 3/4: Building VC brief...');
+    const companies = buildCompanyProfiles([...productSignals, ...githubSignals], previousSnapshot);
+    const brief = buildDailyBrief(date, companies, previousSnapshot);
+    brief.launchesToday = brief.launchesToday.slice(0, config.content.maxLaunches);
+    brief.emergingCompanies = brief.emergingCompanies.slice(0, config.content.maxEmergingCompanies);
+    brief.acceleratingCompanies = brief.acceleratingCompanies.slice(0, config.content.maxAcceleratingCompanies);
+    brief.foundersToMeet = brief.foundersToMeet.slice(0, config.content.maxPeopleToMeet);
+    const snapshot = { date, companies };
+    console.log(`   ✓ Built brief for ${companies.length} companies\n`);
 
-    console.log(`   ✓ Found ${trendingStories.length} trending tech stories\n`);
-
-    // Fetch GitHub trending repositories
-    console.log('⭐ Step 3/4: Fetching GitHub trending repos...');
-    const trendingRepos = await githubClient.getTrendingRepos(5);
-    console.log(`   ✓ Found ${trendingRepos.length} trending repositories\n`);
-
-    // Send email digest
     console.log('📧 Step 4/4: Sending email digest...');
-    await emailService.sendDailyDigest(topLaunches, trendingStories, trendingRepos);
+    const lastMessageId = (await storage.getMeta()).lastMessageId;
+    const messageId = await emailService.sendDailyDigest(brief, lastMessageId);
+    await storage.saveSnapshot(snapshot);
+    await storage.updateMeta({ lastMessageId: messageId });
     console.log(`   ✓ Email sent to: ${config.email.to.join(', ')}\n`);
 
     // Summary
@@ -53,9 +52,12 @@ async function runDailyUpdate() {
     console.log('✅ UPDATE COMPLETE');
     console.log('='.repeat(70));
     console.log(`📊 Summary:`);
-    console.log(`   • Product Launches: ${topLaunches.length}`);
-    console.log(`   • Tech Trends: ${trendingStories.length}`);
-    console.log(`   • GitHub Repos: ${trendingRepos.length}`);
+    console.log(`   • Product Hunt Signals: ${productSignals.length}`);
+    console.log(`   • GitHub Signals: ${githubSignals.length}`);
+    console.log(`   • Launches Today: ${brief.launchesToday.length}`);
+    console.log(`   • Emerging Companies: ${brief.emergingCompanies.length}`);
+    console.log(`   • Accelerating Companies: ${brief.acceleratingCompanies.length}`);
+    console.log(`   • People To Meet: ${brief.foundersToMeet.length}`);
     console.log(`   • Recipients: ${config.email.to.length}`);
     console.log('='.repeat(70) + '\n');
 
@@ -110,7 +112,8 @@ async function main() {
     console.log(`✅ Recipients: ${config.email.to.join(', ')}`);
     console.log(`✅ Schedule: ${config.schedule}`);
     console.log(`✅ Max Launches: ${config.content.maxLaunches}`);
-    console.log(`✅ Max Trends: ${config.content.maxTrends}\n`);
+    console.log(`✅ GitHub API Token: ${config.github.token ? 'Configured' : 'Not configured (public API only)'}`);
+    console.log(`✅ Snapshot File: ${config.storage.snapshotFile}\n`);
   } catch (error) {
     console.error('Configuration validation failed\n');
 
