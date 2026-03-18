@@ -159,7 +159,8 @@ export class ProductHuntClient {
       topics: launch.tags,
       makerName: 'Unknown',
       // No votesCount or commentsCount - RSS doesn't provide real data
-      createdAt: new Date().toISOString(),
+      // Preserve launch day to avoid timezone drift in "launches today"
+      createdAt: `${launch.date}T12:00:00.000Z`,
     }));
   }
 

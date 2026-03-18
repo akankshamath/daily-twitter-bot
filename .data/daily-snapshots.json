@@ -5642,13 +5642,13 @@
             {
               "source": "github",
               "sourceId": "gh-jarrodwatts-claude-hud",
-              "collectedAt": "2026-03-18T19:08:12.138Z",
+              "collectedAt": "2026-03-18T19:52:23.921Z",
               "companyName": "NoSchool CTO",
               "repoName": "claude-hud",
               "repoUrl": "https://github.com/jarrodwatts/claude-hud",
               "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
               "language": "JavaScript",
-              "stars": 6690,
+              "stars": 6710,
               "forks": 289,
               "starsToday": 1040,
               "ownerLogin": "jarrodwatts",
@@ -5668,7 +5668,7 @@
                   "name": "Jarrod Watts",
                   "profileUrl": "https://github.com/jarrodwatts",
                   "avatarUrl": "https://avatars.githubusercontent.com/u/35651410?v=4",
-                  "followers": 888,
+                  "followers": 889,
                   "contributions": 185,
                   "role": "founder",
                   "source": "github"
@@ -5724,7 +5724,7 @@
               "name": "Jarrod Watts",
               "profileUrl": "https://github.com/jarrodwatts",
               "avatarUrl": "https://avatars.githubusercontent.com/u/35651410?v=4",
-              "followers": 888,
+              "followers": 889,
               "contributions": 185,
               "role": "founder",
               "source": "github"
@@ -5736,7 +5736,7 @@
               "name": "Jarrod Watts",
               "profileUrl": "https://github.com/jarrodwatts",
               "avatarUrl": "https://avatars.githubusercontent.com/u/35651410?v=4",
-              "followers": 888,
+              "followers": 889,
               "contributions": 185,
               "role": "founder",
               "source": "github"
@@ -5820,14 +5820,14 @@
             {
               "source": "github",
               "sourceId": "gh-obra-superpowers",
-              "collectedAt": "2026-03-18T19:08:11.896Z",
+              "collectedAt": "2026-03-18T19:52:24.079Z",
               "companyName": "keyboardio",
               "repoName": "superpowers",
               "repoUrl": "https://github.com/obra/superpowers",
               "description": "An agentic skills framework & software development methodology that works.",
               "language": "Shell",
-              "stars": 95604,
-              "forks": 7570,
+              "stars": 95680,
+              "forks": 7579,
               "starsToday": 4091,
               "ownerLogin": "obra",
               "ownerType": "User",
@@ -5839,7 +5839,7 @@
                   "profileUrl": "https://github.com/obra",
                   "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
                   "company": "@keyboardio ",
-                  "followers": 3499,
+                  "followers": 3501,
                   "contributions": 317,
                   "role": "founder",
                   "source": "github"
@@ -5882,7 +5882,7 @@
                   "profileUrl": "https://github.com/claude",
                   "avatarUrl": "https://avatars.githubusercontent.com/u/81847?v=4",
                   "company": "@anthropics",
-                  "followers": 51558,
+                  "followers": 51592,
                   "contributions": 2,
                   "role": "core_builder",
                   "source": "github"
@@ -5897,7 +5897,7 @@
               "profileUrl": "https://github.com/obra",
               "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
               "company": "@keyboardio ",
-              "followers": 3499,
+              "followers": 3501,
               "contributions": 317,
               "role": "founder",
               "source": "github"
@@ -5910,7 +5910,7 @@
               "profileUrl": "https://github.com/obra",
               "avatarUrl": "https://avatars.githubusercontent.com/u/45416?v=4",
               "company": "@keyboardio ",
-              "followers": 3499,
+              "followers": 3501,
               "contributions": 317,
               "role": "founder",
               "source": "github"
@@ -5953,7 +5953,7 @@
               "profileUrl": "https://github.com/claude",
               "avatarUrl": "https://avatars.githubusercontent.com/u/81847?v=4",
               "company": "@anthropics",
-              "followers": 51558,
+              "followers": 51592,
               "contributions": 2,
               "role": "core_builder",
               "source": "github"
@@ -5998,15 +5998,15 @@
             {
               "source": "github",
               "sourceId": "gh-unslothai-unsloth",
-              "collectedAt": "2026-03-18T19:08:12.111Z",
+              "collectedAt": "2026-03-18T19:52:24.270Z",
               "companyName": "unsloth",
               "repoName": "unsloth",
               "repoUrl": "https://github.com/unslothai/unsloth",
               "homepageUrl": "https://unsloth.ai/docs",
               "description": "Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.",
               "language": "Python",
-              "stars": 55571,
-              "forks": 4668,
+              "stars": 55603,
+              "forks": 4669,
               "starsToday": 975,
               "ownerLogin": "unslothai",
               "ownerType": "Organization",
@@ -6193,13 +6193,13 @@
             {
               "source": "github",
               "sourceId": "gh-langchain-ai-open-swe",
-              "collectedAt": "2026-03-18T19:08:12.207Z",
+              "collectedAt": "2026-03-18T19:52:24.156Z",
               "companyName": "langchain-ai",
               "repoName": "open-swe",
               "repoUrl": "https://github.com/langchain-ai/open-swe",
               "description": "An Open-Source Asynchronous Coding Agent",
               "language": "Python",
-              "stars": 6148,
+              "stars": 6169,
               "forks": 801,
               "starsToday": 454,
               "ownerLogin": "langchain-ai",
@@ -6222,7 +6222,7 @@
                   "avatarUrl": "https://avatars.githubusercontent.com/u/46789226?v=4",
                   "company": "@langchain-ai",
                   "bio": "Trace tackler @ LangChain",
-                  "followers": 1439,
+                  "followers": 1440,
                   "contributions": 337,
                   "role": "core_builder",
                   "source": "github"
@@ -6283,7 +6283,7 @@
               "avatarUrl": "https://avatars.githubusercontent.com/u/46789226?v=4",
               "company": "@langchain-ai",
               "bio": "Trace tackler @ LangChain",
-              "followers": 1439,
+              "followers": 1440,
               "contributions": 337,
               "role": "core_builder",
               "source": "github"
@@ -6371,14 +6371,14 @@
             {
               "source": "github",
               "sourceId": "gh-shadps4-emu-shadPS4",
-              "collectedAt": "2026-03-18T19:08:12.252Z",
+              "collectedAt": "2026-03-18T19:52:23.942Z",
               "companyName": "shadps4",
               "repoName": "shadPS4",
               "repoUrl": "https://github.com/shadps4-emu/shadPS4",
               "homepageUrl": "https://shadps4.net/",
               "description": "PlayStation 4 emulator for Windows, Linux and macOS written in C++",
               "language": "C++",
-              "stars": 29730,
+              "stars": 29752,
               "forks": 2024,
               "starsToday": 292,
               "ownerLogin": "shadps4-emu",
@@ -6532,18 +6532,36 @@
         {
           "id": "github-com",
           "companyName": "Github",
-          "productName": "Sub",
-          "canonicalUrl": "https://github.com/adammiribyan/zeroboot",
-          "summary": "I wanted to see how fast an isolated code sandbox could start if I never had to boot a fresh VM.<p>So instead of launching a new microVM per execution, I boot Firecracker once with Python and numpy already loaded, then snapshot the full VM state. Every execution after that creates a new KVM VM backed by a `MAP_PRIVATE` mapping of the snapshot memory, so Linux gives me copy-on-write pages automatically.<p>That means each sandbox starts from an already-running Python process inside a real VM, runs the code, and exits.<p>These are real KVM VMs, not containers: separate guest kernel, separate guest memory, separate page tables. When a VM writes to memory, it gets a private copy of that page.<p>The hard part was not CoW itself. The hard part was resuming the snapshotted VM correctly.<p>Rust, Apache 2.0.",
+          "productName": "Playing LongTurn FreeCiv with Friends",
+          "canonicalUrl": "https://github.com/ndroo/freeciv.andrewmcgrath.info",
+          "summary": "Show HN: Playing LongTurn FreeCiv with Friends",
           "categories": [
-            "AI",
-            "Software"
+            "Software",
+            "AI"
           ],
           "sourceSignals": [
             {
               "source": "hacker_news",
+              "sourceId": "hn-47429988",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
+              "storyType": "show_hn",
+              "companyName": "Github",
+              "productName": "Playing LongTurn FreeCiv with Friends",
+              "storyUrl": "https://news.ycombinator.com/item?id=47429988",
+              "websiteUrl": "https://github.com/ndroo/freeciv.andrewmcgrath.info",
+              "title": "Show HN: Playing LongTurn FreeCiv with Friends",
+              "description": "Show HN: Playing LongTurn FreeCiv with Friends",
+              "authorUsername": "verelo",
+              "authorKarma": 3084,
+              "authorCreated": "2012-01-01T06:27:35.000Z",
+              "score": 6,
+              "commentsCount": 0,
+              "createdAt": "2026-03-18T19:01:54.000Z"
+            },
+            {
+              "source": "hacker_news",
               "sourceId": "hn-47412569",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Github",
               "productName": "Sub",
@@ -6552,16 +6570,16 @@
               "title": "Show HN: Sub-millisecond VM sandboxes using CoW memory forking",
               "description": "I wanted to see how fast an isolated code sandbox could start if I never had to boot a fresh VM.<p>So instead of launching a new microVM per execution, I boot Firecracker once with Python and numpy already loaded, then snapshot the full VM state. Every execution after that creates a new KVM VM backed by a `MAP_PRIVATE` mapping of the snapshot memory, so Linux gives me copy-on-write pages automatically.<p>That means each sandbox starts from an already-running Python process inside a real VM, runs the code, and exits.<p>These are real KVM VMs, not containers: separate guest kernel, separate guest memory, separate page tables. When a VM writes to memory, it gets a private copy of that page.<p>The hard part was not CoW itself. The hard part was resuming the snapshotted VM correctly.<p>Rust, Apache 2.0.",
               "authorUsername": "adammiribyan",
-              "authorKarma": 191,
+              "authorKarma": 194,
               "authorCreated": "2022-08-16T18:23:52.000Z",
-              "score": 271,
-              "commentsCount": 63,
+              "score": 277,
+              "commentsCount": 65,
               "createdAt": "2026-03-17T13:43:44.000Z"
             },
             {
               "source": "hacker_news",
               "sourceId": "hn-47425249",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Github",
               "productName": "Reprompt",
@@ -6579,7 +6597,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47427592",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Github",
               "productName": "Hanoi",
@@ -6597,7 +6615,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47427395",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Github",
               "productName": "Save Claude tokens with semantic search powered by SQLite and Ollama",
@@ -6614,8 +6632,26 @@
             },
             {
               "source": "hacker_news",
+              "sourceId": "hn-47408727",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
+              "storyType": "show_hn",
+              "companyName": "Github",
+              "productName": "Crust",
+              "storyUrl": "https://news.ycombinator.com/item?id=47408727",
+              "websiteUrl": "https://github.com/chenxin-yan/crust",
+              "title": "Show HN: Crust – A CLI framework for TypeScript and Bun",
+              "description": "We&#x27;ve been building Crust (<a href=\"https:&#x2F;&#x2F;crustjs.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;crustjs.com&#x2F;</a>), a TypeScript-first, Bun-native CLI framework with zero dependencies. It&#x27;s been powering our core product internally for a while, and we&#x27;re now open-sourcing it.<p>The problem we kept running into: existing CLI frameworks in the JS ecosystem are either minimal arg parsers where you wire everything yourself, or heavyweight frameworks with large dependency trees and Node-era assumptions. We wanted something in between.<p>What Crust does differently:<p>- Full type inference from definitions — args and flags are inferred automatically. No manual type annotations, no generics to wrangle. You define a flag as type: &quot;string&quot; and it flows through to your handler.<p>- Compile-time validation — catches flag alias collisions and variadic arg mistakes before your code runs, not at runtime.<p>- Zero runtime dependencies — @crustjs&#x2F;core is ~3.6kB gzipped (21kB install). For comparison: yargs is 509kB, oclif is 411kB.<p>- Composable modules — core, plugins, prompts, styling, validation, and build tooling are all separate packages. Install only what you need.<p>- Plugin system — middleware-based with lifecycle hooks (preRun&#x2F;postRun). Official plugins for help, version, and shell autocompletion.<p>- Built for Bun — no Node compatibility layers, no legacy baggage.<p>Quick example:<p><pre><code>  import { Crust } from &quot;@crustjs&#x2F;core&quot;;\n  import { helpPlugin, versionPlugin } from &quot;@crustjs&#x2F;plugins&quot;;\n\n  const main = new Crust(&quot;greet&quot;)\n    .args([{ name: &quot;name&quot;, type: &quot;string&quot;, default: &quot;world&quot; }])\n    .flags({ shout: { type: &quot;boolean&quot;, short: &quot;s&quot; } })\n    .use(helpPlugin())\n    .use(versionPlugin(&quot;1.0.0&quot;))\n    .run(({ args, flags }) =&gt; {\n      const msg = `Hello, ${args.name}!`;\n      console.log(flags.shout ? msg.toUpperCase() : msg);\n    });\n\n  await main.execute();\n</code></pre>\nScaffold a new project:<p><pre><code>  bun create crust my-cli\n</code></pre>\nSite: <a href=\"https:&#x2F;&#x2F;crustjs.com\" rel=\"nofollow\">https:&#x2F;&#x2F;crustjs.com</a>\nGitHub: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;chenxin-yan&#x2F;crust\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;chenxin-yan&#x2F;crust</a><p>Happy to answer any questions about the design decisions or internals.",
+              "authorUsername": "jellyotsiro",
+              "authorKarma": 259,
+              "authorCreated": "2024-03-03T07:30:03.000Z",
+              "score": 88,
+              "commentsCount": 38,
+              "createdAt": "2026-03-17T04:43:29.000Z"
+            },
+            {
+              "source": "hacker_news",
               "sourceId": "hn-47426704",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Github",
               "productName": "PlanckClaw an AI agent in 6832 bytes of x86",
@@ -6632,44 +6668,26 @@
             },
             {
               "source": "hacker_news",
-              "sourceId": "hn-47408727",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "sourceId": "hn-47416227",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Github",
-              "productName": "Crust",
-              "storyUrl": "https://news.ycombinator.com/item?id=47408727",
-              "websiteUrl": "https://github.com/chenxin-yan/crust",
-              "title": "Show HN: Crust – A CLI framework for TypeScript and Bun",
-              "description": "We&#x27;ve been building Crust (<a href=\"https:&#x2F;&#x2F;crustjs.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;crustjs.com&#x2F;</a>), a TypeScript-first, Bun-native CLI framework with zero dependencies. It&#x27;s been powering our core product internally for a while, and we&#x27;re now open-sourcing it.<p>The problem we kept running into: existing CLI frameworks in the JS ecosystem are either minimal arg parsers where you wire everything yourself, or heavyweight frameworks with large dependency trees and Node-era assumptions. We wanted something in between.<p>What Crust does differently:<p>- Full type inference from definitions — args and flags are inferred automatically. No manual type annotations, no generics to wrangle. You define a flag as type: &quot;string&quot; and it flows through to your handler.<p>- Compile-time validation — catches flag alias collisions and variadic arg mistakes before your code runs, not at runtime.<p>- Zero runtime dependencies — @crustjs&#x2F;core is ~3.6kB gzipped (21kB install). For comparison: yargs is 509kB, oclif is 411kB.<p>- Composable modules — core, plugins, prompts, styling, validation, and build tooling are all separate packages. Install only what you need.<p>- Plugin system — middleware-based with lifecycle hooks (preRun&#x2F;postRun). Official plugins for help, version, and shell autocompletion.<p>- Built for Bun — no Node compatibility layers, no legacy baggage.<p>Quick example:<p><pre><code>  import { Crust } from &quot;@crustjs&#x2F;core&quot;;\n  import { helpPlugin, versionPlugin } from &quot;@crustjs&#x2F;plugins&quot;;\n\n  const main = new Crust(&quot;greet&quot;)\n    .args([{ name: &quot;name&quot;, type: &quot;string&quot;, default: &quot;world&quot; }])\n    .flags({ shout: { type: &quot;boolean&quot;, short: &quot;s&quot; } })\n    .use(helpPlugin())\n    .use(versionPlugin(&quot;1.0.0&quot;))\n    .run(({ args, flags }) =&gt; {\n      const msg = `Hello, ${args.name}!`;\n      console.log(flags.shout ? msg.toUpperCase() : msg);\n    });\n\n  await main.execute();\n</code></pre>\nScaffold a new project:<p><pre><code>  bun create crust my-cli\n</code></pre>\nSite: <a href=\"https:&#x2F;&#x2F;crustjs.com\" rel=\"nofollow\">https:&#x2F;&#x2F;crustjs.com</a>\nGitHub: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;chenxin-yan&#x2F;crust\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;chenxin-yan&#x2F;crust</a><p>Happy to answer any questions about the design decisions or internals.",
-              "authorUsername": "jellyotsiro",
-              "authorKarma": 259,
-              "authorCreated": "2024-03-03T07:30:03.000Z",
-              "score": 88,
-              "commentsCount": 37,
-              "createdAt": "2026-03-17T04:43:29.000Z"
-            },
-            {
-              "source": "hacker_news",
-              "sourceId": "hn-47426428",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
-              "storyType": "show_hn",
-              "companyName": "Github",
-              "productName": "NC Web",
-              "storyUrl": "https://news.ycombinator.com/item?id=47426428",
-              "websiteUrl": "https://github.com/victorantos/NC",
-              "title": "Show HN: NC Web – Norton Commander for the web, built with vanilla JavaScript",
-              "description": "Norton Commander for the web, built with vanilla JavaScript",
-              "authorUsername": "victorbuilds",
-              "authorKarma": 259,
-              "authorCreated": "2025-11-29T08:45:23.000Z",
-              "score": 4,
-              "commentsCount": 2,
-              "createdAt": "2026-03-18T14:43:12.000Z"
+              "productName": "Horizon",
+              "storyUrl": "https://news.ycombinator.com/item?id=47416227",
+              "websiteUrl": "https://github.com/peters/horizon",
+              "title": "Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust",
+              "description": "Tabs, splits, and tmux work fine until you have several projects open with logs, tests, and long-running shells. I kept rebuilding context instead of resuming work. Horizon puts shells on an infinite canvas. You can arrange them into workspaces and reopen later with layout, scrollback, and history intact.<p>Built in 3 days with Claude&#x2F;Codex, dogfooding the workflow as I went. Feedback and contributions welcome.",
+              "authorUsername": "petersunde",
+              "authorKarma": 27,
+              "authorCreated": "2020-06-26T23:28:16.000Z",
+              "score": 75,
+              "commentsCount": 31,
+              "createdAt": "2026-03-17T18:14:24.000Z"
             },
             {
               "source": "hacker_news",
               "sourceId": "hn-47412569",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Github",
               "productName": "Sub",
@@ -6678,39 +6696,29 @@
               "title": "Show HN: Sub-millisecond VM sandboxes using CoW memory forking",
               "description": "I wanted to see how fast an isolated code sandbox could start if I never had to boot a fresh VM.<p>So instead of launching a new microVM per execution, I boot Firecracker once with Python and numpy already loaded, then snapshot the full VM state. Every execution after that creates a new KVM VM backed by a `MAP_PRIVATE` mapping of the snapshot memory, so Linux gives me copy-on-write pages automatically.<p>That means each sandbox starts from an already-running Python process inside a real VM, runs the code, and exits.<p>These are real KVM VMs, not containers: separate guest kernel, separate guest memory, separate page tables. When a VM writes to memory, it gets a private copy of that page.<p>The hard part was not CoW itself. The hard part was resuming the snapshotted VM correctly.<p>Rust, Apache 2.0.",
               "authorUsername": "adammiribyan",
-              "authorKarma": 191,
+              "authorKarma": 194,
               "authorCreated": "2022-08-16T18:23:52.000Z",
-              "score": 271,
-              "commentsCount": 63,
+              "score": 277,
+              "commentsCount": 65,
               "createdAt": "2026-03-17T13:43:44.000Z"
-            },
-            {
-              "source": "hacker_news",
-              "sourceId": "hn-47417804",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
-              "storyType": "top_story",
-              "companyName": "Github",
-              "productName": "Get Shit Done: A meta",
-              "storyUrl": "https://news.ycombinator.com/item?id=47417804",
-              "websiteUrl": "https://github.com/gsd-build/get-shit-done",
-              "title": "Get Shit Done: A meta-prompting, context engineering and spec-driven dev system",
-              "description": "prompting, context engineering and spec - driven dev system",
-              "authorUsername": "stefankuehnel",
-              "authorKarma": 3444,
-              "authorCreated": "2021-05-24T10:27:56.000Z",
-              "score": 419,
-              "commentsCount": 230,
-              "createdAt": "2026-03-17T20:23:39.000Z"
             }
           ],
           "founders": [
+            {
+              "login": "verelo",
+              "name": "verelo",
+              "profileUrl": "https://news.ycombinator.com/user?id=verelo",
+              "role": "founder",
+              "source": "hacker_news",
+              "followers": 3084
+            },
             {
               "login": "adammiribyan",
               "name": "adammiribyan",
               "profileUrl": "https://news.ycombinator.com/user?id=adammiribyan",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 191
+              "followers": 194
             },
             {
               "login": "LuxBennu",
@@ -6737,14 +6745,6 @@
               "followers": 6
             },
             {
-              "login": "frntn",
-              "name": "frntn",
-              "profileUrl": "https://news.ycombinator.com/user?id=frntn",
-              "role": "founder",
-              "source": "hacker_news",
-              "followers": 2
-            },
-            {
               "login": "jellyotsiro",
               "name": "jellyotsiro",
               "profileUrl": "https://news.ycombinator.com/user?id=jellyotsiro",
@@ -6753,34 +6753,34 @@
               "followers": 259
             },
             {
-              "login": "victorbuilds",
-              "name": "victorbuilds",
-              "profileUrl": "https://news.ycombinator.com/user?id=victorbuilds",
+              "login": "frntn",
+              "name": "frntn",
+              "profileUrl": "https://news.ycombinator.com/user?id=frntn",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 259
+              "followers": 2
             },
             {
-              "login": "stefankuehnel",
-              "name": "stefankuehnel",
-              "profileUrl": "https://news.ycombinator.com/user?id=stefankuehnel",
+              "login": "petersunde",
+              "name": "petersunde",
+              "profileUrl": "https://news.ycombinator.com/user?id=petersunde",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 3444
+              "followers": 27
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "7 Show HN posts with 1070 points and 398 comments."
+            "8 Show HN posts with 740 points and 202 comments."
           ],
-          "thesis": "Github is surfacing as a ai company with current public momentum. I wanted to see how fast an isolated code sandbox could start if I never had to boot a fresh VM.<p>So instead of launching a new microVM per execution, I boot Firecracker once with Python and numpy already loaded, then snapshot the full VM state. Every execution after that creates a new KVM VM backed by a `MAP_PRIVATE` mapping of the snapshot memory, so Linux gives me copy-on-write pages automatically.<p>That means each sandbox starts from an already-running Python process inside a real VM, runs the code, and exits.<p>These are real KVM VMs, not containers: separate guest kernel, separate guest memory, separate page tables. When a VM writes to memory, it gets a private copy of that page.<p>The hard part was not CoW itself. The hard part was resuming the snapshotted VM correctly.<p>Rust, Apache 2.0.",
+          "thesis": "Github is surfacing as a software company with current public momentum. Show HN: Playing LongTurn FreeCiv with Friends",
           "recommendedAction": "research",
           "stageGuess": "pre_seed",
           "scores": {
-            "overall": 63,
+            "overall": 61,
             "emerging": 100,
             "acceleration": 20,
-            "founderStrength": 42
+            "founderStrength": 36
           },
           "delta": {
             "isNew": false,
@@ -6788,7 +6788,7 @@
             "repoCountDelta": 0,
             "starsTodayDelta": 0,
             "contributorDelta": 0,
-            "scoreDelta": -2
+            "scoreDelta": -4
           }
         },
         {
@@ -6808,14 +6808,14 @@
             {
               "source": "github",
               "sourceId": "gh-newton-physics-newton",
-              "collectedAt": "2026-03-18T19:08:11.984Z",
+              "collectedAt": "2026-03-18T19:52:24.001Z",
               "companyName": "newton-physics",
               "repoName": "newton",
               "repoUrl": "https://github.com/newton-physics/newton",
               "homepageUrl": "https://newton-physics.github.io/newton/",
               "description": "An open-source, GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers.",
               "language": "Python",
-              "stars": 2845,
+              "stars": 2853,
               "forks": 313,
               "starsToday": 20,
               "ownerLogin": "newton-physics",
@@ -6835,7 +6835,7 @@
                   "company": "University of Southern California",
                   "bio": "Research scientist at NVIDIA",
                   "followers": 283,
-                  "contributions": 486,
+                  "contributions": 487,
                   "role": "core_builder",
                   "source": "github"
                 },
@@ -6894,7 +6894,7 @@
               "company": "University of Southern California",
               "bio": "Research scientist at NVIDIA",
               "followers": 283,
-              "contributions": 486,
+              "contributions": 487,
               "role": "core_builder",
               "source": "github"
             },
@@ -6963,6 +6963,67 @@
           }
         },
         {
+          "id": "notes-visaint-space",
+          "companyName": "Visaint",
+          "productName": "AI coding is gambling",
+          "canonicalUrl": "https://notes.visaint.space/ai-coding-is-gambling/",
+          "summary": "AI coding is gambling",
+          "categories": [
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "hacker_news",
+              "sourceId": "hn-47428541",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
+              "storyType": "top_story",
+              "companyName": "Visaint",
+              "productName": "AI coding is gambling",
+              "storyUrl": "https://news.ycombinator.com/item?id=47428541",
+              "websiteUrl": "https://notes.visaint.space/ai-coding-is-gambling/",
+              "title": "AI coding is gambling",
+              "description": "AI coding is gambling",
+              "authorUsername": "speckx",
+              "authorKarma": 30339,
+              "authorCreated": "2023-06-14T15:57:16.000Z",
+              "score": 192,
+              "commentsCount": 207,
+              "createdAt": "2026-03-18T17:22:02.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "speckx",
+              "name": "speckx",
+              "profileUrl": "https://news.ycombinator.com/user?id=speckx",
+              "role": "founder",
+              "source": "hacker_news",
+              "followers": 30339
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Trending on Hacker News with 192 points and 207 comments."
+          ],
+          "thesis": "Visaint is surfacing as a ai company with current public momentum. AI coding is gambling",
+          "recommendedAction": "watch",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 44,
+            "emerging": 44,
+            "acceleration": 35,
+            "founderStrength": 50
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 44
+          }
+        },
+        {
           "id": "dbushell-com",
           "companyName": "Dbushell",
           "productName": "Death to Scroll Fade",
@@ -6975,7 +7036,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47426932",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Dbushell",
               "productName": "Death to Scroll Fade",
@@ -6984,10 +7045,10 @@
               "title": "Death to Scroll Fade",
               "description": "Death to Scroll Fade",
               "authorUsername": "PaulHoule",
-              "authorKarma": 106397,
+              "authorKarma": 106407,
               "authorCreated": "2010-12-10T00:39:41.000Z",
-              "score": 260,
-              "commentsCount": 140,
+              "score": 273,
+              "commentsCount": 149,
               "createdAt": "2026-03-18T15:23:58.000Z"
             }
           ],
@@ -6998,12 +7059,12 @@
               "profileUrl": "https://news.ycombinator.com/user?id=PaulHoule",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 106397
+              "followers": 106407
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "Trending on Hacker News with 260 points and 140 comments."
+            "Trending on Hacker News with 273 points and 149 comments."
           ],
           "thesis": "Dbushell is surfacing as a software company with current public momentum. Death to Scroll Fade",
           "recommendedAction": "watch",
@@ -7036,7 +7097,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47420432",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Inconspicuous",
               "productName": "The pleasures of poor product design",
@@ -7045,10 +7106,10 @@
               "title": "The pleasures of poor product design",
               "description": "The pleasures of poor product design",
               "authorUsername": "NaOH",
-              "authorKarma": 11834,
+              "authorKarma": 11835,
               "authorCreated": "2011-04-06T07:24:48.000Z",
-              "score": 228,
-              "commentsCount": 78,
+              "score": 232,
+              "commentsCount": 81,
               "createdAt": "2026-03-18T01:00:45.000Z"
             }
           ],
@@ -7059,12 +7120,12 @@
               "profileUrl": "https://news.ycombinator.com/user?id=NaOH",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 11834
+              "followers": 11835
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "Trending on Hacker News with 228 points and 78 comments."
+            "Trending on Hacker News with 232 points and 81 comments."
           ],
           "thesis": "Inconspicuous is surfacing as a software company with current public momentum. The pleasures of poor product design",
           "recommendedAction": "watch",
@@ -7085,6 +7146,67 @@
           }
         },
         {
+          "id": "openrocket-info",
+          "companyName": "Openrocket",
+          "productName": "OpenRocket",
+          "canonicalUrl": "https://openrocket.info/",
+          "summary": "OpenRocket",
+          "categories": [
+            "Software"
+          ],
+          "sourceSignals": [
+            {
+              "source": "hacker_news",
+              "sourceId": "hn-47386703",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
+              "storyType": "top_story",
+              "companyName": "Openrocket",
+              "productName": "OpenRocket",
+              "storyUrl": "https://news.ycombinator.com/item?id=47386703",
+              "websiteUrl": "https://openrocket.info/",
+              "title": "OpenRocket",
+              "description": "OpenRocket",
+              "authorUsername": "zeristor",
+              "authorKarma": 13702,
+              "authorCreated": "2013-06-03T14:30:58.000Z",
+              "score": 154,
+              "commentsCount": 38,
+              "createdAt": "2026-03-15T12:20:14.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "zeristor",
+              "name": "zeristor",
+              "profileUrl": "https://news.ycombinator.com/user?id=zeristor",
+              "role": "founder",
+              "source": "hacker_news",
+              "followers": 13702
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Trending on Hacker News with 154 points and 38 comments."
+          ],
+          "thesis": "Openrocket is surfacing as a software company with current public momentum. OpenRocket",
+          "recommendedAction": "watch",
+          "stageGuess": "seed",
+          "scores": {
+            "overall": 41,
+            "emerging": 38,
+            "acceleration": 35,
+            "founderStrength": 50
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 41
+          }
+        },
+        {
           "id": "cs-unc-edu",
           "companyName": "Unc",
           "productName": "Rob Pike's Rules of Programming (1989)",
@@ -7097,7 +7219,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47423647",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Unc",
               "productName": "Rob Pike's Rules of Programming (1989)",
@@ -7106,10 +7228,10 @@
               "title": "Rob Pike's Rules of Programming (1989)",
               "description": "Rob Pike's Rules of Programming (1989)",
               "authorUsername": "vismit2000",
-              "authorKarma": 2952,
+              "authorKarma": 2973,
               "authorCreated": "2022-03-12T01:36:37.000Z",
-              "score": 655,
-              "commentsCount": 348,
+              "score": 690,
+              "commentsCount": 364,
               "createdAt": "2026-03-18T09:59:54.000Z"
             }
           ],
@@ -7120,12 +7242,12 @@
               "profileUrl": "https://news.ycombinator.com/user?id=vismit2000",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 2952
+              "followers": 2973
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "Trending on Hacker News with 655 points and 348 comments."
+            "Trending on Hacker News with 690 points and 364 comments."
           ],
           "thesis": "Unc is surfacing as a software company with current public momentum. Rob Pike's Rules of Programming (1989)",
           "recommendedAction": "watch",
@@ -7158,7 +7280,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47378781",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Huggingface",
               "productName": "Hacker News archive",
@@ -7167,10 +7289,10 @@
               "title": "Show HN: Hacker News archive (47M+ items, 11.6GB) as Parquet, updated every 5m",
               "description": "Show HN: Hacker News archive (47M+ items, 11.6GB) as Parquet, updated every 5m",
               "authorUsername": "tamnd",
-              "authorKarma": 923,
+              "authorKarma": 944,
               "authorCreated": "2025-06-22T11:25:59.000Z",
-              "score": 105,
-              "commentsCount": 37,
+              "score": 140,
+              "commentsCount": 59,
               "createdAt": "2026-03-14T17:12:03.000Z"
             }
           ],
@@ -7181,19 +7303,19 @@
               "profileUrl": "https://news.ycombinator.com/user?id=tamnd",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 923
+              "followers": 944
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "1 Show HN post with 105 points and 37 comments."
+            "1 Show HN post with 140 points and 59 comments."
           ],
           "thesis": "Huggingface is surfacing as a software company with current public momentum. Show HN: Hacker News archive (47M+ items, 11.6GB) as Parquet, updated every 5m",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
-            "overall": 33,
-            "emerging": 48,
+            "overall": 36,
+            "emerging": 54,
             "acceleration": 35,
             "founderStrength": 9
           },
@@ -7203,7 +7325,7 @@
             "repoCountDelta": 0,
             "starsTodayDelta": 0,
             "contributorDelta": 0,
-            "scoreDelta": 33
+            "scoreDelta": 36
           }
         },
         {
@@ -7219,7 +7341,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47427017",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Promptarmor",
               "productName": "Snowflake AI Escapes Sandbox and Executes Malware",
@@ -7228,10 +7350,10 @@
               "title": "Snowflake AI Escapes Sandbox and Executes Malware",
               "description": "Snowflake AI Escapes Sandbox and Executes Malware",
               "authorUsername": "ozgune",
-              "authorKarma": 1778,
+              "authorKarma": 1782,
               "authorCreated": "2011-02-21T10:05:22.000Z",
-              "score": 167,
-              "commentsCount": 44,
+              "score": 178,
+              "commentsCount": 52,
               "createdAt": "2026-03-18T15:30:07.000Z"
             }
           ],
@@ -7242,19 +7364,19 @@
               "profileUrl": "https://news.ycombinator.com/user?id=ozgune",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 1778
+              "followers": 1782
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "Trending on Hacker News with 167 points and 44 comments."
+            "Trending on Hacker News with 178 points and 52 comments."
           ],
           "thesis": "Promptarmor is surfacing as a ai company with current public momentum. Snowflake AI Escapes Sandbox and Executes Malware",
           "recommendedAction": "watch",
           "stageGuess": "seed",
           "scores": {
-            "overall": 33,
-            "emerging": 41,
+            "overall": 34,
+            "emerging": 43,
             "acceleration": 35,
             "founderStrength": 18
           },
@@ -7264,7 +7386,7 @@
             "repoCountDelta": 0,
             "starsTodayDelta": 0,
             "contributorDelta": 0,
-            "scoreDelta": 33
+            "scoreDelta": 34
           }
         },
         {
@@ -7280,7 +7402,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47409222",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Oseifert",
               "productName": "Pgit",
@@ -7289,10 +7411,10 @@
               "title": "Show HN: Pgit – A Git-like CLI backed by PostgreSQL",
               "description": "A Git - like CLI backed by PostgreSQL",
               "authorUsername": "ImGajeed76",
-              "authorKarma": 33,
+              "authorKarma": 34,
               "authorCreated": "2025-07-21T19:21:51.000Z",
-              "score": 106,
-              "commentsCount": 55,
+              "score": 108,
+              "commentsCount": 56,
               "createdAt": "2026-03-17T06:11:17.000Z"
             }
           ],
@@ -7303,12 +7425,12 @@
               "profileUrl": "https://news.ycombinator.com/user?id=ImGajeed76",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 33
+              "followers": 34
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "1 Show HN post with 106 points and 55 comments."
+            "1 Show HN post with 108 points and 56 comments."
           ],
           "thesis": "Oseifert is surfacing as a software company with current public momentum. A Git - like CLI backed by PostgreSQL",
           "recommendedAction": "watch",
@@ -7341,7 +7463,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47422942",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Nightingale",
               "productName": "Nightingale",
@@ -7350,10 +7472,10 @@
               "title": "Nightingale – open-source karaoke app that works with any song on your computer",
               "description": "open - source karaoke app that works with any song on your computer",
               "authorUsername": "rzzzzru",
-              "authorKarma": 178,
+              "authorKarma": 189,
               "authorCreated": "2026-03-18T08:05:10.000Z",
-              "score": 397,
-              "commentsCount": 110,
+              "score": 410,
+              "commentsCount": 116,
               "createdAt": "2026-03-18T08:06:24.000Z"
             }
           ],
@@ -7364,75 +7486,14 @@
               "profileUrl": "https://news.ycombinator.com/user?id=rzzzzru",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 178
+              "followers": 189
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "Trending on Hacker News with 397 points and 110 comments."
+            "Trending on Hacker News with 410 points and 116 comments."
           ],
           "thesis": "Nightingale is surfacing as a software company with current public momentum. open - source karaoke app that works with any song on your computer",
-          "recommendedAction": "watch",
-          "stageGuess": "seed",
-          "scores": {
-            "overall": 30,
-            "emerging": 45,
-            "acceleration": 35,
-            "founderStrength": 2
-          },
-          "delta": {
-            "isNew": true,
-            "launchCountDelta": 0,
-            "repoCountDelta": 0,
-            "starsTodayDelta": 0,
-            "contributorDelta": 0,
-            "scoreDelta": 30
-          }
-        },
-        {
-          "id": "fidget-spinner-github-io",
-          "companyName": "Github",
-          "productName": "Python 3.15's JIT is now back on track",
-          "canonicalUrl": "https://fidget-spinner.github.io/posts/jit-on-track.html",
-          "summary": "Python 3.15's JIT is now back on track",
-          "categories": [
-            "Software"
-          ],
-          "sourceSignals": [
-            {
-              "source": "hacker_news",
-              "sourceId": "hn-47416486",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
-              "storyType": "top_story",
-              "companyName": "Github",
-              "productName": "Python 3.15's JIT is now back on track",
-              "storyUrl": "https://news.ycombinator.com/item?id=47416486",
-              "websiteUrl": "https://fidget-spinner.github.io/posts/jit-on-track.html",
-              "title": "Python 3.15's JIT is now back on track",
-              "description": "Python 3.15's JIT is now back on track",
-              "authorUsername": "guidoiaquinti",
-              "authorKarma": 190,
-              "authorCreated": "2016-09-06T16:14:56.000Z",
-              "score": 461,
-              "commentsCount": 273,
-              "createdAt": "2026-03-17T18:37:27.000Z"
-            }
-          ],
-          "founders": [
-            {
-              "login": "guidoiaquinti",
-              "name": "guidoiaquinti",
-              "profileUrl": "https://news.ycombinator.com/user?id=guidoiaquinti",
-              "role": "founder",
-              "source": "hacker_news",
-              "followers": 190
-            }
-          ],
-          "githubContributors": [],
-          "whyNow": [
-            "Trending on Hacker News with 461 points and 273 comments."
-          ],
-          "thesis": "Github is surfacing as a software company with current public momentum. Python 3.15's JIT is now back on track",
           "recommendedAction": "watch",
           "stageGuess": "seed",
           "scores": {
@@ -7463,7 +7524,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47389696",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "top_story",
               "companyName": "Willwarren",
               "productName": "Write up of my homebrew CPU build",
@@ -7472,10 +7533,10 @@
               "title": "Write up of my homebrew CPU build",
               "description": "Write up of my homebrew CPU build",
               "authorUsername": "wwarren",
-              "authorKarma": 279,
+              "authorKarma": 281,
               "authorCreated": "2014-03-27T01:00:57.000Z",
-              "score": 205,
-              "commentsCount": 39,
+              "score": 209,
+              "commentsCount": 40,
               "createdAt": "2026-03-15T17:36:48.000Z"
             }
           ],
@@ -7486,12 +7547,12 @@
               "profileUrl": "https://news.ycombinator.com/user?id=wwarren",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 279
+              "followers": 281
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "Trending on Hacker News with 205 points and 39 comments."
+            "Trending on Hacker News with 209 points and 40 comments."
           ],
           "thesis": "Willwarren is surfacing as a software company with current public momentum. Write up of my homebrew CPU build",
           "recommendedAction": "watch",
@@ -7512,69 +7573,11 @@
           }
         },
         {
-          "id": "doccupine",
-          "companyName": "Doccupine",
-          "productName": "Doccupine",
-          "canonicalUrl": "https://www.producthunt.com/products/doccupine",
-          "summary": "Open source AI-ready documentation platform.",
-          "categories": [
-            "producthunt",
-            "AI"
-          ],
-          "sourceSignals": [
-            {
-              "source": "product_hunt",
-              "sourceId": "2026-03-18-ph-5dcd6e6e",
-              "collectedAt": "2026-03-18T19:08:09.922Z",
-              "companyName": "Doccupine",
-              "productName": "Doccupine",
-              "launchUrl": "https://www.producthunt.com/products/doccupine",
-              "description": "Open source AI-ready documentation platform.",
-              "tagline": "Open source AI-ready documentation platform.",
-              "topics": [
-                "producthunt"
-              ],
-              "makerName": "Unknown",
-              "createdAt": "2026-03-18T19:08:09.922Z"
-            }
-          ],
-          "founders": [
-            {
-              "login": "unknown",
-              "name": "Unknown",
-              "profileUrl": "https://www.producthunt.com/products/doccupine",
-              "role": "founder",
-              "source": "product_hunt"
-            }
-          ],
-          "githubContributors": [],
-          "whyNow": [
-            "Launched on Product Hunt today."
-          ],
-          "thesis": "Doccupine is surfacing as a producthunt company with current public momentum. Open source AI-ready documentation platform.",
-          "recommendedAction": "watch",
-          "stageGuess": "pre_seed",
-          "scores": {
-            "overall": 27,
-            "emerging": 40,
-            "acceleration": 35,
-            "founderStrength": 0
-          },
-          "delta": {
-            "isNew": true,
-            "launchCountDelta": 1,
-            "repoCountDelta": 0,
-            "starsTodayDelta": 0,
-            "contributorDelta": 0,
-            "scoreDelta": 27
-          }
-        },
-        {
-          "id": "sharepatch",
-          "companyName": "SharePatch",
-          "productName": "SharePatch",
-          "canonicalUrl": "https://www.producthunt.com/products/sharepatch",
-          "summary": "Share git patches with clean, review-ready browser diffs",
+          "id": "claude-dispatch",
+          "companyName": "Claude Dispatch",
+          "productName": "Claude Dispatch",
+          "canonicalUrl": "https://www.producthunt.com/products/claude",
+          "summary": "Text Claude from your phone using “Dispatch”",
           "categories": [
             "producthunt",
             "Software"
@@ -7582,25 +7585,25 @@
           "sourceSignals": [
             {
               "source": "product_hunt",
-              "sourceId": "2026-03-18-ph-93650e2d",
-              "collectedAt": "2026-03-18T19:08:09.922Z",
-              "companyName": "SharePatch",
-              "productName": "SharePatch",
-              "launchUrl": "https://www.producthunt.com/products/sharepatch",
-              "description": "Share git patches with clean, review-ready browser diffs",
-              "tagline": "Share git patches with clean, review-ready browser diffs",
+              "sourceId": "2026-03-18-ph-1b630a45",
+              "collectedAt": "2026-03-18T19:52:22.019Z",
+              "companyName": "Claude Dispatch",
+              "productName": "Claude Dispatch",
+              "launchUrl": "https://www.producthunt.com/products/claude",
+              "description": "Text Claude from your phone using “Dispatch”",
+              "tagline": "Text Claude from your phone using “Dispatch”",
               "topics": [
                 "producthunt"
               ],
               "makerName": "Unknown",
-              "createdAt": "2026-03-18T19:08:09.922Z"
+              "createdAt": "2026-03-18T12:00:00.000Z"
             }
           ],
           "founders": [
             {
               "login": "unknown",
               "name": "Unknown",
-              "profileUrl": "https://www.producthunt.com/products/sharepatch",
+              "profileUrl": "https://www.producthunt.com/products/claude",
               "role": "founder",
               "source": "product_hunt"
             }
@@ -7609,7 +7612,7 @@
           "whyNow": [
             "Launched on Product Hunt today."
           ],
-          "thesis": "SharePatch is surfacing as a producthunt company with current public momentum. Share git patches with clean, review-ready browser diffs",
+          "thesis": "Claude Dispatch is surfacing as a producthunt company with current public momentum. Text Claude from your phone using “Dispatch”",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
@@ -7628,11 +7631,69 @@
           }
         },
         {
-          "id": "claude-double-checker",
-          "companyName": "Claude Double Checker",
-          "productName": "Claude Double Checker",
-          "canonicalUrl": "https://www.producthunt.com/products/claude-double-checker-is-2x-active",
-          "summary": "See Claude's 2× usage window live in your macOS menu bar",
+          "id": "autosend-mcp",
+          "companyName": "AutoSend MCP",
+          "productName": "AutoSend MCP",
+          "canonicalUrl": "https://www.producthunt.com/products/autosend-mcp",
+          "summary": "The email platform your AI agent can operate.",
+          "categories": [
+            "producthunt",
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "product_hunt",
+              "sourceId": "2026-03-18-ph-a9299eff",
+              "collectedAt": "2026-03-18T19:52:22.019Z",
+              "companyName": "AutoSend MCP",
+              "productName": "AutoSend MCP",
+              "launchUrl": "https://www.producthunt.com/products/autosend-mcp",
+              "description": "The email platform your AI agent can operate.",
+              "tagline": "The email platform your AI agent can operate.",
+              "topics": [
+                "producthunt"
+              ],
+              "makerName": "Unknown",
+              "createdAt": "2026-03-18T12:00:00.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "unknown",
+              "name": "Unknown",
+              "profileUrl": "https://www.producthunt.com/products/autosend-mcp",
+              "role": "founder",
+              "source": "product_hunt"
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "Launched on Product Hunt today."
+          ],
+          "thesis": "AutoSend MCP is surfacing as a producthunt company with current public momentum. The email platform your AI agent can operate.",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 27,
+            "emerging": 40,
+            "acceleration": 35,
+            "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 1,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 27
+          }
+        },
+        {
+          "id": "fantastical-mcp-for-mac",
+          "companyName": "Fantastical MCP for Mac",
+          "productName": "Fantastical MCP for Mac",
+          "canonicalUrl": "https://www.producthunt.com/products/fantastical",
+          "summary": "Manage your schedule directly with Claude",
           "categories": [
             "producthunt",
             "Software"
@@ -7640,25 +7701,25 @@
           "sourceSignals": [
             {
               "source": "product_hunt",
-              "sourceId": "2026-03-18-ph-e044a651",
-              "collectedAt": "2026-03-18T19:08:09.922Z",
-              "companyName": "Claude Double Checker",
-              "productName": "Claude Double Checker",
-              "launchUrl": "https://www.producthunt.com/products/claude-double-checker-is-2x-active",
-              "description": "See Claude's 2× usage window live in your macOS menu bar",
-              "tagline": "See Claude's 2× usage window live in your macOS menu bar",
+              "sourceId": "2026-03-18-ph-86e16d9f",
+              "collectedAt": "2026-03-18T19:52:22.019Z",
+              "companyName": "Fantastical MCP for Mac",
+              "productName": "Fantastical MCP for Mac",
+              "launchUrl": "https://www.producthunt.com/products/fantastical",
+              "description": "Manage your schedule directly with Claude",
+              "tagline": "Manage your schedule directly with Claude",
               "topics": [
                 "producthunt"
               ],
               "makerName": "Unknown",
-              "createdAt": "2026-03-18T19:08:09.922Z"
+              "createdAt": "2026-03-18T12:00:00.000Z"
             }
           ],
           "founders": [
             {
               "login": "unknown",
               "name": "Unknown",
-              "profileUrl": "https://www.producthunt.com/products/claude-double-checker-is-2x-active",
+              "profileUrl": "https://www.producthunt.com/products/fantastical",
               "role": "founder",
               "source": "product_hunt"
             }
@@ -7667,7 +7728,7 @@
           "whyNow": [
             "Launched on Product Hunt today."
           ],
-          "thesis": "Claude Double Checker is surfacing as a producthunt company with current public momentum. See Claude's 2× usage window live in your macOS menu bar",
+          "thesis": "Fantastical MCP for Mac is surfacing as a producthunt company with current public momentum. Manage your schedule directly with Claude",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
@@ -7686,11 +7747,11 @@
           }
         },
         {
-          "id": "grok-s-text-to-speech-api",
-          "companyName": "Grok's Text to Speech API",
-          "productName": "Grok's Text to Speech API",
-          "canonicalUrl": "https://www.producthunt.com/products/grok-s-text-to-speech-api",
-          "summary": "Grok's Text to Speech API is now available.",
+          "id": "ms-auto-captions",
+          "companyName": "MS AUTO CAPTIONS",
+          "productName": "MS AUTO CAPTIONS",
+          "canonicalUrl": "https://www.producthunt.com/products/ms-auto-captions",
+          "summary": "Generate trending subtitles for videos automatically with AI",
           "categories": [
             "producthunt",
             "AI"
@@ -7698,25 +7759,25 @@
           "sourceSignals": [
             {
               "source": "product_hunt",
-              "sourceId": "2026-03-18-ph-3786fac7",
-              "collectedAt": "2026-03-18T19:08:09.922Z",
-              "companyName": "Grok's Text to Speech API",
-              "productName": "Grok's Text to Speech API",
-              "launchUrl": "https://www.producthunt.com/products/grok-s-text-to-speech-api",
-              "description": "Grok's Text to Speech API is now available.",
-              "tagline": "Grok's Text to Speech API is now available.",
+              "sourceId": "2026-03-18-ph-8750c879",
+              "collectedAt": "2026-03-18T19:52:22.019Z",
+              "companyName": "MS AUTO CAPTIONS",
+              "productName": "MS AUTO CAPTIONS",
+              "launchUrl": "https://www.producthunt.com/products/ms-auto-captions",
+              "description": "Generate trending subtitles for videos automatically with AI",
+              "tagline": "Generate trending subtitles for videos automatically with AI",
               "topics": [
                 "producthunt"
               ],
               "makerName": "Unknown",
-              "createdAt": "2026-03-18T19:08:09.922Z"
+              "createdAt": "2026-03-18T12:00:00.000Z"
             }
           ],
           "founders": [
             {
               "login": "unknown",
               "name": "Unknown",
-              "profileUrl": "https://www.producthunt.com/products/grok-s-text-to-speech-api",
+              "profileUrl": "https://www.producthunt.com/products/ms-auto-captions",
               "role": "founder",
               "source": "product_hunt"
             }
@@ -7725,7 +7786,7 @@
           "whyNow": [
             "Launched on Product Hunt today."
           ],
-          "thesis": "Grok's Text to Speech API is surfacing as a producthunt company with current public momentum. Grok's Text to Speech API is now available.",
+          "thesis": "MS AUTO CAPTIONS is surfacing as a producthunt company with current public momentum. Generate trending subtitles for videos automatically with AI",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
@@ -7744,11 +7805,11 @@
           }
         },
         {
-          "id": "soul-2-0",
-          "companyName": "Soul 2.0",
-          "productName": "Soul 2.0",
-          "canonicalUrl": "https://www.producthunt.com/products/soul-2-0",
-          "summary": "Fashion-Grade AI Photos Without the Camera Crew",
+          "id": "comet-for-enterprise",
+          "companyName": "Comet for Enterprise",
+          "productName": "Comet for Enterprise",
+          "canonicalUrl": "https://www.producthunt.com/products/perplexity-ai",
+          "summary": "Perplexity’s Secure AI browser built for enterprise teams",
           "categories": [
             "producthunt",
             "AI"
@@ -7756,25 +7817,25 @@
           "sourceSignals": [
             {
               "source": "product_hunt",
-              "sourceId": "2026-03-18-ph-930393e5",
-              "collectedAt": "2026-03-18T19:08:09.922Z",
-              "companyName": "Soul 2.0",
-              "productName": "Soul 2.0",
-              "launchUrl": "https://www.producthunt.com/products/soul-2-0",
-              "description": "Fashion-Grade AI Photos Without the Camera Crew",
-              "tagline": "Fashion-Grade AI Photos Without the Camera Crew",
+              "sourceId": "2026-03-18-ph-cd3f9012",
+              "collectedAt": "2026-03-18T19:52:22.019Z",
+              "companyName": "Comet for Enterprise",
+              "productName": "Comet for Enterprise",
+              "launchUrl": "https://www.producthunt.com/products/perplexity-ai",
+              "description": "Perplexity’s Secure AI browser built for enterprise teams",
+              "tagline": "Perplexity’s Secure AI browser built for enterprise teams",
               "topics": [
                 "producthunt"
               ],
               "makerName": "Unknown",
-              "createdAt": "2026-03-18T19:08:09.922Z"
+              "createdAt": "2026-03-18T12:00:00.000Z"
             }
           ],
           "founders": [
             {
               "login": "unknown",
               "name": "Unknown",
-              "profileUrl": "https://www.producthunt.com/products/soul-2-0",
+              "profileUrl": "https://www.producthunt.com/products/perplexity-ai",
               "role": "founder",
               "source": "product_hunt"
             }
@@ -7783,7 +7844,7 @@
           "whyNow": [
             "Launched on Product Hunt today."
           ],
-          "thesis": "Soul 2.0 is surfacing as a producthunt company with current public momentum. Fashion-Grade AI Photos Without the Camera Crew",
+          "thesis": "Comet for Enterprise is surfacing as a producthunt company with current public momentum. Perplexity’s Secure AI browser built for enterprise teams",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
@@ -7814,7 +7875,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47428898",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Forms",
               "productName": "Open",
@@ -7863,67 +7924,6 @@
           }
         },
         {
-          "id": "bentodesktop-com",
-          "companyName": "Bentodesktop",
-          "productName": "Bento",
-          "canonicalUrl": "https://bentodesktop.com",
-          "summary": "Save and restore multi - monitor app layouts",
-          "categories": [
-            "Software"
-          ],
-          "sourceSignals": [
-            {
-              "source": "hacker_news",
-              "sourceId": "hn-47426226",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
-              "storyType": "show_hn",
-              "companyName": "Bentodesktop",
-              "productName": "Bento",
-              "storyUrl": "https://news.ycombinator.com/item?id=47426226",
-              "websiteUrl": "https://bentodesktop.com",
-              "title": "Show HN: Bento – Save and restore multi-monitor app layouts",
-              "description": "Save and restore multi - monitor app layouts",
-              "authorUsername": "aarmenante",
-              "authorKarma": 292,
-              "authorCreated": "2012-02-23T22:22:44.000Z",
-              "score": 7,
-              "commentsCount": 3,
-              "createdAt": "2026-03-18T14:27:42.000Z"
-            }
-          ],
-          "founders": [
-            {
-              "login": "aarmenante",
-              "name": "aarmenante",
-              "profileUrl": "https://news.ycombinator.com/user?id=aarmenante",
-              "role": "founder",
-              "source": "hacker_news",
-              "followers": 292
-            }
-          ],
-          "githubContributors": [],
-          "whyNow": [
-            "1 Show HN post with 7 points and 3 comments."
-          ],
-          "thesis": "Bentodesktop is surfacing as a software company with current public momentum. Save and restore multi - monitor app layouts",
-          "recommendedAction": "watch",
-          "stageGuess": "pre_seed",
-          "scores": {
-            "overall": 24,
-            "emerging": 31,
-            "acceleration": 35,
-            "founderStrength": 3
-          },
-          "delta": {
-            "isNew": true,
-            "launchCountDelta": 0,
-            "repoCountDelta": 0,
-            "starsTodayDelta": 0,
-            "contributorDelta": 0,
-            "scoreDelta": 24
-          }
-        },
-        {
           "id": "tmux-thijsverreck-com",
           "companyName": "Thijsverreck",
           "productName": "Tmux",
@@ -7936,7 +7936,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47428868",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Thijsverreck",
               "productName": "Tmux",
@@ -7945,10 +7945,10 @@
               "title": "Show HN: Tmux-IDE, OSS agent-first terminal IDE",
               "description": "Hey HN,<p>Small OSS project that i created for myself and want to share with the community. It&#x27;s a declarative, scriptable, terminal-based IDE focussed on agentic engineering.<p>That&#x27;s a lot of jargon, but essentially its a multi-agent IDE that you start in your terminal.<p>Why is that relevant? Thanks to tmux and SSH, it means that you have a really simple and efficient way to create your own always-on coding setup.<p>Boot into your IDE through ssh, give a prompt to claude and close off your machine. In tmux-ide claude will keep working.<p>The tool is intentionally really lightweight, because I think the power should come from the harnesses that you are working with.<p>I&#x27;m hoping to share this with the community and get feedback and suggestions to shape this project! I think that &quot;remote work&quot; is directionally correct, because we can now have extremely long-running coding tasks. But I also think we should be able to control and orchstrate that experience according to what we need.<p>The project is 100% open-source, and i hope to shape it together with others who like to work in this way too!<p>Github: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;wavyrai&#x2F;tmux-ide\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;wavyrai&#x2F;tmux-ide</a>\nDocs: <a href=\"https:&#x2F;&#x2F;tmux.thijsverreck.com&#x2F;docs\" rel=\"nofollow\">https:&#x2F;&#x2F;tmux.thijsverreck.com&#x2F;docs</a>",
               "authorUsername": "thijsverreck",
-              "authorKarma": 11,
+              "authorKarma": 15,
               "authorCreated": "2019-06-28T16:16:53.000Z",
-              "score": 13,
-              "commentsCount": 3,
+              "score": 24,
+              "commentsCount": 10,
               "createdAt": "2026-03-18T17:46:25.000Z"
             }
           ],
@@ -7959,21 +7959,82 @@
               "profileUrl": "https://news.ycombinator.com/user?id=thijsverreck",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 11
+              "followers": 15
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "1 Show HN post with 13 points and 3 comments."
+            "1 Show HN post with 24 points and 10 comments."
           ],
           "thesis": "Thijsverreck is surfacing as a ai company with current public momentum. Hey HN,<p>Small OSS project that i created for myself and want to share with the community. It&#x27;s a declarative, scriptable, terminal-based IDE focussed on agentic engineering.<p>That&#x27;s a lot of jargon, but essentially its a multi-agent IDE that you start in your terminal.<p>Why is that relevant? Thanks to tmux and SSH, it means that you have a really simple and efficient way to create your own always-on coding setup.<p>Boot into your IDE through ssh, give a prompt to claude and close off your machine. In tmux-ide claude will keep working.<p>The tool is intentionally really lightweight, because I think the power should come from the harnesses that you are working with.<p>I&#x27;m hoping to share this with the community and get feedback and suggestions to shape this project! I think that &quot;remote work&quot; is directionally correct, because we can now have extremely long-running coding tasks. But I also think we should be able to control and orchstrate that experience according to what we need.<p>The project is 100% open-source, and i hope to shape it together with others who like to work in this way too!<p>Github: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;wavyrai&#x2F;tmux-ide\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;wavyrai&#x2F;tmux-ide</a>\nDocs: <a href=\"https:&#x2F;&#x2F;tmux.thijsverreck.com&#x2F;docs\" rel=\"nofollow\">https:&#x2F;&#x2F;tmux.thijsverreck.com&#x2F;docs</a>",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
-            "overall": 23,
-            "emerging": 32,
+            "overall": 24,
+            "emerging": 34,
             "acceleration": 35,
             "founderStrength": 0
+          },
+          "delta": {
+            "isNew": true,
+            "launchCountDelta": 0,
+            "repoCountDelta": 0,
+            "starsTodayDelta": 0,
+            "contributorDelta": 0,
+            "scoreDelta": 24
+          }
+        },
+        {
+          "id": "rememberclippy-com",
+          "companyName": "Rememberclippy",
+          "productName": "Clippy",
+          "canonicalUrl": "https://RememberClippy.com",
+          "summary": "A friend and I built a browser prototype that answers questions about whatever’s on your screen using getDisplayMedia, client-side wake-word detection, and server-side multimodal inference.<p>Hard parts:<p>– Getting the model to point to specific UI elements<p>– Keeping it coherent across multi-step workflows (“Help me create a sword in Tinkercad”)<p>– Preventing the infinite mirror effect and confusion between window vs full-screen sharing<p>– Keeping voice → screenshot → inference → voice latency low enough to feel conversational<p>We packaged it as “Clippy” for fun, but the real experiment is letting a model tool-call fresh screenshots to help it gather more context.<p>One practical use case is remote tech support — I&#x27;m sending this to my mom next time she calls instead of screen sharing.<p>Curious what breaks.",
+          "categories": [
+            "AI"
+          ],
+          "sourceSignals": [
+            {
+              "source": "hacker_news",
+              "sourceId": "hn-47429822",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
+              "storyType": "show_hn",
+              "companyName": "Rememberclippy",
+              "productName": "Clippy",
+              "storyUrl": "https://news.ycombinator.com/item?id=47429822",
+              "websiteUrl": "https://RememberClippy.com",
+              "title": "Show HN: Clippy – screen-aware voice AI in the browser",
+              "description": "A friend and I built a browser prototype that answers questions about whatever’s on your screen using getDisplayMedia, client-side wake-word detection, and server-side multimodal inference.<p>Hard parts:<p>– Getting the model to point to specific UI elements<p>– Keeping it coherent across multi-step workflows (“Help me create a sword in Tinkercad”)<p>– Preventing the infinite mirror effect and confusion between window vs full-screen sharing<p>– Keeping voice → screenshot → inference → voice latency low enough to feel conversational<p>We packaged it as “Clippy” for fun, but the real experiment is letting a model tool-call fresh screenshots to help it gather more context.<p>One practical use case is remote tech support — I&#x27;m sending this to my mom next time she calls instead of screen sharing.<p>Curious what breaks.",
+              "authorUsername": "krschacht",
+              "authorKarma": 53,
+              "authorCreated": "2009-10-14T17:51:52.000Z",
+              "score": 2,
+              "commentsCount": 0,
+              "createdAt": "2026-03-18T18:50:40.000Z"
+            }
+          ],
+          "founders": [
+            {
+              "login": "krschacht",
+              "name": "krschacht",
+              "profileUrl": "https://news.ycombinator.com/user?id=krschacht",
+              "role": "founder",
+              "source": "hacker_news",
+              "followers": 53
+            }
+          ],
+          "githubContributors": [],
+          "whyNow": [
+            "1 Show HN post with 2 points and 0 comments."
+          ],
+          "thesis": "Rememberclippy is surfacing as a ai company with current public momentum. A friend and I built a browser prototype that answers questions about whatever’s on your screen using getDisplayMedia, client-side wake-word detection, and server-side multimodal inference.<p>Hard parts:<p>– Getting the model to point to specific UI elements<p>– Keeping it coherent across multi-step workflows (“Help me create a sword in Tinkercad”)<p>– Preventing the infinite mirror effect and confusion between window vs full-screen sharing<p>– Keeping voice → screenshot → inference → voice latency low enough to feel conversational<p>We packaged it as “Clippy” for fun, but the real experiment is letting a model tool-call fresh screenshots to help it gather more context.<p>One practical use case is remote tech support — I&#x27;m sending this to my mom next time she calls instead of screen sharing.<p>Curious what breaks.",
+          "recommendedAction": "watch",
+          "stageGuess": "pre_seed",
+          "scores": {
+            "overall": 23,
+            "emerging": 30,
+            "acceleration": 35,
+            "founderStrength": 1
           },
           "delta": {
             "isNew": true,
@@ -7997,7 +8058,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47427299",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Svgbackgrounds",
               "productName": "I built 48 lightweight SVG backgrounds you can copy/paste",
@@ -8006,10 +8067,10 @@
               "title": "Show HN: I built 48 lightweight SVG backgrounds you can copy/paste",
               "description": "Show HN: I built 48 lightweight SVG backgrounds you can copy/paste",
               "authorUsername": "visiwig",
-              "authorKarma": 26,
+              "authorKarma": 27,
               "authorCreated": "2021-01-22T03:29:20.000Z",
-              "score": 2,
-              "commentsCount": 3,
+              "score": 3,
+              "commentsCount": 6,
               "createdAt": "2026-03-18T15:50:44.000Z"
             }
           ],
@@ -8020,80 +8081,19 @@
               "profileUrl": "https://news.ycombinator.com/user?id=visiwig",
               "role": "founder",
               "source": "hacker_news",
-              "followers": 26
+              "followers": 27
             }
           ],
           "githubContributors": [],
           "whyNow": [
-            "1 Show HN post with 2 points and 3 comments."
+            "1 Show HN post with 3 points and 6 comments."
           ],
           "thesis": "Svgbackgrounds is surfacing as a software company with current public momentum. Show HN: I built 48 lightweight SVG backgrounds you can copy/paste",
           "recommendedAction": "watch",
           "stageGuess": "pre_seed",
           "scores": {
             "overall": 23,
-            "emerging": 31,
-            "acceleration": 35,
-            "founderStrength": 0
-          },
-          "delta": {
-            "isNew": true,
-            "launchCountDelta": 0,
-            "repoCountDelta": 0,
-            "starsTodayDelta": 0,
-            "contributorDelta": 0,
-            "scoreDelta": 23
-          }
-        },
-        {
-          "id": "opo-fausto-me",
-          "companyName": "Fausto",
-          "productName": "Website lets you post only once for life",
-          "canonicalUrl": "https://opo.fausto.me/",
-          "summary": "Built this as a small social experiment: every user gets one post for life (permanent, no deletes&#x2F;do-overs). After posting, you unlock the feed and see what everyone else chose.",
-          "categories": [
-            "Software"
-          ],
-          "sourceSignals": [
-            {
-              "source": "hacker_news",
-              "sourceId": "hn-47426364",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
-              "storyType": "show_hn",
-              "companyName": "Fausto",
-              "productName": "Website lets you post only once for life",
-              "storyUrl": "https://news.ycombinator.com/item?id=47426364",
-              "websiteUrl": "https://opo.fausto.me/",
-              "title": "Show HN: Website lets you post only once for life",
-              "description": "Built this as a small social experiment: every user gets one post for life (permanent, no deletes&#x2F;do-overs). After posting, you unlock the feed and see what everyone else chose.",
-              "authorUsername": "faustoct",
-              "authorKarma": 5,
-              "authorCreated": "2015-12-19T19:12:52.000Z",
-              "score": 3,
-              "commentsCount": 1,
-              "createdAt": "2026-03-18T14:37:26.000Z"
-            }
-          ],
-          "founders": [
-            {
-              "login": "faustoct",
-              "name": "faustoct",
-              "profileUrl": "https://news.ycombinator.com/user?id=faustoct",
-              "role": "founder",
-              "source": "hacker_news",
-              "followers": 5
-            }
-          ],
-          "githubContributors": [],
-          "whyNow": [
-            "1 Show HN post with 3 points and 1 comments."
-          ],
-          "thesis": "Fausto is surfacing as a software company with current public momentum. Built this as a small social experiment: every user gets one post for life (permanent, no deletes&#x2F;do-overs). After posting, you unlock the feed and see what everyone else chose.",
-          "recommendedAction": "watch",
-          "stageGuess": "pre_seed",
-          "scores": {
-            "overall": 23,
-            "emerging": 31,
+            "emerging": 32,
             "acceleration": 35,
             "founderStrength": 0
           },
@@ -8119,7 +8119,7 @@
             {
               "source": "hacker_news",
               "sourceId": "hn-47429810",
-              "collectedAt": "2026-03-18T19:08:13.052Z",
+              "collectedAt": "2026-03-18T19:52:25.842Z",
               "storyType": "show_hn",
               "companyName": "Knowza",
               "productName": "Knowza.ai",
@@ -8171,6 +8171,6 @@
     }
   ],
   "meta": {
-    "lastMessageId": "<0d72c31f-0e7a-7478-fa3f-8c4c545cd070@gmail.com>"
+    "lastMessageId": "<cd45359d-df81-8b99-f41e-af135a3b875a@gmail.com>"
   }
 }
