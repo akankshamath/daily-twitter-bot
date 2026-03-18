@@ -28,6 +28,15 @@ function normalizeCompanyId(signal: CompanySignal): string {
     }
   }
 
+  if (signal.source === 'hacker_news' && signal.websiteUrl) {
+    try {
+      const url = new URL(signal.websiteUrl);
+      return slugify(url.hostname);
+    } catch {
+      return slugify(signal.companyName);
+    }
+  }
+
   return slugify(signal.companyName);
 }
 
@@ -67,6 +76,8 @@ function inferCategories(signals: CompanySignal[]): string[] {
       }
       signal.topics.forEach(topic => raw.add(topic));
       raw.add(inferKeywordCategory(`${signal.repoName} ${signal.description}`));
+    } else if (signal.source === 'hacker_news') {
+      raw.add(inferKeywordCategory(`${signal.title} ${signal.description}`));
     }
   }
 
@@ -88,10 +99,14 @@ function chooseCanonicalUrl(signals: CompanySignal[]): string | undefined {
   for (const signal of signals) {
     if (signal.source === 'product_hunt' && signal.websiteUrl) return signal.websiteUrl;
     if (signal.source === 'github' && signal.homepageUrl) return signal.homepageUrl;
+    if (signal.source === 'hacker_news' && signal.websiteUrl) return signal.websiteUrl;
   }
 
   const productHuntSignal = signals.find((signal): signal is ProductSignal => signal.source === 'product_hunt');
   if (productHuntSignal) return productHuntSignal.launchUrl;
+
+  const hnSignal = signals.find(signal => signal.source === 'hacker_news');
+  if (hnSignal && 'storyUrl' in hnSignal) return hnSignal.storyUrl;
 
   const repoSignal = signals.find((signal): signal is RepositorySignal => signal.source === 'github');
   return repoSignal?.repoUrl;
@@ -101,6 +116,11 @@ function summarize(signals: CompanySignal[]): string {
   const launch = signals.find((signal): signal is ProductSignal => signal.source === 'product_hunt');
   if (launch) {
     return launch.description || launch.tagline;
+  }
+
+  const hnSignal = signals.find(signal => signal.source === 'hacker_news');
+  if (hnSignal && 'description' in hnSignal) {
+    return hnSignal.description;
   }
 
   const repo = signals.find((signal): signal is RepositorySignal => signal.source === 'github');
@@ -113,6 +133,19 @@ function buildWhyNow(signals: CompanySignal[], previous?: CompanyProfile): strin
   const launch = signals.find((signal): signal is ProductSignal => signal.source === 'product_hunt');
   if (launch) {
     items.push(`Launched on Product Hunt today.`);
+  }
+
+  const hnSignals = signals.filter(signal => signal.source === 'hacker_news');
+  if (hnSignals.length > 0) {
+    const showHNCount = hnSignals.filter(s => 'storyType' in s && s.storyType === 'show_hn').length;
+    const totalScore = hnSignals.reduce((sum, s) => sum + ('score' in s ? s.score : 0), 0);
+    const totalComments = hnSignals.reduce((sum, s) => sum + ('commentsCount' in s ? s.commentsCount : 0), 0);
+
+    if (showHNCount > 0) {
+      items.push(`${showHNCount} Show HN post${showHNCount > 1 ? 's' : ''} with ${totalScore} points and ${totalComments} comments.`);
+    } else {
+      items.push(`Trending on Hacker News with ${totalScore} points and ${totalComments} comments.`);
+    }
   }
 
   const repos = signals.filter((signal): signal is RepositorySignal => signal.source === 'github');
@@ -128,7 +161,7 @@ function buildWhyNow(signals: CompanySignal[], previous?: CompanyProfile): strin
     if (delta > 0) {
       items.push(`GitHub momentum improved by ${delta.toLocaleString()} stars/day versus the prior snapshot.`);
     }
-  } else {
+  } else if (items.length === 0) {
     items.push('Newly appeared in the tracked signal set.');
   }
 
@@ -144,8 +177,9 @@ function inferStage(signals: CompanySignal[]): CompanyProfile['stageGuess'] {
   const repos = signals.filter((signal): signal is RepositorySignal => signal.source === 'github');
   const stars = repos.reduce((sum, repo) => sum + repo.stars, 0);
   const hasLaunch = signals.some(signal => signal.source === 'product_hunt');
+  const hasShowHN = signals.some(signal => signal.source === 'hacker_news' && 'storyType' in signal && signal.storyType === 'show_hn');
 
-  if (hasLaunch && stars < 5000) return 'pre_seed';
+  if ((hasLaunch || hasShowHN) && stars < 5000) return 'pre_seed';
   if (stars < 25000) return 'seed';
   if (stars >= 25000) return 'growth';
   return 'unclear';
@@ -162,8 +196,21 @@ function computeScores(signals: CompanySignal[], founders: ContributorProfile[],
   const repos = signals.filter((signal): signal is RepositorySignal => signal.source === 'github');
   const starsToday = repos.reduce((sum, repo) => sum + repo.starsToday, 0);
 
-  // Only use real data: Product Hunt launch = fixed boost, GitHub stars = actual metric
-  const emerging = Math.min(100, Math.round((hasLaunch ? 40 : 0) + starsToday / 3));
+  // Calculate Hacker News engagement score
+  const hnSignals = signals.filter(signal => signal.source === 'hacker_news');
+  const hnScore = hnSignals.reduce((sum, signal) => {
+    if ('score' in signal && 'commentsCount' in signal) {
+      const points = signal.score;
+      const comments = signal.commentsCount;
+      const isShowHN = 'storyType' in signal && signal.storyType === 'show_hn';
+      // Show HN gets bonus, high engagement (points + comments) drives score
+      return sum + (isShowHN ? 30 : 15) + Math.min(points / 10, 20) + Math.min(comments / 5, 10);
+    }
+    return sum;
+  }, 0);
+
+  // Combine signals: Product Hunt launch, HN engagement, and GitHub momentum
+  const emerging = Math.min(100, Math.round((hasLaunch ? 40 : 0) + hnScore + starsToday / 3));
   const previousStarsToday = previous
     ? previous.sourceSignals
         .filter((signal): signal is RepositorySignal => signal.source === 'github')
@@ -211,7 +258,21 @@ export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?
     const previous = previousById.get(id);
     const productSignal = companySignals.find((signal): signal is ProductSignal => signal.source === 'product_hunt');
     const repoSignals = companySignals.filter((signal): signal is RepositorySignal => signal.source === 'github');
+    const hnSignals = companySignals.filter(signal => signal.source === 'hacker_news');
     const contributors = dedupePeople(repoSignals.flatMap(repo => repo.contributors));
+
+    // Build founders list from Product Hunt makers, HN authors, and GitHub maintainers
+    const hnFounders: ContributorProfile[] = hnSignals
+      .filter(signal => 'authorUsername' in signal && 'authorKarma' in signal)
+      .map(signal => ({
+        login: (signal as any).authorUsername,
+        name: (signal as any).authorUsername,
+        profileUrl: `https://news.ycombinator.com/user?id=${(signal as any).authorUsername}`,
+        role: 'founder' as const,
+        source: 'hacker_news' as const,
+        followers: (signal as any).authorKarma,
+      }));
+
     const founders = dedupePeople([
       ...(productSignal
         ? [{
@@ -222,6 +283,7 @@ export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?
             source: 'product_hunt' as const,
           }]
         : []),
+      ...hnFounders,
       ...contributors.filter(person => person.role === 'founder' || person.role === 'maintainer').slice(0, 2),
     ]);
     const categories = inferCategories(companySignals);
@@ -234,10 +296,18 @@ export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?
           .reduce((sum, repo) => sum + repo.starsToday, 0)
       : 0;
 
+    const hnSignal = hnSignals[0];
+    const companyName = productSignal?.companyName ??
+                        repoSignals[0]?.companyName ??
+                        (hnSignal && 'companyName' in hnSignal ? hnSignal.companyName : 'Unknown');
+    const productName = productSignal?.productName ??
+                        repoSignals[0]?.repoName ??
+                        (hnSignal && 'productName' in hnSignal ? hnSignal.productName : 'Unknown');
+
     companies.push({
       id,
-      companyName: productSignal?.companyName ?? repoSignals[0]?.companyName ?? 'Unknown',
-      productName: productSignal?.productName ?? repoSignals[0]?.repoName ?? 'Unknown',
+      companyName,
+      productName,
       canonicalUrl: chooseCanonicalUrl(companySignals),
       summary,
       categories,
@@ -245,7 +315,7 @@ export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?
       founders,
       githubContributors: contributors,
       whyNow: buildWhyNow(companySignals, previous),
-      thesis: inferThesis(productSignal?.companyName ?? repoSignals[0]?.companyName ?? 'This company', categories, summary),
+      thesis: inferThesis(companyName, categories, summary),
       recommendedAction: chooseAction(scores.overall),
       stageGuess: inferStage(companySignals),
       scores,

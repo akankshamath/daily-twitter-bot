@@ -215,13 +215,66 @@ export class HackerNewsClient {
   }
 
   /**
+   * Check if a URL points to a product/company site (not a blog or news article)
+   */
+  private isProductUrl(url: string): boolean {
+    try {
+      const parsed = new URL(url);
+      const hostname = parsed.hostname.toLowerCase();
+      const path = parsed.pathname.toLowerCase();
+
+      // Exclude common blog/news/content sites
+      const excludedDomains = [
+        'medium.com', 'substack.com', 'blog.', 'news.', 'techcrunch.com',
+        'theverge.com', 'arstechnica.com', 'wired.com', 'reddit.com',
+        'twitter.com', 'x.com', 'youtube.com', 'linkedin.com',
+        'facebook.com', 'instagram.com', 'tiktok.com',
+        'nytimes.com', 'washingtonpost.com', 'wsj.com', 'bloomberg.com',
+        'reuters.com', 'bbc.com', 'cnn.com', 'theguardian.com',
+        'arxiv.org', 'wikipedia.org', 'stackexchange.com', 'stackoverflow.com'
+      ];
+
+      // Check if domain matches excluded patterns
+      if (excludedDomains.some(domain => hostname.includes(domain))) {
+        return false;
+      }
+
+      // Exclude URLs with blog-like paths
+      const blogPatterns = ['/blog/', '/post/', '/article/', '/news/', '/press/'];
+      if (blogPatterns.some(pattern => path.includes(pattern))) {
+        return false;
+      }
+
+      // Prefer domains with product indicators
+      const productIndicators = ['/app', '/product', '/pricing', '/download', '/docs', '/api'];
+      const hasProductIndicator = productIndicators.some(indicator => path.includes(indicator));
+
+      // Allow GitHub repos as they often represent products
+      if (hostname.includes('github.com')) {
+        return true;
+      }
+
+      return true; // Allow by default if not explicitly excluded
+    } catch {
+      return false;
+    }
+  }
+
+  /**
    * Converts HN stories to company signals for enrichment
    */
   async getCompanySignals(): Promise<HackerNewsSignal[]> {
+    // Prioritize Show HN stories as they are actual product launches
     const showHNStories = await this.getShowHNStories(15);
-    const topStories = await this.getTopStories(10, 150);
 
-    const allStories = [...showHNStories, ...topStories];
+    // For top stories, filter for relevance: only include product/company sites
+    const topStories = await this.getTopStories(10, 150);
+    const relevantTopStories = topStories.filter(story =>
+      story.url && this.isProductUrl(story.url)
+    );
+
+    // Combine with Show HN taking priority
+    const allStories = [...showHNStories, ...relevantTopStories];
     const collectedAt = new Date().toISOString();
 
     // Enrich stories with user data

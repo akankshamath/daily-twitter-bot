@@ -17,6 +17,9 @@ export interface Launch {
   url: string;
   one_liner: string;
   tags: string[];
+  votesCount?: number;
+  commentsCount?: number;
+  rank?: number;
 }
 
 export class ProductHuntClient {

@@ -2,6 +2,7 @@ import cron from 'node-cron';
 import { config } from './config';
 import { ProductHuntClient } from './productHuntClient';
 import { GitHubClient } from './githubClient';
+import { HackerNewsClient } from './hackerNewsClient';
 import { EmailService } from './emailService';
 import { buildCompanyProfiles, buildDailyBrief } from './companyEnricher';
 import { SnapshotStorage } from './storage';
@@ -16,22 +17,27 @@ async function runDailyUpdate() {
     // Initialize services
     const productHuntClient = new ProductHuntClient();
     const githubClient = new GitHubClient();
+    const hackerNewsClient = new HackerNewsClient();
     const emailService = new EmailService();
     const storage = new SnapshotStorage(config.storage.snapshotFile);
     const now = new Date();
     const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     const previousSnapshot = await storage.getLatestSnapshot(date);
 
-    console.log('📦 Step 1/4: Fetching Product Hunt company signals...');
+    console.log('📦 Step 1/5: Fetching Product Hunt company signals...');
     const productSignals = await productHuntClient.getCompanySignals();
     console.log(`   ✓ Found ${productSignals.length} Product Hunt signals\n`);
 
-    console.log('⭐ Step 2/4: Fetching GitHub company signals...');
+    console.log('⭐ Step 2/5: Fetching GitHub company signals...');
     const githubSignals = await githubClient.getCompanySignals(8);
     console.log(`   ✓ Found ${githubSignals.length} GitHub signals\n`);
 
-    console.log('🧠 Step 3/4: Building VC brief...');
-    const companies = buildCompanyProfiles([...productSignals, ...githubSignals], previousSnapshot);
+    console.log('🔥 Step 3/5: Fetching Hacker News company signals...');
+    const hackerNewsSignals = await hackerNewsClient.getCompanySignals();
+    console.log(`   ✓ Found ${hackerNewsSignals.length} Hacker News signals (${hackerNewsSignals.filter(s => s.storyType === 'show_hn').length} Show HN, ${hackerNewsSignals.filter(s => s.storyType === 'top_story').length} top stories)\n`);
+
+    console.log('🧠 Step 4/5: Building VC brief...');
+    const companies = buildCompanyProfiles([...productSignals, ...githubSignals, ...hackerNewsSignals], previousSnapshot);
     const brief = buildDailyBrief(date, companies, previousSnapshot);
     brief.launchesToday = brief.launchesToday.slice(0, config.content.maxLaunches);
     brief.emergingCompanies = brief.emergingCompanies.slice(0, config.content.maxEmergingCompanies);
@@ -40,7 +46,7 @@ async function runDailyUpdate() {
     const snapshot = { date, companies };
     console.log(`   ✓ Built brief for ${companies.length} companies\n`);
 
-    console.log('📧 Step 4/4: Sending email digest...');
+    console.log('📧 Step 5/5: Sending email digest...');
     const lastMessageId = (await storage.getMeta()).lastMessageId;
     const messageId = await emailService.sendDailyDigest(brief, lastMessageId);
     await storage.saveSnapshot(snapshot);
@@ -54,6 +60,7 @@ async function runDailyUpdate() {
     console.log(`📊 Summary:`);
     console.log(`   • Product Hunt Signals: ${productSignals.length}`);
     console.log(`   • GitHub Signals: ${githubSignals.length}`);
+    console.log(`   • Hacker News Signals: ${hackerNewsSignals.length} (${hackerNewsSignals.filter(s => s.storyType === 'show_hn').length} Show HN)`);
     console.log(`   • Launches Today: ${brief.launchesToday.length}`);
     console.log(`   • Emerging Companies: ${brief.emergingCompanies.length}`);
     console.log(`   • Accelerating Companies: ${brief.acceleratingCompanies.length}`);

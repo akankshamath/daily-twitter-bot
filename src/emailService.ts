@@ -104,6 +104,13 @@ export class EmailService {
         ? '#2563eb'
         : '#d97706';
 
+    // For launch cards, get Product Hunt description; otherwise use investment thesis
+    const productHuntSignal = company.sourceSignals.find(signal => signal.source === 'product_hunt');
+    const bottomText = variant === 'launch' && productHuntSignal && 'description' in productHuntSignal
+      ? productHuntSignal.description
+      : company.thesis;
+    const bottomLabel = variant === 'launch' ? 'Description:' : 'Investment angle:';
+
     return `
       <div style="border:1px solid #e5dccf; border-left:5px solid ${accentColor}; border-radius:12px; padding:18px 20px; margin:14px 0; background:#fff;">
         <div style="font-size:18px; line-height:24px; font-weight:700; color:#0f172a;">
@@ -117,14 +124,8 @@ export class EmailService {
         <div style="font-size:13px; line-height:20px; color:#111827; margin-top:8px;">
           <strong>Why now:</strong> ${this.escapeHtml(company.whyNow.join(' '))}
         </div>
-        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:8px;">
-          <strong>Founder signal:</strong> ${this.escapeHtml(founders)}
-        </div>
         <div style="font-size:13px; line-height:20px; color:#111827; margin-top:6px;">
-          <strong>GitHub contributors:</strong> ${this.escapeHtml(contributors)}
-        </div>
-        <div style="font-size:13px; line-height:20px; color:#111827; margin-top:6px;">
-          <strong>Investment angle:</strong> ${this.escapeHtml(company.thesis)}
+          <strong>${bottomLabel}</strong> ${this.escapeHtml(bottomText)}
         </div>
       </div>
     `;
@@ -182,15 +183,30 @@ export class EmailService {
       const founders = company.founders.slice(0, 3).map(person => this.personLabel(person.name, person.company)).join('; ') || 'Unknown';
       const contributors = company.githubContributors.slice(0, 3).map(person => this.personLabel(person.name, person.company)).join('; ') || 'Not available';
 
-      return `${index + 1}. ${company.companyName} (${company.productName})
+      // For launch cards, get Product Hunt description; otherwise use investment thesis
+      const productHuntSignal = company.sourceSignals.find(signal => signal.source === 'product_hunt');
+      const bottomText = variant === 'launch' && productHuntSignal && 'description' in productHuntSignal
+        ? productHuntSignal.description
+        : company.thesis;
+      const bottomLabel = variant === 'launch' ? 'Description' : 'Thesis';
+
+      let cardText = `${index + 1}. ${company.companyName} (${company.productName})
    URL: ${company.canonicalUrl ?? 'N/A'}
    Summary: ${company.summary}
    Categories: ${company.categories.join(', ') || 'Software'}
-   Why now: ${company.whyNow.join(' ')}
+   Why now: ${company.whyNow.join(' ')}`;
+
+      // Only add founder/contributor info for non-launch cards
+      if (variant !== 'launch') {
+        cardText += `
    Founders: ${founders}
-   GitHub contributors: ${contributors}
-   Thesis: ${company.thesis}
+   GitHub contributors: ${contributors}`;
+      }
+
+      cardText += `
+   ${bottomLabel}: ${bottomText}
 `;
+      return cardText;
     }).join('\n');
 
     return `${title}\n${'-'.repeat(72)}\n${body}`;
