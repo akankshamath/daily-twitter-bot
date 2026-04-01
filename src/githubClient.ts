@@ -14,6 +14,16 @@ export interface Repository {
   starsToday: number;
 }
 
+interface TrendingDeveloper {
+  login: string;
+  name: string;
+  profileUrl: string;
+  rank: number;
+  popularRepoName?: string;
+  popularRepoDescription?: string;
+  popularRepoUrl?: string;
+}
+
 export class GitHubClient {
   private baseUrl = 'https://github.com/trending';
   private apiBaseUrl = 'https://api.github.com';
@@ -96,12 +106,71 @@ export class GitHubClient {
   }
 
   async getCompanySignals(limit: number = 5): Promise<RepositorySignal[]> {
+    const trendingDevelopers = await this.getTrendingDevelopers(25);
+    const trendingDeveloperMap = new Map(trendingDevelopers.map((developer) => [developer.login.toLowerCase(), developer]));
     const repos = await this.getTrendingRepos(limit);
-    const signals = await Promise.all(repos.map(repo => this.buildCompanySignal(repo)));
+    const signals = await Promise.all(repos.map(repo => this.buildCompanySignal(repo, trendingDeveloperMap)));
     return signals.filter((signal): signal is RepositorySignal => signal !== null);
   }
 
-  private async buildCompanySignal(repo: Repository): Promise<RepositorySignal | null> {
+  async getTrendingDevelopers(limit: number = 10): Promise<TrendingDeveloper[]> {
+    try {
+      console.log('Fetching trending developers from GitHub Trending Developers...');
+
+      const response = await axios.get(`${this.baseUrl}/developers?since=daily`, {
+        timeout: 10000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0',
+        },
+      });
+
+      const $ = cheerio.load(response.data);
+      const developers: TrendingDeveloper[] = [];
+
+      $('article.Box-row').each((index, el) => {
+        if (developers.length >= limit) return false;
+
+        const profileLink = $(el).find('h2 a, h1 a').first();
+        const relativeProfileUrl = profileLink.attr('href') ?? '';
+        const login = relativeProfileUrl.replace(/^\/+/, '').trim() || profileLink.text().trim().replace(/^@/, '');
+        if (!login) return;
+
+        const name = $(el).find('h1, h2').first().text().replace(/\s+/g, ' ').trim() || login;
+
+        const popularRepoLink = $(el).find('article a[href^="/"][href*="/"]').filter((_, link) => {
+          const href = $(link).attr('href') ?? '';
+          const text = $(link).text().replace(/\s+/g, ' ').trim();
+          return href.split('/').filter(Boolean).length >= 2 && text.length > 0;
+        }).last();
+
+        const relativePopularRepoUrl = popularRepoLink.attr('href') ?? '';
+        const popularRepoName = popularRepoLink.text().replace(/\s+/g, ' ').trim() || undefined;
+        const popularRepoUrl = relativePopularRepoUrl ? `https://github.com${relativePopularRepoUrl}` : undefined;
+        const popularRepoDescription = $(el)
+          .find('article div, article p')
+          .map((_, node) => $(node).text().replace(/\s+/g, ' ').trim())
+          .get()
+          .find((text) => text.length > 0 && text !== popularRepoName && !text.startsWith('@'));
+
+        developers.push({
+          login,
+          name,
+          profileUrl: `https://github.com/${login}`,
+          rank: index + 1,
+          popularRepoName,
+          popularRepoDescription,
+          popularRepoUrl,
+        });
+      });
+
+      return developers;
+    } catch (error) {
+      console.error('Error fetching GitHub trending developers:', error);
+      return [];
+    }
+  }
+
+  private async buildCompanySignal(repo: Repository, trendingDeveloperMap: Map<string, TrendingDeveloper>): Promise<RepositorySignal | null> {
     try {
       const repoApiPath = this.extractRepoApiPath(repo.url);
       if (!repoApiPath) return null;
@@ -128,8 +197,11 @@ export class GitHubClient {
           this.getContributorProfile(contributor.login, contributor.html_url, contributor.avatar_url, contributor.contributions, contributor.login === repo.author),
         ),
       );
+      const enrichedContributors = contributors
+        .filter((item): item is ContributorProfile => item !== null)
+        .map((contributor) => this.applyTrendingDeveloperData(contributor, trendingDeveloperMap.get(contributor.login.toLowerCase())));
 
-      const companyName = this.inferCompanyName(repo, repoData.homepage, contributors.filter((item): item is ContributorProfile => item !== null));
+      const companyName = this.inferCompanyName(repo, repoData.homepage, enrichedContributors);
 
       return {
         source: 'github',
@@ -147,7 +219,7 @@ export class GitHubClient {
         ownerLogin: repoData.owner.login,
         ownerType: repoData.owner.type,
         topics: repoData.topics ?? [],
-        contributors: contributors.filter((item): item is ContributorProfile => item !== null),
+        contributors: enrichedContributors,
       };
     } catch (error) {
       console.error(`Error enriching GitHub repo ${repo.author}/${repo.name}:`, error);
@@ -212,7 +284,11 @@ export class GitHubClient {
         source: 'github',
       };
     } catch (error) {
-      console.error(`Error fetching GitHub user ${login}:`, error);
+      if (this.isNotFoundError(error)) {
+        console.warn(`GitHub profile ${login} was not found. Using contributor metadata from the repository response.`);
+      } else {
+        console.error(`Error fetching GitHub user ${login}:`, error);
+      }
       return {
         login,
         name: login,
@@ -223,6 +299,26 @@ export class GitHubClient {
         source: 'github',
       };
     }
+  }
+
+  private applyTrendingDeveloperData(contributor: ContributorProfile, developer?: TrendingDeveloper): ContributorProfile {
+    if (!developer) {
+      return contributor;
+    }
+
+    return {
+      ...contributor,
+      name: contributor.name || developer.name || contributor.login,
+      profileUrl: contributor.profileUrl || developer.profileUrl,
+      trendingRank: developer.rank,
+      popularRepoName: developer.popularRepoName,
+      popularRepoDescription: developer.popularRepoDescription,
+      popularRepoUrl: developer.popularRepoUrl,
+    };
+  }
+
+  private isNotFoundError(error: unknown): boolean {
+    return axios.isAxiosError(error) && error.response?.status === 404;
   }
 
   private inferCompanyName(repo: Repository, homepageUrl: string | undefined, contributors: ContributorProfile[]): string {

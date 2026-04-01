@@ -3,11 +3,20 @@ import { config } from './config';
 import { ProductHuntClient } from './productHuntClient';
 import { GitHubClient } from './githubClient';
 import { HackerNewsClient } from './hackerNewsClient';
+import { TwitterApiClient } from './twitterApiClient';
 import { EmailService } from './emailService';
 import { buildCompanyProfiles, buildDailyBrief } from './companyEnricher';
 import { SnapshotStorage } from './storage';
 
+let isUpdateInProgress = false;
+
 async function runDailyUpdate() {
+  if (isUpdateInProgress) {
+    console.warn('Skipping scheduled update because a previous run is still in progress.');
+    return;
+  }
+
+  isUpdateInProgress = true;
   console.log('\n' + '='.repeat(70));
   console.log('Daily Tech Digest Update');
   console.log('='.repeat(70));
@@ -18,39 +27,44 @@ async function runDailyUpdate() {
     const productHuntClient = new ProductHuntClient();
     const githubClient = new GitHubClient();
     const hackerNewsClient = new HackerNewsClient();
+    const twitterClient = new TwitterApiClient();
     const emailService = new EmailService();
     const storage = new SnapshotStorage(config.storage.snapshotFile);
     const now = new Date();
     const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     const previousSnapshot = await storage.getLatestSnapshot(date);
 
-    console.log('📦 Step 1/5: Fetching Product Hunt company signals...');
+    console.log('📦 Step 1/6: Fetching Product Hunt company signals...');
     const productSignals = await productHuntClient.getCompanySignals();
     console.log(`   ✓ Found ${productSignals.length} Product Hunt signals\n`);
 
-    console.log('⭐ Step 2/5: Fetching GitHub company signals...');
+    console.log('⭐ Step 2/6: Fetching GitHub company signals...');
     const githubSignals = await githubClient.getCompanySignals(8);
     console.log(`   ✓ Found ${githubSignals.length} GitHub signals\n`);
 
-    console.log('🔥 Step 3/5: Fetching Hacker News company signals...');
+    console.log('🔥 Step 3/6: Fetching Hacker News company signals...');
     const hackerNewsSignals = await hackerNewsClient.getCompanySignals();
     console.log(`   ✓ Found ${hackerNewsSignals.length} Hacker News signals (${hackerNewsSignals.filter(s => s.storyType === 'show_hn').length} Show HN, ${hackerNewsSignals.filter(s => s.storyType === 'top_story').length} top stories)\n`);
 
-    console.log('🧠 Step 4/5: Building VC brief...');
-    const companies = buildCompanyProfiles([...productSignals, ...githubSignals, ...hackerNewsSignals], previousSnapshot);
+    console.log('🐦 Step 4/6: Fetching Twitter founder intent signals...');
+    const twitterSignals = await twitterClient.getCompanySignals(10);
+    console.log(`   ✓ Found ${twitterSignals.length} Twitter founder signals\n`);
+
+    console.log('🧠 Step 5/6: Building VC brief...');
+    const companies = buildCompanyProfiles([...productSignals, ...githubSignals, ...hackerNewsSignals, ...twitterSignals], previousSnapshot);
     const brief = buildDailyBrief(date, companies, previousSnapshot);
     brief.launchesToday = brief.launchesToday.slice(0, config.content.maxLaunches);
     brief.emergingCompanies = brief.emergingCompanies.slice(0, config.content.maxEmergingCompanies);
     brief.acceleratingCompanies = brief.acceleratingCompanies.slice(0, config.content.maxAcceleratingCompanies);
+    brief.twitterFounders = brief.twitterFounders.slice(0, 10);
     brief.foundersToMeet = brief.foundersToMeet.slice(0, config.content.maxPeopleToMeet);
     const snapshot = { date, companies };
     console.log(`   ✓ Built brief for ${companies.length} companies\n`);
 
-    console.log('📧 Step 5/5: Sending email digest...');
+    console.log('📧 Step 6/6: Sending email digest...');
     const lastMessageId = (await storage.getMeta()).lastMessageId;
     const messageId = await emailService.sendDailyDigest(brief, lastMessageId);
-    await storage.saveSnapshot(snapshot);
-    await storage.updateMeta({ lastMessageId: messageId });
+    await storage.saveRunResult(snapshot, { lastMessageId: messageId });
     console.log(`   ✓ Email sent to: ${config.email.to.join(', ')}\n`);
 
     // Summary
@@ -61,6 +75,7 @@ async function runDailyUpdate() {
     console.log(`   • Product Hunt Signals: ${productSignals.length}`);
     console.log(`   • GitHub Signals: ${githubSignals.length}`);
     console.log(`   • Hacker News Signals: ${hackerNewsSignals.length} (${hackerNewsSignals.filter(s => s.storyType === 'show_hn').length} Show HN)`);
+    console.log(`   • Twitter Signals: ${twitterSignals.length}`);
     console.log(`   • Launches Today: ${brief.launchesToday.length}`);
     console.log(`   • Emerging Companies: ${brief.emergingCompanies.length}`);
     console.log(`   • Accelerating Companies: ${brief.acceleratingCompanies.length}`);
@@ -92,6 +107,8 @@ async function runDailyUpdate() {
 
     console.error('='.repeat(70) + '\n');
     throw error;
+  } finally {
+    isUpdateInProgress = false;
   }
 }
 
@@ -166,7 +183,11 @@ async function main() {
 
   // Schedule the task
   cron.schedule(config.schedule, async () => {
-    await runDailyUpdate();
+    try {
+      await runDailyUpdate();
+    } catch (error) {
+      console.error('Scheduled update failed:', error);
+    }
   });
 
   console.log('Tool is running...\n');

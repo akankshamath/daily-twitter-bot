@@ -9,6 +9,10 @@ function slugify(value: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
+function normalizeLabel(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
 function normalizeCompanyId(signal: CompanySignal): string {
   if (signal.source === 'product_hunt' && signal.websiteUrl) {
     try {
@@ -29,6 +33,15 @@ function normalizeCompanyId(signal: CompanySignal): string {
   }
 
   if (signal.source === 'hacker_news' && signal.websiteUrl) {
+    try {
+      const url = new URL(signal.websiteUrl);
+      return slugify(url.hostname);
+    } catch {
+      return slugify(signal.companyName);
+    }
+  }
+
+  if (signal.source === 'twitter' && signal.websiteUrl) {
     try {
       const url = new URL(signal.websiteUrl);
       return slugify(url.hostname);
@@ -132,7 +145,22 @@ function buildWhyNow(signals: CompanySignal[], previous?: CompanyProfile): strin
 
   const launch = signals.find((signal): signal is ProductSignal => signal.source === 'product_hunt');
   if (launch) {
-    items.push(`Launched on Product Hunt today.`);
+    let launchText = 'Launched on Product Hunt today';
+    const details: string[] = [];
+
+    if (launch.votesCount && launch.votesCount > 0) {
+      details.push(`${launch.votesCount} upvotes`);
+    }
+    if (launch.commentsCount && launch.commentsCount > 0) {
+      details.push(`${launch.commentsCount} comments`);
+    }
+
+    if (details.length > 0) {
+      launchText += ` with ${details.join(' and ')}`;
+    }
+
+    launchText += '.';
+    items.push(launchText);
   }
 
   const hnSignals = signals.filter(signal => signal.source === 'hacker_news');
@@ -168,9 +196,69 @@ function buildWhyNow(signals: CompanySignal[], previous?: CompanyProfile): strin
   return items;
 }
 
-function inferThesis(companyName: string, categories: string[], summary: string): string {
-  const primaryCategory = categories[0] ?? 'software';
-  return `${companyName} is surfacing as a ${primaryCategory.toLowerCase()} company with current public momentum. ${summary}`;
+function inferThesis(
+  companyName: string,
+  productName: string,
+  categories: string[],
+  signals: CompanySignal[],
+  recommendedAction: CompanyProfile['recommendedAction'],
+): string {
+  const primaryCategory = (categories[0] ?? 'software').toLowerCase();
+  const parts: string[] = [];
+  const launch = signals.find((signal): signal is ProductSignal => signal.source === 'product_hunt');
+  const hnSignals = signals.filter(signal => signal.source === 'hacker_news');
+  const repos = signals.filter((signal): signal is RepositorySignal => signal.source === 'github');
+
+  if (launch) {
+    const launchDetails: string[] = [];
+    if (launch.rank && launch.rank <= 5) {
+      launchDetails.push(`ranked #${launch.rank} on Product Hunt`);
+    }
+    if (launch.votesCount && launch.votesCount > 0) {
+      launchDetails.push(`${launch.votesCount} upvotes`);
+    }
+    if (launch.commentsCount && launch.commentsCount > 0) {
+      launchDetails.push(`${launch.commentsCount} comments`);
+    }
+
+    parts.push(
+      launchDetails.length > 0
+        ? `${productName} is getting live launch-day demand in ${primaryCategory} with ${launchDetails.join(', ')}.`
+        : `${productName} is a fresh Product Hunt launch in ${primaryCategory}, which makes this a timely first-look opportunity.`,
+    );
+  }
+
+  if (hnSignals.length > 0) {
+    const totalPoints = hnSignals.reduce((sum, signal) => sum + ('score' in signal ? signal.score : 0), 0);
+    const totalComments = hnSignals.reduce((sum, signal) => sum + ('commentsCount' in signal ? signal.commentsCount : 0), 0);
+    const showHNCount = hnSignals.filter(signal => 'storyType' in signal && signal.storyType === 'show_hn').length;
+
+    if (showHNCount > 0) {
+      parts.push(`Hacker News discussion is founder-led, with ${showHNCount} Show HN post${showHNCount > 1 ? 's' : ''}, ${totalPoints} points, and ${totalComments} comments.`);
+    } else {
+      parts.push(`Hacker News is providing organic distribution with ${totalPoints} points and ${totalComments} comments.`);
+    }
+  }
+
+  if (repos.length > 0) {
+    const totalStarsToday = repos.reduce((sum, repo) => sum + repo.starsToday, 0);
+    const repoCount = repos.length;
+    parts.push(`${repoCount} GitHub repo${repoCount > 1 ? 's are' : ' is'} adding ${totalStarsToday.toLocaleString()} stars today, which points to real developer pull.`);
+  }
+
+  if (launch && (hnSignals.length > 0 || repos.length > 0)) {
+    parts.push(`${companyName} is showing cross-channel validation rather than a single-source spike.`);
+  }
+
+  const actionText = recommendedAction === 'reach_out'
+    ? 'This looks worth an immediate outreach while the signal is still fresh.'
+    : recommendedAction === 'research'
+      ? 'This looks worth deeper research before the current momentum cools.'
+      : 'This is worth watching for repeat traction across additional channels.';
+
+  parts.push(actionText);
+
+  return parts.join(' ');
 }
 
 function inferStage(signals: CompanySignal[]): CompanyProfile['stageGuess'] {
@@ -241,6 +329,52 @@ function isSameLocalDate(dateString: string, targetDate: string): boolean {
   return `${year}-${month}-${day}` === targetDate;
 }
 
+function buildLaunchCards(companies: CompanyProfile[], date: string): CompanyProfile[] {
+  const launchCards: CompanyProfile[] = [];
+
+  for (const company of companies) {
+    const productSignals = company.sourceSignals.filter((signal): signal is ProductSignal =>
+      signal.source === 'product_hunt' && isSameLocalDate(signal.createdAt, date),
+    );
+
+    for (const signal of productSignals) {
+      const launchFounder = signal.makerName && signal.makerName !== 'Unknown'
+        ? [{
+            login: signal.makerName.toLowerCase().replace(/\s+/g, '-'),
+            name: signal.makerName,
+            profileUrl: signal.launchUrl,
+            role: 'founder' as const,
+            source: 'product_hunt' as const,
+          }]
+        : company.founders;
+
+      launchCards.push({
+        ...company,
+        id: `${company.id}-${signal.sourceId}`,
+        companyName: signal.companyName,
+        productName: signal.productName,
+        canonicalUrl: signal.websiteUrl || signal.launchUrl || company.canonicalUrl,
+        summary: signal.description || signal.tagline,
+        categories: signal.topics.length > 0 ? signal.topics : company.categories,
+        sourceSignals: [signal],
+        founders: launchFounder,
+        githubContributors: [],
+        whyNow: [
+          `Launched on Product Hunt today${signal.rank ? ` at rank #${signal.rank}` : ''}${signal.votesCount ? ` with ${signal.votesCount} upvotes` : ''}${signal.commentsCount ? ` and ${signal.commentsCount} comments` : ''}.`,
+        ],
+      });
+    }
+  }
+
+  return launchCards
+    .sort((a, b) => {
+      const aSignal = a.sourceSignals[0] as ProductSignal;
+      const bSignal = b.sourceSignals[0] as ProductSignal;
+      return (bSignal.votesCount ?? 0) - (aSignal.votesCount ?? 0) || (aSignal.rank ?? 999) - (bSignal.rank ?? 999);
+    })
+    .slice(0, 5);
+}
+
 export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?: DailySnapshot): CompanyProfile[] {
   const grouped = new Map<string, CompanySignal[]>();
 
@@ -296,13 +430,22 @@ export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?
           .reduce((sum, repo) => sum + repo.starsToday, 0)
       : 0;
 
+    const primaryRepo = repoSignals[0];
+    const shouldFlipGitHubNames = !productSignal &&
+      hnSignals.length === 0 &&
+      !!primaryRepo &&
+      normalizeLabel(primaryRepo.companyName) === normalizeLabel(primaryRepo.ownerLogin) &&
+      normalizeLabel(primaryRepo.repoName) !== normalizeLabel(primaryRepo.ownerLogin);
+
     const hnSignal = hnSignals[0];
     const companyName = productSignal?.companyName ??
-                        repoSignals[0]?.companyName ??
+                        (shouldFlipGitHubNames ? primaryRepo.repoName : repoSignals[0]?.companyName) ??
                         (hnSignal && 'companyName' in hnSignal ? hnSignal.companyName : 'Unknown');
     const productName = productSignal?.productName ??
-                        repoSignals[0]?.repoName ??
+                        (shouldFlipGitHubNames ? primaryRepo.ownerLogin : repoSignals[0]?.repoName) ??
                         (hnSignal && 'productName' in hnSignal ? hnSignal.productName : 'Unknown');
+
+    const recommendedAction = chooseAction(scores.overall);
 
     companies.push({
       id,
@@ -315,8 +458,8 @@ export function buildCompanyProfiles(signals: CompanySignal[], previousSnapshot?
       founders,
       githubContributors: contributors,
       whyNow: buildWhyNow(companySignals, previous),
-      thesis: inferThesis(companyName, categories, summary),
-      recommendedAction: chooseAction(scores.overall),
+      thesis: inferThesis(companyName, productName, categories, companySignals, recommendedAction),
+      recommendedAction,
       stageGuess: inferStage(companySignals),
       scores,
       delta: {
@@ -371,12 +514,23 @@ function buildPeopleToMeet(companies: CompanyProfile[]): PersonToMeet[] {
   for (const company of companies) {
     const candidates = dedupePeople([...company.founders, ...company.githubContributors]).slice(0, 3);
     for (const person of candidates) {
-      const score = company.scores.overall + Math.min(person.followers ?? 0, 5000) / 250 + Math.min(person.contributions ?? 0, 100) / 5;
+      const trendingBonus = person.trendingRank ? Math.max(0, 16 - person.trendingRank) * 3 : 0;
+      const score = company.scores.overall
+        + Math.min(person.followers ?? 0, 5000) / 250
+        + Math.min(person.contributions ?? 0, 100) / 5
+        + trendingBonus;
+      const popularRepoText = person.popularRepoName
+        ? ` Popular repo: ${person.popularRepoName}${person.popularRepoDescription ? ` - ${person.popularRepoDescription}` : ''}.`
+        : '';
+      const trendingText = person.trendingRank
+        ? ` Ranked #${person.trendingRank} on GitHub Trending Developers.`
+        : '';
+
       people.push({
         companyId: company.id,
         companyName: company.companyName,
         person,
-        reason: `${company.companyName} scored ${company.scores.overall}/100 with ${company.delta.isNew ? 'new emergence' : 'accelerating momentum'} and ${company.categories[0] ?? 'software'} relevance.`,
+        reason: `${company.companyName} scored ${company.scores.overall}/100 with ${company.delta.isNew ? 'new emergence' : 'accelerating momentum'} and ${company.categories[0] ?? 'software'} relevance.${trendingText}${popularRepoText}`,
         score: Math.round(score),
       });
     }
@@ -388,17 +542,7 @@ function buildPeopleToMeet(companies: CompanyProfile[]): PersonToMeet[] {
 }
 
 export function buildDailyBrief(date: string, companies: CompanyProfile[], previousSnapshot?: DailySnapshot): DailyBrief {
-  const launchesToday = companies
-    .filter(company =>
-      company.sourceSignals.some((signal): signal is ProductSignal =>
-        signal.source === 'product_hunt' && isSameLocalDate(signal.createdAt, date),
-      ),
-    )
-    .sort((a, b) => {
-      // Sort by overall score since we don't have real vote counts
-      return b.scores.overall - a.scores.overall;
-    })
-    .slice(0, 12);
+  const launchesToday = buildLaunchCards(companies, date);
 
   const emergingCompanies = companies
     .filter(company => company.delta.isNew || company.scores.emerging >= 60)
@@ -410,11 +554,22 @@ export function buildDailyBrief(date: string, companies: CompanyProfile[], previ
     .sort((a, b) => b.delta.starsTodayDelta - a.delta.starsTodayDelta || b.delta.scoreDelta - a.delta.scoreDelta)
     .slice(0, 10);
 
+  // Twitter founder signals - early-stage builders
+  const twitterFounders = companies
+    .filter(company => company.sourceSignals.some(signal => signal.source === 'twitter'))
+    .sort((a, b) => {
+      const aTwitterCount = a.sourceSignals.filter(s => s.source === 'twitter').length;
+      const bTwitterCount = b.sourceSignals.filter(s => s.source === 'twitter').length;
+      return bTwitterCount - aTwitterCount || b.scores.overall - a.scores.overall;
+    })
+    .slice(0, 10);
+
   return {
     date,
     launchesToday,
     emergingCompanies,
     acceleratingCompanies,
+    twitterFounders,
     categoryMomentum: buildCategoryMomentum(companies, previousSnapshot),
     foundersToMeet: buildPeopleToMeet(companies),
     allCompanies: companies,

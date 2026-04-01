@@ -19,6 +19,12 @@ interface Config {
   github: {
     token?: string;
   };
+  productHunt: {
+    token?: string;
+  };
+  twitterApi: {
+    apiKey: string;
+  };
   storage: {
     snapshotFile: string;
   };
@@ -52,10 +58,16 @@ export const config: Config = {
   github: {
     token: process.env.GITHUB_TOKEN,
   },
+  productHunt: {
+    token: process.env.PRODUCT_HUNT_TOKEN || process.env.PRODUCT_HUNT_DEVELOPER_TOKEN,
+  },
+  twitterApi: {
+    apiKey: process.env.TWITTER_API_KEY || '',
+  },
   storage: {
     snapshotFile: process.env.SNAPSHOT_FILE || '.data/daily-snapshots.json',
   },
   emailDigest: {
-    subject: process.env.EMAIL_SUBJECT || 'VC Daily Dealflow Thread',
+    subject: process.env.EMAIL_SUBJECT || '500 Startup News',
   },
 };

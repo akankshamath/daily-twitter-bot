@@ -43,6 +43,18 @@ export class SnapshotStorage {
     });
   }
 
+  async saveRunResult(snapshot: DailySnapshot, meta: SnapshotMeta): Promise<void> {
+    const data = await this.load();
+    const snapshots = data.snapshots.filter(item => item.date !== snapshot.date);
+    snapshots.push(snapshot);
+    snapshots.sort((a, b) => a.date.localeCompare(b.date));
+
+    await this.write({
+      snapshots: snapshots.slice(-30),
+      meta: { ...data.meta, ...meta },
+    });
+  }
+
   async getLatestSnapshot(excludingDate?: string): Promise<DailySnapshot | undefined> {
     const data = await this.load();
     const snapshots = excludingDate

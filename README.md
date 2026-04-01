@@ -69,7 +69,7 @@ MAX_PEOPLE_TO_MEET=8
 GITHUB_TOKEN=
 
 # Email thread + snapshot storage
-EMAIL_SUBJECT=VC Daily Dealflow Thread
+EMAIL_SUBJECT=500 Startup News
 SNAPSHOT_FILE=.data/daily-snapshots.json
 ```
 

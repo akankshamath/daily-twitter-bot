@@ -7,6 +7,10 @@ export interface ContributorProfile {
   bio?: string;
   followers?: number;
   contributions?: number;
+  trendingRank?: number;
+  popularRepoName?: string;
+  popularRepoDescription?: string;
+  popularRepoUrl?: string;
   role: 'founder' | 'core_builder' | 'maintainer';
   source: 'github' | 'product_hunt' | 'hacker_news';
 }
@@ -25,6 +29,7 @@ export interface ProductSignal {
   makerName: string;
   votesCount?: number;  // Optional - RSS doesn't provide this
   commentsCount?: number;  // Optional - RSS doesn't provide this
+  rank?: number;
   createdAt: string;
 }
 
@@ -66,7 +71,25 @@ export interface HackerNewsSignal {
   createdAt: string;
 }
 
-export type CompanySignal = ProductSignal | RepositorySignal | HackerNewsSignal;
+export interface TwitterSignal {
+  source: 'twitter';
+  sourceId: string;
+  collectedAt: string;
+  companyName: string;
+  productName: string;
+  tweetUrl: string;
+  websiteUrl?: string;
+  description: string;
+  authorUsername: string;
+  authorFollowers: number;
+  likes: number;
+  retweets: number;
+  replies: number;
+  relevanceScore: number;
+  createdAt: string;
+}
+
+export type CompanySignal = ProductSignal | RepositorySignal | HackerNewsSignal | TwitterSignal;
 
 export interface CompanyScores {
   overall: number;
@@ -123,6 +146,7 @@ export interface DailyBrief {
   launchesToday: CompanyProfile[];
   emergingCompanies: CompanyProfile[];
   acceleratingCompanies: CompanyProfile[];
+  twitterFounders: CompanyProfile[];
   categoryMomentum: CategoryMomentum[];
   foundersToMeet: PersonToMeet[];
   allCompanies: CompanyProfile[];

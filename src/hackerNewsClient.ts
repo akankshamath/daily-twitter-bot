@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as cheerio from 'cheerio';
 import { config } from './config';
 import { HackerNewsSignal } from './types';
 
@@ -294,7 +295,7 @@ export class HackerNewsClient {
           storyUrl: `https://news.ycombinator.com/item?id=${story.id}`,
           websiteUrl: story.url,
           title: story.title,
-          description: story.text || this.extractDescriptionFromTitle(story.title),
+          description: this.cleanDescription(story.text, story.title),
           authorUsername: story.by,
           authorKarma: user?.karma ?? 0,
           authorCreated: user?.created ? new Date(user.created * 1000).toISOString() : undefined,
@@ -362,6 +363,37 @@ export class HackerNewsClient {
       return parts.slice(1).join(' - ').trim();
     }
     return title;
+  }
+
+  private cleanDescription(text: string | undefined, title: string): string {
+    const titleSummary = this.extractDescriptionFromTitle(title);
+    if (!text) {
+      return titleSummary;
+    }
+
+    const plainText = cheerio.load(`<div>${text}</div>`)('div').text().replace(/\s+/g, ' ').trim();
+    if (!plainText) {
+      return titleSummary;
+    }
+
+    const cleanedText = plainText
+      .replace(/\bTech stack:.*$/i, '')
+      .replace(/\bBlog post with the full story:.*$/i, '')
+      .replace(/\bGitHub repo:.*$/i, '')
+      .trim();
+
+    if (titleSummary && titleSummary !== title && titleSummary.length <= 140) {
+      return titleSummary;
+    }
+
+    const firstSentence = cleanedText.match(/^(.{1,220}?[.!?])(\s|$)/)?.[1]?.trim();
+    if (firstSentence) {
+      return firstSentence;
+    }
+
+    return cleanedText.length > 220
+      ? `${cleanedText.slice(0, 217).trimEnd()}...`
+      : cleanedText;
   }
 
   /**
