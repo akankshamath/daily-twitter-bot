@@ -3,3 +3,7 @@ dist/
 .env
 *.log
 .DS_Store
+
+# Test output files
+test-output.txt
+*.log
